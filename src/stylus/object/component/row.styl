@@ -1,5 +1,5 @@
 .{$bs-prefix}c-row {
-  bs-c-row();
+  @extend $bs-row;
 
   &--reverse {
     flex-direction: row-reverse;
@@ -94,7 +94,7 @@
   }
 
   &__col {
-    bs-c-row__col();
+    bs-col();
   }
 }
 
@@ -108,11 +108,11 @@ for $size, $screen-min in $bs-sizes {
 
         if ($gcd == 1) {
           $_bs-item{$prefix}-gcd-{$i / $gcd}-{$max_columns / $gcd} {
-            bs-c-row__col($i, $max_columns);
+            bs-col($i, $max_columns);
           }
 
           $_bs-item{$prefix}-offset-gcd-{$i / $gcd}-{$max_columns / $gcd} {
-            bs-c-row__col--offset($i, $max_columns);
+            bs-col-offset($i, $max_columns);
           }
         }
       }
@@ -158,7 +158,7 @@ for $size, $screen-min in $bs-sizes {
       }
 
       &{$prefix}-offset-0 {
-        bs-c-row__col--offset(0);
+        bs-col-offset(0);
       }
 
       &{$prefix}-shrink {

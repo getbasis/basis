@@ -11,5 +11,8 @@ $bs-use-mixin-only ?= false;
 
 @import 'function/*';
 @import 'variable/*';
-@import 'mixin/helper/*';
-@import 'mixin/component/*';
+@import 'mixin/*';
+
+if (bs-is-use-mixin-only()) {
+  @import 'placeholder/*';
+}

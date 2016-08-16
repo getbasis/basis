@@ -1,0 +1,35 @@
+//
+// Hero component
+//
+// .c-hero {
+//     @extend $bs-hero;
+// }
+//
+
+$bs-hero-col {
+  flex: 0 1 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+$bs-hero {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+
+  &__header {
+    @extend $bs-hero-col;
+    align-self: flex-start;
+  }
+
+  &__content {
+    @extend $bs-hero-col;
+    align-self: center;
+  }
+
+  &__footer {
+    @extend $bs-hero-col;
+    align-self: flex-end;
+  }
+}

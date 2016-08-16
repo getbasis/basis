@@ -2,7 +2,7 @@
 // Radio component
 //
 // .c-radio {
-//     bs-c-radio();
+//     @extend $bs-radio;
 // }
 //
 // <span class="c-radio">
@@ -10,12 +10,12 @@
 // </span>
 //
 
-$bs-c-radio-margin ?= ($bs-base-font-size / 2);
+$bs-radio-margin ?= ($bs-base-font-size / 2);
 
-bs-c-radio() {
+$bs-radio {
   display: inline-block;
 
   [type="radio"] {
-    margin-right: $bs-c-radio-margin;
+    margin-right: $bs-radio-margin;
   }
 }
