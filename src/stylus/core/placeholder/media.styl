@@ -15,13 +15,11 @@
 // </div>
 //
 
-$bs-media-margin ?= $bs-base-line-height;
-
 $bs-media {
   display: flex;
 
   &__figure {
-    margin-right: $bs-media-margin;
+    bs-margin(0, 1, 0, 0);
     flex: none;
     bs-background-image-cover();
 
