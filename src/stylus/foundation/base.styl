@@ -1,0 +1,135 @@
+* {
+  &, &:before, &:after {
+    box-sizing: border-box;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: (bs-strip-unit($bs-base-font-size-px) / 16 * 100%);
+}
+
+body {
+  color: $bs-color-text;
+  font-family: $bs-font-family;
+  bs-font-size-line-height($bs-base-font-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code, kbd, pre, samp {
+  bs-font-size-line-height($bs-base-font-size-px - 2);
+  font-family: '_', monospace;
+}
+
+input, textarea, keygen, select, button {
+  font-family: $bs-font-family;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+p, ul, ol, dl, table, pre, blockquote {
+  margin-top: 0;
+  bs-margin-bottom(1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+h1 {
+  bs-font-size-line-height($bs-base-font-size * $bs-h1-font-size-scale);
+  bs-margin-top($bs-h1-margin-top);
+  bs-margin-bottom($bs-h1-margin-bottom);
+}
+
+h2 {
+  bs-font-size-line-height($bs-base-font-size * $bs-h2-font-size-scale);
+  bs-margin-top($bs-h2-margin-top);
+  bs-margin-bottom($bs-h2-margin-bottom);
+}
+
+h3 {
+  bs-font-size-line-height($bs-base-font-size * $bs-h3-font-size-scale);
+  bs-margin-top($bs-h3-margin-top);
+  bs-margin-bottom($bs-h3-margin-bottom);
+}
+
+h4 {
+  bs-font-size-line-height($bs-base-font-size * $bs-h4-font-size-scale);
+  bs-margin-top($bs-h4-margin-top);
+  bs-margin-bottom($bs-h4-margin-bottom);
+}
+
+h5 {
+  bs-font-size-line-height($bs-base-font-size * $bs-h5-font-size-scale);
+  bs-margin-top($bs-h5-margin-top);
+  bs-margin-bottom($bs-h5-margin-bottom);
+}
+
+h6 {
+  bs-font-size-line-height($bs-base-font-size * $bs-h6-font-size-scale);
+  bs-margin-top($bs-h6-margin-top);
+  bs-margin-bottom($bs-h6-margin-bottom);
+}
+
+ol ol, ol ul, ul ol, ul ul {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 0;
+}
+
+blockquote {
+  border-left: ($bs-base-font-size / 2) solid bs-lighter($bs-color-gray);
+  margin-left: 0;
+  padding: $bs-base-font-size 0 $bs-base-font-size $bs-base-font-size;
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  footer {
+    color: bs-darker($bs-color-gray);
+    font-size: 90%;
+  }
+}
+
+code {
+  background-color: bs-lighter($bs-color-red);
+  border-radius: $bs-border-radius;
+  color: $bs-color-red;
+  padding: 2px 4px;
+}
+
+pre {
+  background-color: bs-lightest($bs-color-gray);
+  border: 1px solid bs-lighter($bs-color-gray);
+  border-radius: $bs-border-radius;
+  padding: $bs-base-font-size;
+  overflow: auto;
+
+  code {
+    background-color: transparent;
+    border: none;
+    color: $bs-color-text;
+    font-size: 100%;
+    padding: 0;
+  }
+}
+
+label {
+  cursor: pointer;
+}

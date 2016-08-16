@@ -3,16 +3,17 @@
 /**
  * Import node modules
  */
-var gulp         = require( 'gulp' );
-var sass         = require( 'gulp-sass' );
-var rename       = require( 'gulp-rename' );
-var postcss      = require( 'gulp-postcss' );
-var autoprefixer = require( 'autoprefixer' );
-var cssnano      = require( 'cssnano' );
+var gulp         = require('gulp');
+var plumber      = require('gulp-plumber');
+var stylus       = require('gulp-stylus');
+var rename       = require('gulp-rename');
+var postcss      = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
+var cssnano      = require('cssnano');
 
 var path = {
   src: {
-    scss: 'src/scss/**/*.scss'
+    stylus: 'src/stylus'
   },
   dist: {
     css: 'dist/css'
@@ -20,12 +21,18 @@ var path = {
 };
 
 /**
- * Sass to CSS
+ * Stylus to CSS
  */
-gulp.task('sass', function() {
-  return gulp.src(path.src.scss)
-    .pipe(sass({
-      outputStyle: 'expanded'
+gulp.task('stylus', function() {
+  return gulp.src(
+      [
+        path.src.stylus + '/basis.styl',
+        path.src.stylus + '/plugin/basis-ie9/basis-ie9.styl'
+      ],
+      {base: path.src.stylus }
+    )
+    .pipe(stylus({
+      'include css': true
     }))
     .pipe(postcss([
       autoprefixer({
@@ -40,16 +47,16 @@ gulp.task('sass', function() {
 });
 
 /**
- * Auto Compile Sass.
+ * Auto Compile Stylus.
  */
 gulp.task('watch', function() {
-  gulp.watch([path.src.scss], ['sass']);
+  gulp.watch([path.src.stylus + '/**/*/styl'], ['stylus']);
 });
 
 /**
  * Build
  */
-gulp.task('build', ['sass']);
+gulp.task('build', ['stylus']);
 
 /**
  * Release
@@ -64,4 +71,4 @@ gulp.task('release', ['build'], function() {
       .pipe( gulp.dest('release'));
 } );
 
-gulp.task( 'default', ['build', 'watch'] );
+gulp.task('default', ['build', 'watch']);

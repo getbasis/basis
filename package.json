@@ -1,30 +1,36 @@
 {
-  "name": "sass-basis",
-  "version": "5.5.0",
-  "main": "src/scss/basis.scss",
+  "name": "getbasis",
+  "version": "1.0.0",
+  "main": "src/stylus/basis.styl",
   "author": "inc2734",
   "contributors": [
     "Toro_Unit"
   ],
   "license": "MIT",
-  "homepage": "http://sass-basis.github.io/",
+  "homepage": "http://getbasis.github.io/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sass-basis/basis"
+    "url": "https://github.com/getbasis/basis"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.7",
     "cssnano": "^3.7.3",
     "gulp": "^3.9.1",
     "gulp-cli": "^1.2.2",
+    "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2"
+    "gulp-stylus": "^2.5.0",
+    "stylus": "^0.54.5"
   },
   "scripts": {
     "gulp": "gulp",
     "build": "gulp build",
     "release": "gulp release",
-    "sass-test": "scss tests/tests.scss"
+    "stylus-test": "stylus tests/tests.styl && cat tests/tests.css",
+    "stylus": "stylus"
+  },
+  "dependencies": {
+    "normalize.css": "^4.2.0"
   }
 }

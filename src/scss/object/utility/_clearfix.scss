@@ -1,5 +1,0 @@
-@if (not bs-is-use-mixin-only()) {
-  .#{$bs-prefix}u-clearfix {
-    @include bs-clearfix();
-  }
-}

@@ -3,47 +3,47 @@ A lightweight responsive CSS framework based on flexible box ( flexbox ).
 
 <img src="https://avatars0.githubusercontent.com/u/18589717?v=3&s=200" alt="Basis" width="100" />
 
-* Document: http://sass-basis.github.io/
-* GitHub: https://github.com/sass-basis/basis/
-* Release: https://github.com/sass-basis/basis/releases/
+* Document: http://-basis.github.io/
+* GitHub: https://github.com/getbasis/basis/
+* Release: https://github.com/getbasis/basis/releases/
 
 ## Why it's awesome?
 
-* Basis isn't about a UI framework. Basis provides only basic frame of components. So you build a responsive web page quickly and easy to overwrite with your sass or css.
+* Basis isn't about a UI framework. Basis provides only basic frame of components. So you build a responsive web page quickly and easy to overwrite with your stylus or css.
 * CSS architecture of Basis is [FLOCSS](https://github.com/hiloki/flocss). So it is possible a modular approach.
 * Basis has incorporated the concept of vertical rhythm. So you can be a good-balanced design.
 * Flexible grid system. Clean because using a flexible box.
-* highly extensible. The core is only the basic components, it can be extended with [add-on](https://github.com/sass-basis).
+* highly extensible. The core is only the basic components, it can be extended with [add-on](https://github.com/getbasis).
 
 ## Demo ( HTML5 Templates )
-* integrity: http://sass-basis.github.io/integrity/
-* improve: http://sass-basis.github.io/improve/
-* affinity: http://sass-basis.github.io/affinity/
+* integrity: http://getbasis.github.io/integrity/
+* improve: http://getbasis.github.io/improve/
+* affinity: http://getbasis.github.io/affinity/
 
 ## Get started
 
 ### Using npm
 
-1. ```$ npm install sass-basis```
-2. Import basis.scss your Sass/SCSS.
-```scss
-@import /PATH/TO/node_modules/sass-basis/src/scss/basis;
+1. ```$ npm install getbasis```
+2. Import basis.styl your Stylus.
+```styl
+@import /PATH/TO/node_modules/getbasis/src/stylus/basis;
 ```
 
 IF you want to use build files, just do this.
 
 ```shell
-$ cd /PATH/TO/sass-basis
+$ cd /PATH/TO/getbasis
 $ npm install
-$ gulp build
+$ npm run gulp build
 ```
 
 ### Download from GitHub
 
-1. Download the basis from https://github.com/sass-basis/basis/releases
-2. Import basis.scss your Sass/SCSS.
-```scss
-@import /PATH/TO/basis/src/scss/basis;
+1. Download the basis from https://github.com/getbasis/basis/releases
+2. Import basis.styl your Stylus.
+```styl
+@import /PATH/TO/basis/src/stylus/basis;
 ```
 or Just this link.
 ```html
@@ -81,7 +81,7 @@ Pull request sent to the master branch doesn't merge.
 
 ## Third party licenses
 
-#### normalize.css v4.0.0
+#### normalize.css
 * MIT License
 * github.com/necolas/normalize.css
 

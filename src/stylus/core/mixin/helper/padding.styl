@@ -1,0 +1,65 @@
+//
+// Retrun padding
+//
+// @param  int  $coefficient-1
+// @param  int  $coefficient-1
+// @param  int  $coefficient-1
+// @param  int  $coefficient-1
+//
+bs-padding($coefficient-1, $coefficient-2 = null, $coefficient-3 = null, $coefficient-4 = null) {
+  if ($coefficient-2 == null && $coefficient-3 && null and $coefficient-4 && null) {
+    $padding = bs-space($bs-base-line-height, $coefficient-1, $bs-margin-coefficient);
+    padding: $padding;
+  } else if ($coefficient-3 == null && $coefficient-4 == null) {
+    $padding-vertical   = bs-space($bs-base-line-height, $coefficient-1, $bs-margin-coefficient);
+    $padding-horizontal = bs-space($bs-base-line-height, $coefficient-2, $bs-margin-coefficient);
+    padding: $padding-vertical $padding-horizontal;
+  } else if ($coefficient-4 == null) {
+    $padding-top        = bs-space($bs-base-line-height, $coefficient-1, $bs-margin-coefficient);
+    $padding-horizontal = bs-space($bs-base-line-height, $coefficient-2, $bs-margin-coefficient);
+    $padding-bottom     = bs-space($bs-base-line-height, $coefficient-3, $bs-margin-coefficient);
+    padding: $padding-top $padding-horizontal $padding-bottom;
+  } else {
+    $padding-top    = bs-space($bs-base-line-height, $coefficient-1, $bs-margin-coefficient);
+    $padding-right  = bs-space($bs-base-line-height, $coefficient-2, $bs-margin-coefficient);
+    $padding-bottom = bs-space($bs-base-line-height, $coefficient-3, $bs-margin-coefficient);
+    $padding-left   = bs-space($bs-base-line-height, $coefficient-4, $bs-margin-coefficient);
+    padding: $padding-top $padding-right $padding-bottom $padding-left;
+  }
+}
+
+//
+// Retrun padding-top
+//
+// @param  int  $coefficient
+//
+bs-padding-top($coefficient) {
+  padding-top: bs-space($bs-base-line-height, $coefficient, $bs-margin-coefficient);
+}
+
+//
+// Retrun padding-right
+//
+// @param  int  $coefficient
+//
+bs-padding-right($coefficient) {
+  padding-right: bs-space($bs-base-line-height, $coefficient, $bs-margin-coefficient);
+}
+
+//
+// Retrun padding-bottom
+//
+// @param  int  $coefficient
+//
+bs-padding-bottom($coefficient) {
+  padding-bottom: bs-space($bs-base-line-height, $coefficient, $bs-margin-coefficient);
+}
+
+//
+// Retrun padding-left
+//
+// @param  int  $coefficient
+//
+bs-padding-left($coefficient) {
+  padding-left: bs-space($bs-base-line-height, $coefficient, $bs-margin-coefficient);
+}

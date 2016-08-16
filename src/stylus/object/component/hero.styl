@@ -1,0 +1,33 @@
+.{$bs-prefix}c-hero {
+  bs-c-hero();
+
+  &--full {
+    height: 100vh;
+  }
+
+  &--cover {
+    bs-background-image-cover();
+  }
+
+  &--overlay {
+    bs-overlay(rgba(0, 0, 0, .7));
+  }
+
+  &--fixed {
+    +bs-bp-lg-only() {
+      bs-background-image-fixed();
+    }
+  }
+
+  &__header {
+    bs-c-hero__header();
+  }
+
+  &__content {
+    bs-c-hero__content();
+  }
+
+  &__footer {
+    bs-c-hero__footer();
+  }
+}

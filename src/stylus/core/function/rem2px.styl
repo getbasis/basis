@@ -1,0 +1,9 @@
+//
+// Return px from rem
+// @param   rem  $rem
+// @param   px   $base-font-size-px
+// @return  px
+//
+bs-rem2px($rem, $base-font-size-px = $bs-base-font-size-px) {
+  return bs-strip-unit($rem) * $base-font-size-px;
+}

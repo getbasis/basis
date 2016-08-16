@@ -1,0 +1,27 @@
+.{$bs-prefix}c-media {
+  bs-c-media();
+
+  &--middle {
+    align-items: center;
+  }
+
+  &__figure {
+    bs-c-media__figure();
+  }
+
+  &__body {
+    bs-c-media__body();
+
+    > .c-media {
+      margin-top: $bs-c-media-margin;
+    }
+  }
+
+  &--reverse {
+    .c-media__figure {
+      margin-right: 0;
+      margin-left: $bs-c-media-margin;
+      order: 1;
+    }
+  }
+}

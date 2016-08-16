@@ -1,0 +1,17 @@
+/*!
+ * Name: Basis v1.0.0
+ * Description: The flexbox based CSS framework.
+ * Author: Takashi Kitajima ( inc2734 )
+ * Author URL: http://2inc.org
+ * GitHub Repository: https://github.com/getbasis/basis
+ * License: MIT
+ */
+
+@import 'core/*';
+
+if (! bs-is-use-mixin-only()) {
+  @import '../../node_modules/normalize.css/normalize.css';
+  @import 'foundation/*';
+  @import 'object/component/*';
+  @import 'object/utility/*';
+}
