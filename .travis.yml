@@ -18,6 +18,7 @@ before_script:
 script:
   - cd release
   - ls | xargs rm -rf
+  - rm -rf .gitignore .travis.yml
   - cd ../
   - npm run release
 after_success:
