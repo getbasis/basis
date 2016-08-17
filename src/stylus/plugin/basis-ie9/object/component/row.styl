@@ -4,6 +4,13 @@
   width: 100%;
   font-size: 0;
 
+  &__col {
+    font-size: bs-rem2px($bs-base-font-size);
+    display: table-cell;
+    text-align: left;
+    vertical-align: top;
+  }
+
   &--reverse {
     direction: rtl;
 
@@ -114,14 +121,6 @@
       }
     }
   }
-
-  &__col {
-    font-size: bs-rem2px($bs-base-font-size);
-    // display: inline-block;
-    display: table-cell;
-    text-align: left;
-    vertical-align: top;
-  }
 }
 
 for $size, $screen-min in $bs-sizes {
@@ -149,34 +148,8 @@ for $size, $screen-min in $bs-sizes {
       display: inline-block;
       width: 100%;
     }
-  }
-}
 
-.{$bs-prefix}c-row__col {
-  for $size, $screen-min in $bs-sizes {
-    +bs-bp-min($screen-min) {
-      $prefix = bs-bp-prefix($size);
-
-      for $max_columns in ($bs-min-columns..$bs-max-columns) {
-        for $i in range(1, $max_columns) {
-          $gcd = bs-gcd($i, $max_columns);
-
-          &{$prefix}-{$i}-{$max_columns} {
-            if ($i != $max_columns) {
-              @extend $_bs-item{$prefix}-gcd-{$i / $gcd}-{$max_columns / $gcd};
-            } else {
-              @extend $_bs-item{$prefix}-full;
-            }
-          }
-
-          if ($i < $max_columns) {
-            &{$prefix}-offset-{$i}-{$max_columns} {
-              @extend $_bs-item{$prefix}-offset-gcd-{$i / $gcd}-{$max_columns / $gcd};
-            }
-          }
-        }
-      }
-
+    .{$bs-prefix}c-row__col {
       &{$prefix}-auto {
         // Not supported.
       }
@@ -195,6 +168,34 @@ for $size, $screen-min in $bs-sizes {
 
       &{$prefix}-fit {
         // Not supported.
+      }
+    }
+  }
+}
+
+.{$bs-prefix}c-row__col {
+  for $size, $screen-min in $bs-sizes {
+    +bs-bp-min($screen-min) {
+      $prefix = bs-bp-prefix($size);
+
+      for $max_columns in range($bs-min-columns, $bs-max-columns) {
+        for $i in range(1, $max_columns) {
+          $gcd = bs-gcd($i, $max_columns);
+
+          &{$prefix}-{$i}-{$max_columns} {
+            if ($i != $max_columns) {
+              @extend $_bs-item{$prefix}-gcd-{$i / $gcd}-{$max_columns / $gcd};
+            } else {
+              @extend $_bs-item{$prefix}-full;
+            }
+          }
+
+          if ($i < $max_columns) {
+            &{$prefix}-offset-{$i}-{$max_columns} {
+              @extend $_bs-item{$prefix}-offset-gcd-{$i / $gcd}-{$max_columns / $gcd};
+            }
+          }
+        }
       }
     }
   }
