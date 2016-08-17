@@ -5,10 +5,11 @@
 // @param   second|milisecond  $delay: 0  animate time
 //
 bs-bounce-vertical($px, $delay = 0) {
+  $keyframe-name = bs-bounce-vertical- + $px;
   position: relative;
-  animation: bs-bounce-vertical- + $px $delay;
+  animation: $keyframe-name $delay;
 
-  @keyframes bs-bounce-vertical-{$px} {
+  @keyframes {$keyframe-name} {
     0%   { top: ($px * -1); }
     25%  { top: $px; }
     50%  { top: ($px / 2 * -1); }
@@ -38,10 +39,11 @@ bs-vibrate-vertical() {
 // @param   second|milisecond  $delay: 0  animate time
 //
 bs-bounce-horizontal($px, $delay = 0) {
+  $keyframe-name = bs-bounce-horizontal- + $px;
   position: relative;
-  animation: bs-bounce-horizontal- + $px $delay;
+  animation: $keyframe-name $delay;
 
-  @keyframes bs-bounce-horizontal-{$px} {
+  @keyframes {$keyframe-name} {
     0%   { left: ($px * -1); }
     25%  { left: $px; }
     50%  { left: ($px / 2 * -1); }
@@ -72,10 +74,11 @@ bs-vibrate-horizontal() {
 //
 bs-bounce-scale($float, $delay = 0) {
   $suffix = bs-strip-unit(percentage($float));
-  animation: bs-bounce-scale- + $suffix $delay ease-out;
+  $keyframe-name = bs-bounce-scale- + $suffix;
+  animation: $keyframe-name $delay ease-out;
   $scale = ($float - 1);
 
-  @keyframes bs-bounce-scale-{$suffix} {
+  @keyframes {$keyframe-name} {
     0%   { transform: scale(1); }
     25%  { transform: scale($float); }
     50%  { transform: scale(1); }
