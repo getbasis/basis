@@ -1,19 +1,19 @@
 //
 // Bounce vertical
 //
-// @param   length             $px        bounce size
-// @param   second|milisecond  $delay: 0  animate time
+// @param   length             px        bounce size
+// @param   second|milisecond  delay: 0  animate time
 //
-bs-bounce-vertical($px, $delay = 0) {
-  $keyframe-name = bs-bounce-vertical- + $px;
+bs-bounce-vertical(px, delay = 0) {
+  keyframe-name = bs-bounce-vertical- + px;
   position: relative;
-  animation: $keyframe-name $delay;
+  animation: keyframe-name delay;
 
-  @keyframes {$keyframe-name} {
-    0%   { top: ($px * -1); }
-    25%  { top: $px; }
-    50%  { top: ($px / 2 * -1); }
-    75%  { top: ($px / 2); }
+  @keyframes {keyframe-name} {
+    0%   { top: (px * -1); }
+    25%  { top: px; }
+    50%  { top: (px / 2 * -1); }
+    75%  { top: (px / 2); }
     100% { top: 0; }
   }
 }
@@ -35,19 +35,19 @@ bs-vibrate-vertical() {
 //
 // Bounce horizontal
 //
-// @param   length             $px        bounce size
-// @param   second|milisecond  $delay: 0  animate time
+// @param   length             px        bounce size
+// @param   second|milisecond  delay: 0  animate time
 //
-bs-bounce-horizontal($px, $delay = 0) {
-  $keyframe-name = bs-bounce-horizontal- + $px;
+bs-bounce-horizontal(px, delay = 0) {
+  keyframe-name = bs-bounce-horizontal- + px;
   position: relative;
-  animation: $keyframe-name $delay;
+  animation: keyframe-name delay;
 
-  @keyframes {$keyframe-name} {
-    0%   { left: ($px * -1); }
-    25%  { left: $px; }
-    50%  { left: ($px / 2 * -1); }
-    75%  { left: ($px / 2); }
+  @keyframes {keyframe-name} {
+    0%   { left: (px * -1); }
+    25%  { left: px; }
+    50%  { left: (px / 2 * -1); }
+    75%  { left: (px / 2); }
     100% { left: 0; }
   }
 }
@@ -69,20 +69,20 @@ bs-vibrate-horizontal() {
 //
 // Bounce scale
 //
-// @param   float              $px        bounce size
-// @param   second|milisecond  $delay: 0  animate time
+// @param   float              px        bounce size
+// @param   second|milisecond  delay: 0  animate time
 //
-bs-bounce-scale($float, $delay = 0) {
-  $suffix = bs-strip-unit(percentage($float));
-  $keyframe-name = bs-bounce-scale- + $suffix;
-  animation: $keyframe-name $delay ease-out;
-  $scale = ($float - 1);
+bs-bounce-scale(float, delay = 0) {
+  suffix = bs-strip-unit(percentage(float));
+  keyframe-name = bs-bounce-scale- + suffix;
+  animation: keyframe-name delay ease-out;
+  scale = (float - 1);
 
-  @keyframes {$keyframe-name} {
+  @keyframes {keyframe-name} {
     0%   { transform: scale(1); }
-    25%  { transform: scale($float); }
+    25%  { transform: scale(float); }
     50%  { transform: scale(1); }
-    75%  { transform: scale((1 + ($float - 1) / 2)); }
+    75%  { transform: scale((1 + (float - 1) / 2)); }
     100% { transform: scale(1); }
   }
 }
@@ -113,7 +113,7 @@ bs-extend-underline() {
   content: '';
   width: 0;
   height: 1px;
-  transition: width $bs-transition-duration $bs-transition-function-timing;
+  transition: width bs-transition-duration bs-transition-function-timing;
   transform: translateX(-50%);
-  background-color: $bs-color-text;
+  background-color: bs-color-text;
 }

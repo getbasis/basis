@@ -15,19 +15,19 @@
 }
 
 +bs-test('[function] bs-px2rem()') {
-	$rem = bs-px2rem(16px, 16px);
-	bs-assert-equals(1rem, $rem);
+	rem = bs-px2rem(16px, 16px);
+	bs-assert-equals(1rem, rem);
 
-	$rem = bs-px2rem(16px, 10px);
-	bs-assert-equals(1.6rem, $rem);
+	rem = bs-px2rem(16px, 10px);
+	bs-assert-equals(1.6rem, rem);
 }
 
 +bs-test('[function] bs-rem2px()') {
-	$rem = bs-rem2px(1rem, 16px);
-	bs-assert-equals(16px, $rem);
+	rem = bs-rem2px(1rem, 16px);
+	bs-assert-equals(16px, rem);
 
-	$rem = bs-rem2px(1rem, 10px);
-	bs-assert-equals(10px, $rem);
+	rem = bs-rem2px(1rem, 10px);
+	bs-assert-equals(10px, rem);
 }
 
 +bs-test('[function] bs-strip-unit()') {

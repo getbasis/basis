@@ -14,13 +14,13 @@
 // </div>
 //
 
-$bs-input-group-border-radius ?= $bs-border-radius;
-$bs-input-group-border-color  ?= bs-light($bs-color-gray);
-$bs-input-group-addon-padding ?= ($bs-base-font-size / 2);
-$bs-input-group-addon-background-color ?= bs-lighter($bs-color-gray);
+bs-input-group-border-radius ?= bs-border-radius;
+bs-input-group-border-color  ?= bs-light(bs-color-gray);
+bs-input-group-addon-padding ?= (bs-base-font-size / 2);
+bs-input-group-addon-background-color ?= bs-lighter(bs-color-gray);
 
 $bs-input-group {
-  border-radius: $bs-input-group-border-radius;
+  border-radius: bs-input-group-border-radius;
   display: flex;
   flex-wrap: nowrap;
 
@@ -29,25 +29,25 @@ $bs-input-group {
   }
 
   > :first-child {
-    border-radius: $bs-input-group-border-radius 0 0 $bs-input-group-border-radius;
+    border-radius: bs-input-group-border-radius 0 0 bs-input-group-border-radius;
   }
 
   > :last-child {
-    border-radius: 0 $bs-input-group-border-radius $bs-input-group-border-radius 0;
+    border-radius: 0 bs-input-group-border-radius bs-input-group-border-radius 0;
   }
 
   &__addon {
     flex: 0 1 0;
-    padding: $bs-input-group-addon-padding;
-    background-color: $bs-input-group-addon-background-color;
-    border: 1px solid $bs-input-group-border-color;
+    padding: bs-input-group-addon-padding;
+    background-color: bs-input-group-addon-background-color;
+    border: 1px solid bs-input-group-border-color;
     border-radius: 0;
   }
 
   &__field {
     display: flex;
     flex: 1;
-    border: 1px solid $bs-input-group-border-color;
+    border: 1px solid bs-input-group-border-color;
   }
 
   &__control {
@@ -62,7 +62,7 @@ $bs-input-group {
     @extend $bs-btn;
     flex: 0 1 0;
     overflow: visible;
-    border: 1px solid $bs-input-group-border-color;
+    border: 1px solid bs-input-group-border-color;
     border-radius: 0;
   }
 }

@@ -10,17 +10,17 @@
 // </div>
 //
 
-$bs-container-margin ?= $bs-base-line-height;
+bs-container-margin ?= bs-base-line-height;
 
 $bs-container-fluid {
   margin-right: auto;
   margin-left: auto;
-  padding-right: ($bs-container-margin / 2);
-  padding-left: ($bs-container-margin / 2);
+  padding-right: (bs-container-margin / 2);
+  padding-left: (bs-container-margin / 2);
 
   +bs-bp-md-min() {
-    padding-right: $bs-container-margin;
-    padding-left: $bs-container-margin;
+    padding-right: bs-container-margin;
+    padding-left: bs-container-margin;
   }
 }
 
@@ -36,12 +36,12 @@ $bs-container-fluid {
 // </div>
 //
 
-$bs-container-max-width ?= 75rem;
+bs-container-max-width ?= 75rem;
 
 $bs-container {
   @extend $bs-container-fluid;
 
   +bs-bp-lg-only() {
-    max-width: $bs-container-max-width;
+    max-width: bs-container-max-width;
   }
 }
