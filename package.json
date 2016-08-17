@@ -6,6 +6,15 @@
   "contributors": [
     "Toro_Unit"
   ],
+  "keywords": [
+    "css",
+    "stylus",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
   "license": "MIT",
   "homepage": "http://getbasis.github.io/",
   "repository": {
