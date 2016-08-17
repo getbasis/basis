@@ -1,0 +1,69 @@
+//
+// Adding margin for the row
+//
+// @param  int  coefficient
+//
+bs-row-margin(coefficient) {
+  margin-right: (bs-base-line-height * coefficient / 2 * -1);
+  margin-left: (bs-base-line-height * coefficient / 2 * -1);
+  margin-bottom: (bs-base-line-height * -1);
+}
+
+//
+// Adding margin for the column
+//
+// @param  int  coefficient
+//
+bs-col-margin(coefficient) {
+  padding-right: (bs-base-line-height * coefficient / 2);
+  padding-left: (bs-base-line-height * coefficient / 2);
+  margin-bottom: bs-base-line-height;
+}
+
+//
+// Setting column width
+//
+// @param  length  width
+//
+bs-col-width(width) {
+  if (width == auto) {
+    flex: auto;
+    max-width: 100%;
+  } else if (width == 1) {
+    flex: 1;
+    max-width: 100%;
+  } else {
+    flex: 0 1 width;
+    max-width: width;
+  }
+}
+
+//
+// Setting column width
+//
+// @param  int  columns  molecule column size
+// @param  int  max-columns  denominator column size
+//
+bs-col(columns = null, max-columns = null) {
+  if (columns != null && max-columns != null) {
+    width = percentage(columns / max-columns);
+    bs-col-width(width);
+  } else {
+    bs-col-width(1);
+  }
+}
+
+//
+// Setting column offset
+//
+// @param  int  columns  molecule offset size
+// @param  int  max-columns  denominator offset size
+//
+bs-col-offset(columns = null, max-columns = null) {
+  if (columns != null && max-columns != null) {
+    margin-left: percentage(columns / max-columns);
+  }
+  if (columns == 0) {
+    margin-left: 0;
+  }
+}

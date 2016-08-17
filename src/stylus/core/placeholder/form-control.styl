@@ -1,0 +1,36 @@
+//
+// Form control component
+//
+// .c-form-control {
+//     @extend $bs-form-control;
+// }
+//
+// <input type="text" class="c-form-control" />
+//
+
+bs-form-control-border        ?= 1px solid bs-light(bs-color-gray);
+bs-form-control-border-radius ?= bs-border-radius;
+bs-form-control-padding       ?= (bs-base-line-height / 4) (bs-base-line-height / 2);
+bs-form-control-disabled-background-color ?= bs-lighter(bs-color-gray);
+
+$bs-form-control {
+  background-color: #fff;
+  border: bs-form-control-border;
+  border-radius: bs-form-control-border-radius;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .035);
+  padding: bs-form-control-padding;
+
+  &[disabled] {
+    background-color: bs-form-control-disabled-background-color;
+    cursor: not-allowed;
+  }
+
+  &[readonly] {
+    background-color: bs-form-control-disabled-background-color;
+  }
+
+  textarea& {
+    height: auto;
+    width: 100%;
+  }
+}

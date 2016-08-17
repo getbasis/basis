@@ -1,14 +1,14 @@
-bs-test($message) {
+bs-test(message) {
 	[Test] {
-		message: $message;
+		message: message;
 		{block}
 	}
 }
 
-bs-assert-equals($expected, $actual) {
-	if ($expected == $actual) {
+bs-assert-equals(expected, actual) {
+	if (expected == actual) {
 		content: 'OK!';
 	} else {
-		content: 'FAILURES! Expected: ' + $expected + '  Actual: ' + $actual;
+		content: 'FAILURES! Expected: ' + expected + '  Actual: ' + actual;
 	}
 }

@@ -1,13 +1,13 @@
 //
 // Return min-width media query
 //
-// @param  length  $min  width
+// @param  length  min  width
 //
-bs-bp-min($min) {
-  if ($min == $bs-screen-sm-min) {
+bs-bp-min(min) {
+  if (min == bs-screen-sm-min) {
     {block};
   } else {
-    @media (min-width: $min) {
+    @media (min-width: min) {
       {block};
     }
   }
@@ -16,28 +16,28 @@ bs-bp-min($min) {
 //
 // Return max-width media query
 //
-// @param  length  $max  width
+// @param  length  max  width
 //
-bs-bp-max($max) {
-  @media (max-width: $max) {
+bs-bp-max(max) {
+  @media (max-width: max) {
     {block};
   }
 }
 
 //
-// Return $bs-screen-md-min media query
+// Return bs-screen-md-min media query
 //
 bs-bp-md-min() {
-  +bs-bp-min($bs-screen-md-min) {
+  +bs-bp-min(bs-screen-md-min) {
     {block};
   }
 }
 
 //
-// Return $bs-screen-md-max media query
+// Return bs-screen-md-max media query
 //
 bs-bp-md-max() {
-  +bs-bp-max($bs-screen-md-max) {
+  +bs-bp-max(bs-screen-md-max) {
     {block};
   }
 }
@@ -46,7 +46,7 @@ bs-bp-md-max() {
 // Return media query for smartphone size
 //
 bs-bp-sm-only() {
-  +bs-bp-max($bs-screen-sm-max) {
+  +bs-bp-max(bs-screen-sm-max) {
     {block};
   }
 }
@@ -55,7 +55,7 @@ bs-bp-sm-only() {
 // Return media query for tablet size
 //
 bs-bp-md-only() {
-  @media (min-width: $bs-screen-md-min) and (max-width: $bs-screen-md-max) {
+  @media (min-width: bs-screen-md-min) and (max-width: bs-screen-md-max) {
     {block};
   }
 }
@@ -66,7 +66,7 @@ bs-bp-md-only() {
 // @return  string  media query
 //
 bs-bp-lg-only() {
-  +bs-bp-min($bs-screen-lg-min) {
+  +bs-bp-min(bs-screen-lg-min) {
     {block};
   }
 }

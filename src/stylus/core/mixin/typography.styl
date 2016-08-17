@@ -1,0 +1,75 @@
+//
+// Return px and rem font-sizes
+//
+// @param  rem|px  font-size
+//
+bs-font-size(font-size) {
+  unit = unit(font-size);
+  if (unit == 'px') {
+    font-size: font-size;
+    font-size: bs-px2rem(font-size);
+  } else if (unit == 'rem') {
+    font-size: bs-rem2px(font-size);
+    font-size: font-size;
+  } else {
+    font-size: font-size;
+  }
+}
+
+//
+// Return line height ( px ) for vertical rhythum
+//
+// @param   px   font-size
+// @param   int  coefficient
+// @return  int
+//
+bs-vertical-rhythm(font-size, coefficient = 1) {
+  between-lines    = bs-strip-unit(bs-rem2px(bs-between-lines));
+  base-line-height = bs-strip-unit(bs-rem2px(bs-base-line-height));
+  base-font-size   = bs-strip-unit(bs-rem2px(bs-base-font-size));
+  font-size        = bs-strip-unit(font-size);
+
+  line-height = font-size + (between-lines * coefficient);
+
+  if (line-height < font-size + (between-lines * 2)) {
+    return bs-vertical-rhythm(font-size, (coefficient + 1));
+  } else {
+    if (font-size % base-font-size == 0 && font-size > base-font-size) {
+      return line-height - (between-lines / 2);
+    }
+    return line-height;
+  }
+}
+
+//
+// Return line-height for vertical rhythum
+//
+// @param  rem|px  font-size  font size
+//
+bs-line-height(font-size) {
+  unit = unit(font-size);
+  px   = font-size;
+  if (unit == 'rem') {
+    px = bs-rem2px(font-size);
+  }
+  line-height: (bs-vertical-rhythm(px) / bs-strip-unit(px));
+}
+
+//
+// Return px and rem font-sizes and line-height for vertical rhythum
+//
+// @param  rem|px  font-size
+//
+// h1 {
+//     bs-font-size-line-height(1.5rem);
+// }
+//
+bs-font-size-line-height(font-size) {
+  unit = unit(font-size);
+  rem  = font-size;
+  if (unit == 'px') {
+    rem = bs-px2rem(font-size);
+  }
+  bs-font-size(rem);
+  bs-line-height(rem);
+}

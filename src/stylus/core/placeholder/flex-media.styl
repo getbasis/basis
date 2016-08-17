@@ -1,0 +1,49 @@
+//
+// Media component. When smartphone size, vertically aligned.
+//
+// .c-flex-media {
+//     @extend $bs-flex-media;
+// }
+//
+// <div class="c-flex-media">
+//    <div class="c-flex-media__figure">
+//        <img ... />
+//    </div>
+//    <div class="c-flex-media__body">
+//        ...
+//    </div>
+// </div>
+//
+
+$bs-flex-media {
+  &__figure {
+    bs-margin(0, 0, .5);
+    bs-background-image-cover();
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  +bs-bp-md-min() {
+    display: flex;
+
+    &__figure {
+      bs-margin(0, 1, 0, 0);
+      flex: none;
+
+      > * {
+        vertical-align: top;
+        margin-top: bs-between-lines;
+      }
+
+      > img {
+        width: auto;
+      }
+    }
+
+    &__body {
+      flex: 1;
+    }
+  }
+}

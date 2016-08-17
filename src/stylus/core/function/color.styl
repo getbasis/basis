@@ -1,59 +1,59 @@
 //
 // A little brighten
 //
-// @param   hex  $hex
+// @param   hex  hex
 // @return  hex
 //
-bs-light($hex) {
-  return lighten($hex, 20%);
+bs-light(hex) {
+  return lightness(hex, (lightness(hex) + 20%));
 }
 
 //
 // Brighten
 //
-// @param   hex  $hex
+// @param   hex  hex
 // @return  hex
 //
-bs-lighter($hex) {
-  return lighten($hex, 33.5%);
+bs-lighter(hex) {
+  return lightness(hex, (lightness(hex) + 33.5%));
 }
 
 //
 // To very brighten
 //
-// @param   hex  $hex
+// @param   hex  hex
 // @return  hex
 //
-bs-lightest($hex) {
-  return lighten($hex, 37%);
+bs-lightest(hex) {
+  return lightness(hex, (lightness(hex) + 37%));
 }
 
 //
 // A little darken
 //
-// @param   hex  $hex
+// @param   hex  hex
 // @return  hex
 //
-bs-dark($hex) {
-  return darken($hex, 20%);
+bs-dark(hex) {
+  return darken(hex, (lightness(hex) - 20%));
 }
 
 //
 // Darken
 //
-// @param   hex  $hex
+// @param   hex  hex
 // @return  hex
 //
-bs-darker($hex) {
-  return darken($hex, 33.5%);
+bs-darker(hex) {
+  return darken(hex, (lightness(hex) - 33.5%));
 }
 
 //
 // To very darken
 //
-// @param   hex  $hex
+// @param   hex  hex
 // @return  hex
 //
-bs-darkest($hex) {
-  return darken($hex, 37%);
+bs-darkest(hex) {
+  return darken(hex, (lightness(hex) - 37%));
 }

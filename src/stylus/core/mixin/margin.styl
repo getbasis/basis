@@ -1,0 +1,65 @@
+//
+// Retrun margin
+//
+// @param  int  coefficient-1
+// @param  int  coefficient-1
+// @param  int  coefficient-1
+// @param  int  coefficient-1
+//
+bs-margin(coefficient-1, coefficient-2 = null, coefficient-3 = null, coefficient-4 = null) {
+  if (coefficient-2 == null && coefficient-3 == null && coefficient-4 == null) {
+    margin = bs-space(bs-base-line-height, coefficient-1, bs-margin-coefficient);
+    margin: margin;
+  } else if (coefficient-3 == null && coefficient-4 == null) {
+    margin-vertical   = bs-space(bs-base-line-height, coefficient-1, bs-margin-coefficient);
+    margin-horizontal = bs-space(bs-base-line-height, coefficient-2, bs-margin-coefficient);
+    margin: margin-vertical margin-horizontal;
+  } else if (coefficient-4 == null) {
+    margin-top        = bs-space(bs-base-line-height, coefficient-1, bs-margin-coefficient);
+    margin-horizontal = bs-space(bs-base-line-height, coefficient-2, bs-margin-coefficient);
+    margin-bottom     = bs-space(bs-base-line-height, coefficient-3, bs-margin-coefficient);
+    margin: margin-top margin-horizontal margin-bottom;
+  } else {
+    margin-top    = bs-space(bs-base-line-height, coefficient-1, bs-margin-coefficient);
+    margin-right  = bs-space(bs-base-line-height, coefficient-2, bs-margin-coefficient);
+    margin-bottom = bs-space(bs-base-line-height, coefficient-3, bs-margin-coefficient);
+    margin-left   = bs-space(bs-base-line-height, coefficient-4, bs-margin-coefficient);
+    margin: margin-top margin-right margin-bottom margin-left;
+  }
+}
+
+//
+// Retrun margin-top
+//
+// @param  int  coefficient
+//
+bs-margin-top(coefficient) {
+  margin-top: bs-space(bs-base-line-height, coefficient, bs-margin-coefficient);
+}
+
+//
+// Retrun margin-right
+//
+// @param  int  coefficient
+//
+bs-margin-right(coefficient) {
+  margin-right: bs-space(bs-base-line-height, coefficient, bs-margin-coefficient);
+}
+
+//
+// Retrun margin-bottom
+//
+// @param  int  coefficient
+//
+bs-margin-bottom(coefficient) {
+  margin-bottom: bs-space(bs-base-line-height, coefficient, bs-margin-coefficient);
+}
+
+//
+// Retrun margin-left
+//
+// @param  int  coefficient
+//
+bs-margin-left(coefficient) {
+  margin-left: bs-space(bs-base-line-height, coefficient, bs-margin-coefficient);
+}

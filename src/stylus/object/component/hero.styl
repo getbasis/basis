@@ -1,5 +1,5 @@
-.{$bs-prefix}c-hero {
-  bs-c-hero();
+.{bs-prefix}c-hero {
+  @extend $bs-hero;
 
   &--full {
     height: 100vh;
@@ -17,17 +17,5 @@
     +bs-bp-lg-only() {
       bs-background-image-fixed();
     }
-  }
-
-  &__header {
-    bs-c-hero__header();
-  }
-
-  &__content {
-    bs-c-hero__content();
-  }
-
-  &__footer {
-    bs-c-hero__footer();
   }
 }

@@ -1,0 +1,27 @@
+//
+// Button component
+//
+// .c-btn {
+//     @extend $bs-btn;
+// }
+//
+// <a class="c-btn" role="button">btn</a>
+//
+
+bs-btn-border     ?= 1px solid bs-light(bs-color-gray);
+bs-btn-text-color ?= bs-color-text;
+bs-btn-padding    ?= (bs-base-font-size / 2) (bs-base-font-size * 2);
+
+$bs-btn {
+  background-color: #fff;
+  border: bs-btn-border;
+  color: bs-btn-text-color;
+  cursor: pointer;
+  display: inline-block;
+  padding: bs-btn-padding;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+}

@@ -1,0 +1,42 @@
+//
+// Default font size
+// If html { font-size: 62.5% }, set 10px
+// @type  px
+//
+bs-base-font-size-px ?= 16px;
+
+//
+// Default font size
+// @type  rem
+//
+bs-base-font-size = 1rem;
+
+//
+// Between the character and line of line-height
+// @type  rem
+//
+bs-between-lines ?= (bs-base-font-size / 4);
+
+//
+// Default line height
+// @type  rem
+//
+bs-base-line-height ?= (bs-base-font-size + bs-between-lines * 2);
+
+//
+// Margin coefficient
+// @type  int
+//
+bs-margin-coefficient ?= 1;
+
+//
+// The minimum number of columns
+// @type  int
+//
+bs-min-columns ?= 1;
+
+//
+// The maximum number of columns
+// @type  int
+//
+bs-max-columns ?= 12;

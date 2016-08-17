@@ -1,4 +1,4 @@
-.{$bs-prefix}c-flex-media {
+.{bs-prefix}c-flex-media {
   +bs-bp-md-min() {
 	  display: table;
 	  width: 100%;
@@ -9,7 +9,7 @@
 	    display: table-cell;
 	    vertical-align: top;
 	    margin-right: 0;
-	    padding-right: $bs-c-media-margin;
+      bs-padding-right(1);
     }
   }
 
@@ -26,7 +26,7 @@
 	    text-align: left;
 	    direction: rtl;
 
-	    > .{$bs-prefix}c-media__body {
+	    > .{bs-prefix}c-media__body {
 	      text-align: left;
 	      direction: ltl;
 	    }

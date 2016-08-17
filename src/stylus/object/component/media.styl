@@ -1,26 +1,19 @@
-.{$bs-prefix}c-media {
-  bs-c-media();
+.{bs-prefix}c-media {
+  @extend $bs-media;
+
+  &__body {
+    > .{bs-prefix}c-media {
+      bs-margin-top(1);
+    }
+  }
 
   &--middle {
     align-items: center;
   }
 
-  &__figure {
-    bs-c-media__figure();
-  }
-
-  &__body {
-    bs-c-media__body();
-
-    > .c-media {
-      margin-top: $bs-c-media-margin;
-    }
-  }
-
   &--reverse {
-    .c-media__figure {
-      margin-right: 0;
-      margin-left: $bs-c-media-margin;
+    .{bs-prefix}c-media__figure {
+      bs-margin(0, 0, 0, 1);
       order: 1;
     }
   }

@@ -10,7 +10,7 @@
 // }
 //
 bs-transition-all() {
-  transition: all $bs-transition-duration $bs-transition-function-timing;
+  transition: all bs-transition-duration bs-transition-function-timing;
 }
 
 //
@@ -26,8 +26,8 @@ bs-transition-all() {
 // }
 //
 bs-transition-size() {
-  transition: width $bs-transition-duration $bs-transition-function-timing,
-              height $bs-transition-duration $bs-transition-function-timing;
+  transition: width bs-transition-duration bs-transition-function-timing,
+              height bs-transition-duration bs-transition-function-timing;
 }
 
 //
@@ -42,6 +42,6 @@ bs-transition-size() {
 // }
 //
 bs-transition-opacity() {
-  transition: opacity $bs-transition-duration $bs-transition-function-timing;
+  transition: opacity bs-transition-duration bs-transition-function-timing;
   backface-visibility: hidden;
 }

@@ -1,0 +1,35 @@
+//
+// Media component
+//
+// .c-media {
+//     @extend $bs-media;
+// }
+//
+// <div class="c-media">
+//    <div class="c-media__figure">
+//        <img ... />
+//    </div>
+//    <div class="c-media__body">
+//        ...
+//    </div>
+// </div>
+//
+
+$bs-media {
+  display: flex;
+
+  &__figure {
+    bs-margin(0, 1, 0, 0);
+    flex: none;
+    bs-background-image-cover();
+
+    > * {
+      vertical-align: top;
+      margin-top: bs-between-lines;
+    }
+  }
+
+  &__body {
+    flex: 1;
+  }
+}
