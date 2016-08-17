@@ -5,7 +5,7 @@
 // @return  hex
 //
 bs-light($hex) {
-  return lightness($hex, 20%);
+  return lightness($hex, (lightness($hex) + 20%));
 }
 
 //
@@ -15,7 +15,7 @@ bs-light($hex) {
 // @return  hex
 //
 bs-lighter($hex) {
-  return lightness($hex, 33.5%);
+  return lightness($hex, (lightness($hex) + 33.5%));
 }
 
 //
@@ -25,7 +25,7 @@ bs-lighter($hex) {
 // @return  hex
 //
 bs-lightest($hex) {
-  return lightness($hex, 37%);
+  return lightness($hex, (lightness($hex) + 37%));
 }
 
 //
@@ -35,7 +35,7 @@ bs-lightest($hex) {
 // @return  hex
 //
 bs-dark($hex) {
-  return darken($hex, 20%);
+  return darken($hex, (lightness($hex) - 20%));
 }
 
 //
@@ -45,7 +45,7 @@ bs-dark($hex) {
 // @return  hex
 //
 bs-darker($hex) {
-  return darken($hex, 33.5%);
+  return darken($hex, (lightness($hex) - 33.5%));
 }
 
 //
@@ -55,5 +55,5 @@ bs-darker($hex) {
 // @return  hex
 //
 bs-darkest($hex) {
-  return darken($hex, 37%);
+  return darken($hex, (lightness($hex) - 37%));
 }
