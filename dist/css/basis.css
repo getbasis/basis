@@ -1,5 +1,5 @@
 /*
- * Name: Basis v1.0.3
+ * Name: Basis v1.0.4
  * Description: The flexbox based CSS framework.
  * Author: Takashi Kitajima ( inc2734 )
  * Author URL: http://2inc.org
@@ -899,12 +899,12 @@ textarea._c-input-group__control {
 ._c-row--collapse {
   margin-right: 0rem;
   margin-left: 0rem;
-  margin-bottom: -1.5rem;
+  margin-bottom: 0rem;
 }
 ._c-row--collapse > ._c-row__col {
   padding-right: 0rem;
   padding-left: 0rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0rem;
 }
 ._c-row--margin {
   margin-right: -0.75rem;
@@ -919,22 +919,22 @@ textarea._c-input-group__control {
 ._c-row--margin-s {
   margin-right: -0.375rem;
   margin-left: -0.375rem;
-  margin-bottom: -1.5rem;
+  margin-bottom: -0.75rem;
 }
 ._c-row--margin-s > ._c-row__col {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 ._c-row--margin-l {
   margin-right: -1.5rem;
   margin-left: -1.5rem;
-  margin-bottom: -1.5rem;
+  margin-bottom: -3rem;
 }
 ._c-row--margin-l > ._c-row__col {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
 ._c-row--fill > ._c-row__col {
   display: -ms-flexbox;
@@ -993,12 +993,12 @@ textarea._c-input-group__control {
   ._c-row--md-collapse {
     margin-right: 0rem;
     margin-left: 0rem;
-    margin-bottom: -1.5rem;
+    margin-bottom: 0rem;
   }
   ._c-row--md-collapse > ._c-row__col {
     padding-right: 0rem;
     padding-left: 0rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0rem;
   }
   ._c-row--md-margin {
     margin-right: -0.75rem;
@@ -1013,22 +1013,22 @@ textarea._c-input-group__control {
   ._c-row--md-margin-s {
     margin-right: -0.375rem;
     margin-left: -0.375rem;
-    margin-bottom: -1.5rem;
+    margin-bottom: -0.75rem;
   }
   ._c-row--md-margin-s > ._c-row__col {
     padding-right: 0.375rem;
     padding-left: 0.375rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
   }
   ._c-row--md-margin-l {
     margin-right: -1.5rem;
     margin-left: -1.5rem;
-    margin-bottom: -1.5rem;
+    margin-bottom: -3rem;
   }
   ._c-row--md-margin-l > ._c-row__col {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
   }
   ._c-row--md-fill > ._c-row__col {
     display: -ms-flexbox;
@@ -1088,12 +1088,12 @@ textarea._c-input-group__control {
   ._c-row--lg-collapse {
     margin-right: 0rem;
     margin-left: 0rem;
-    margin-bottom: -1.5rem;
+    margin-bottom: 0rem;
   }
   ._c-row--lg-collapse > ._c-row__col {
     padding-right: 0rem;
     padding-left: 0rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0rem;
   }
   ._c-row--lg-margin {
     margin-right: -0.75rem;
@@ -1108,22 +1108,22 @@ textarea._c-input-group__control {
   ._c-row--lg-margin-s {
     margin-right: -0.375rem;
     margin-left: -0.375rem;
-    margin-bottom: -1.5rem;
+    margin-bottom: -0.75rem;
   }
   ._c-row--lg-margin-s > ._c-row__col {
     padding-right: 0.375rem;
     padding-left: 0.375rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
   }
   ._c-row--lg-margin-l {
     margin-right: -1.5rem;
     margin-left: -1.5rem;
-    margin-bottom: -1.5rem;
+    margin-bottom: -3rem;
   }
   ._c-row--lg-margin-l > ._c-row__col {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
   }
   ._c-row--lg-fill > ._c-row__col {
     display: -ms-flexbox;
