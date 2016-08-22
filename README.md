@@ -1,5 +1,5 @@
 # Basis
-A lightweight responsive CSS framework based on flexible box ( flexbox ).
+A lightweight responsive Stylus/CSS framework based on flexible box.
 
 <img src="https://avatars0.githubusercontent.com/u/18589717?v=3&s=200" alt="Basis" width="100" />
 

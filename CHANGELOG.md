@@ -1,5 +1,9 @@
 #Changelog
 
+## August 22, 2016 v1.0.4
+* Fix readme
+* Fix `._c-row` margin bug #1
+
 ## August 17, 2016 v1.0.3
 * Refactoring variable names
 

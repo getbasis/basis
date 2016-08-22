@@ -6,7 +6,7 @@
 bs-row-margin(coefficient) {
   margin-right: (bs-base-line-height * coefficient / 2 * -1);
   margin-left: (bs-base-line-height * coefficient / 2 * -1);
-  margin-bottom: (bs-base-line-height * -1);
+  margin-bottom: (bs-base-line-height * coefficient * -1);
 }
 
 //
@@ -17,7 +17,7 @@ bs-row-margin(coefficient) {
 bs-col-margin(coefficient) {
   padding-right: (bs-base-line-height * coefficient / 2);
   padding-left: (bs-base-line-height * coefficient / 2);
-  margin-bottom: bs-base-line-height;
+  margin-bottom: (bs-base-line-height * coefficient);
 }
 
 //
