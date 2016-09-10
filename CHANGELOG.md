@@ -1,5 +1,8 @@
 #Changelog
 
+## September 19, 2016 v1.0.5
+* Fix a bs-padding bug
+
 ## August 22, 2016 v1.0.4
 * Fix readme
 * Fix `._c-row` margin bug #1
