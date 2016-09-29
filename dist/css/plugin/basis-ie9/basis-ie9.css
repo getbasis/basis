@@ -1,32 +1,28 @@
 @media (min-width: 40em) {
-  ._c-flex-media {
+  ._c-flex-media:before,
+  ._c-flex-media:after {
+    content: " ";
     display: table;
-    width: 100%;
+  }
+  ._c-flex-media:after {
+    clear: both;
   }
 }
 @media (min-width: 40em) {
   ._c-flex-media__figure {
-    display: table-cell;
-    vertical-align: top;
-    margin-right: 0;
-    padding-right: 1.5rem;
+    display: block;
+    float: left;
   }
 }
 @media (min-width: 40em) {
   ._c-flex-media__body {
-    display: table-cell;
-    vertical-align: top;
-    width: 100%;
+    display: block;
+    overflow: hidden;
   }
 }
 @media (min-width: 40em) {
-  ._c-flex-media--reverse {
-    text-align: left;
-    direction: rtl;
-  }
-  ._c-flex-media--reverse > ._c-media__body {
-    text-align: left;
-    direction: ltl;
+  ._c-flex-media--reverse > ._c-flex-media__figure {
+    float: right;
   }
 }
 ._c-input-group {
@@ -46,36 +42,24 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
-._c-media {
+._c-media:before,
+._c-media:after {
+  content: " ";
   display: table;
-  width: 100%;
+}
+._c-media:after {
+  clear: both;
 }
 ._c-media__figure {
-  display: table-cell;
-  vertical-align: top;
-  margin-right: 0;
-  padding-right: 1.5rem;
+  display: block;
+  float: left;
 }
 ._c-media__body {
-  display: table-cell;
-  vertical-align: top;
-  width: 100%;
+  display: block;
+  overflow: hidden;
 }
-._c-media--middle > ._c-media__figure,
-._c-media--middle > ._c-media__body {
-  vertical-align: middle;
-}
-._c-media--middle ._c-media__figure {
-  margin-left: 0;
-  padding-left: 1.5rem;
-}
-._c-media--reverse {
-  text-align: left;
-  direction: rtl;
-}
-._c-media--reverse > ._c-media__body {
-  text-align: left;
-  direction: ltl;
+._c-media--reverse > ._c-media__figure {
+  float: right;
 }
 ._c-row {
   display: table;
@@ -492,6 +476,10 @@
   display: inline-block;
   width: 100%;
 }
+._c-row__col--fit {
+  display: inline-block;
+  width: auto;
+}
 @media (min-width: 40em) {
   ._c-row__col--md-1-2,
   ._c-row__col--md-2-4,
@@ -708,6 +696,10 @@
   ._c-row__col--md-12-12 {
     display: inline-block;
     width: 100%;
+  }
+  ._c-row__col--md-fit {
+    display: inline-block;
+    width: auto;
   }
 }
 @media (min-width: 64em) {
@@ -926,5 +918,9 @@
   ._c-row__col--lg-12-12 {
     display: inline-block;
     width: 100%;
+  }
+  ._c-row__col--lg-fit {
+    display: inline-block;
+    width: auto;
   }
 }

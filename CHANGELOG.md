@@ -1,5 +1,10 @@
 #Changelog
 
+## August 22, 2016 v1.0.6
+* Refactoring `._c-flex-media` for IE9.
+* Refactoring `._c-row__col--fit` for IE9.
+* Refactoring `._c-media` for IE9.
+
 ## September 19, 2016 v1.0.5
 * Fix a bs-padding bug
 
