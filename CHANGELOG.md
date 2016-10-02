@@ -4,6 +4,7 @@
 * Update `._c-checkbox`
 * Update `._c-radio`
 * Add `._c-select`
+* Change gulp task name `stylus` to `css`
 
 ## September 22, 2016 v1.0.6
 * Refactoring `._c-flex-media` for IE9.
