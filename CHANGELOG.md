@@ -1,6 +1,11 @@
 #Changelog
 
-## August 22, 2016 v1.0.6
+## October 2, 2016 v2.0.0
+* Update `._c-checkbox`
+* Update `._c-radio`
+* Add `._c-select`
+
+## September 22, 2016 v1.0.6
 * Refactoring `._c-flex-media` for IE9.
 * Refactoring `._c-row__col--fit` for IE9.
 * Refactoring `._c-media` for IE9.
