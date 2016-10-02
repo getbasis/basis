@@ -11,8 +11,10 @@
 // </span>
 //
 
-bs-checkbox-margin  ?= (bs-base-font-size / 2);
-bs-checkbox-z-index ?= 1;
+bs-checkbox-margin        ?= (bs-base-font-size / 2);
+bs-checkbox-z-index       ?= 1;
+bs-checkbox-size          ?= bs-base-font-size;
+bs-checkbox-border-radius ?= 3px;
 
 $bs-checkbox {
   position: relative;
@@ -24,7 +26,7 @@ $bs-checkbox {
     position: absolute;
     top: bs-between-lines;
     left: 0;
-    height: bs-base-font-size;
+    height: bs-checkbox-size;
     width: @height;
   }
 
@@ -41,20 +43,20 @@ $bs-checkbox {
       display: inline-block;
       background-color: #fff;
       border: 1px solid bs-light(bs-color-gray);
-      border-radius: 3px;
+      border-radius: bs-checkbox-border-radius;
       z-index: (bs-checkbox-z-index - 1);
     }
 
     &::after {
       position: absolute;
-      top: (bs-between-lines - bs-px2rem(2px));
-      left: 2px;
       content: '';
       display: inline-block;
-      background-color: bs-color-gray;
-      border-radius: 2px;
-      height: (bs-base-font-size - bs-px2rem(4px));
+      background-color: bs-dark(bs-color-gray);
+      border-radius: (bs-checkbox-border-radius - 1);
+      height: (bs-checkbox-size / 2);
       width: @height;
+      left: ((bs-checkbox-size - @height) / 2);
+      top: (bs-between-lines + @left);
       opacity: 0;
       z-index: (bs-checkbox-z-index - 1);
     }
