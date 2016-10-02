@@ -11,51 +11,52 @@
 // </span>
 //
 
-bs-checkbox-margin ?= (bs-base-font-size / 2);
+bs-checkbox-margin  ?= (bs-base-font-size / 2);
+bs-checkbox-z-index ?= 1;
 
 $bs-checkbox {
   position: relative;
   display: inline-block;
   padding-left: (bs-base-font-size + bs-checkbox-margin);
 
-  > [type="checkbox"] {
+  > [type="checkbox"],
+  &__label::before {
     position: absolute;
     top: bs-between-lines;
     left: 0;
     height: bs-base-font-size;
     width: @height;
+  }
+
+  > [type="checkbox"] {
     cursor: pointer;
     opacity: 0 !important;
     outline: 0;
+    z-index: bs-checkbox-z-index;
   }
 
   &__label {
     &::before {
-      position: absolute;
-      top: bs-between-lines;
-      left: 0;
-      height: bs-base-font-size;
-      width: @height;
       content: '';
       display: inline-block;
-      height: bs-base-font-size;
-      width: @height;
       background-color: #fff;
       border: 1px solid bs-light(bs-color-gray);
       border-radius: 3px;
+      z-index: (bs-checkbox-z-index - 1);
     }
 
     &::after {
       position: absolute;
-      top: 2px;
+      top: (bs-between-lines - bs-px2rem(2px));
       left: 2px;
       content: '';
       display: inline-block;
       background-color: bs-color-gray;
-      border-radius: 3px;
-      height: (bs-base-font-size - bs-px2rem(2px));
+      border-radius: 2px;
+      height: (bs-base-font-size - bs-px2rem(4px));
       width: @height;
       opacity: 0;
+      z-index: (bs-checkbox-z-index - 1);
     }
   }
 
