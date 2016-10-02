@@ -7,15 +7,61 @@
 //
 // <span class="c-checkbox">
 //     <input type="checkbox" />
+//     <label class="c-checkbox__label">Label</label>
 // </span>
 //
 
 bs-checkbox-margin ?= (bs-base-font-size / 2);
 
 $bs-checkbox {
+  position: relative;
   display: inline-block;
+  padding-left: (bs-base-font-size + bs-checkbox-margin);
 
-  [type="checkbox"] {
-    margin-right: bs-checkbox-margin;
+  > [type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: bs-base-font-size;
+    width: @height;
+    cursor: pointer;
+    opacity: 0 !important;
+    outline: 0;
+  }
+
+  &__label {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: bs-base-font-size;
+      width: @height;
+      content: '';
+      display: inline-block;
+      height: bs-base-font-size;
+      width: @height;
+      background-color: #fff;
+      border: 1px solid bs-light(bs-color-gray);
+      border-radius: 3px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      content: '';
+      display: inline-block;
+      background-color: bs-color-gray;
+      border-radius: 3px;
+      height: (bs-base-font-size - 2);
+      width: @height;
+      opacity: 0;
+    }
+  }
+
+  & ~ &__label {
+    &::after {
+      opacity: 1;
+    }
   }
 }
