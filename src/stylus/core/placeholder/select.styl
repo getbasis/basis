@@ -1,0 +1,37 @@
+//
+// Select component
+//
+// .c-select {
+//     @extend $bs-select;
+// }
+//
+// <span class="c-select">
+//     <select></select>
+// </span>
+//
+$bs-select {
+  display: inline-block;
+  overflow: hidden;
+  background-color: #fff;
+  border: bs-form-control-border;
+  border-radius: bs-form-control-border-radius;
+  padding: bs-form-control-padding;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    display: block;
+    border: 12px solid transparent;
+    border-top: 12px solid bs-dark(bs-color-gray);
+    width: 0;
+    height: 0;
+  }
+
+  > select {
+    outline: 0;
+    width: 130%;
+  }
+}
