@@ -20,7 +20,7 @@ $bs-checkbox {
 
   > [type="checkbox"] {
     position: absolute;
-    top: 0;
+    top: bs-between-lines;
     left: 0;
     height: bs-base-font-size;
     width: @height;
@@ -32,7 +32,7 @@ $bs-checkbox {
   &__label {
     &::before {
       position: absolute;
-      top: 0;
+      top: bs-between-lines;
       left: 0;
       height: bs-base-font-size;
       width: @height;
@@ -53,13 +53,13 @@ $bs-checkbox {
       display: inline-block;
       background-color: bs-color-gray;
       border-radius: 3px;
-      height: (bs-base-font-size - 2);
+      height: (bs-base-font-size - bs-px2rem(2px));
       width: @height;
       opacity: 0;
     }
   }
 
-  & ~ &__label {
+  & > input:checked ~ &__label {
     &::after {
       opacity: 1;
     }
