@@ -23,7 +23,7 @@ var path = {
 /**
  * Stylus to CSS
  */
-gulp.task('stylus', function() {
+gulp.task('css', function() {
   return gulp.src(
       [
         path.src.stylus + '/basis.styl',
@@ -50,13 +50,13 @@ gulp.task('stylus', function() {
  * Auto Compile Stylus.
  */
 gulp.task('watch', function() {
-  gulp.watch([path.src.stylus + '/**/*/styl'], ['stylus']);
+  gulp.watch([path.src.stylus + '/**/*/styl'], ['css']);
 });
 
 /**
  * Build
  */
-gulp.task('build', ['stylus']);
+gulp.task('build', ['css']);
 
 /**
  * Release

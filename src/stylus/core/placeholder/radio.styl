@@ -7,15 +7,64 @@
 //
 // <span class="c-radio">
 //     <input type="radio" />
+//     <label class="c-radio__label">Label</label>
 // </span>
 //
 
-bs-radio-margin ?= (bs-base-font-size / 2);
+bs-radio-margin  ?= (bs-base-font-size / 2);
+bs-radio-z-index ?= 1;
+bs-radio-size    ?= bs-base-font-size;
 
 $bs-radio {
+  position: relative;
   display: inline-block;
+  margin-right: bs-radio-margin;
+  padding-left: (bs-base-font-size + bs-radio-margin);
 
-  [type="radio"] {
-    margin-right: bs-radio-margin;
+  > [type="radio"],
+  &__label::before {
+    position: absolute;
+    top: bs-between-lines;
+    left: 0;
+    height: bs-radio-size;
+    width: @height;
+  }
+
+  > [type="radio"] {
+    cursor: pointer;
+    opacity: 0 !important;
+    outline: 0;
+    z-index: bs-radio-z-index;
+  }
+
+  &__label {
+    &::before {
+      content: '';
+      display: inline-block;
+      background-color: #fff;
+      border: 1px solid bs-light(bs-color-gray);
+      border-radius: 100%;
+      z-index: (bs-radio-z-index - 1);
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      display: inline-block;
+      background-color: bs-dark(bs-color-gray);
+      border-radius: 100%;
+      height: (bs-radio-size / 2);
+      width: @height;
+      left: ((bs-radio-size - @height) / 2);
+      top: (bs-between-lines + @left);
+      opacity: 0;
+      z-index: (bs-radio-z-index - 1);
+    }
+  }
+
+  & > input:checked ~ &__label {
+    &::after {
+      opacity: 1;
+    }
   }
 }
