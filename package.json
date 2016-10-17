@@ -40,6 +40,6 @@
     "stylus": "stylus"
   },
   "dependencies": {
-    "normalize.css": "^4.2.0"
+    "normalize-styl": "^4.1.1"
   }
 }

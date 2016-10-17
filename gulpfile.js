@@ -32,7 +32,7 @@ gulp.task('css', function() {
       {base: path.src.stylus }
     )
     .pipe(stylus({
-      'include css': true
+      'resolve url nocheck': true
     }))
     .pipe(postcss([
       autoprefixer({
