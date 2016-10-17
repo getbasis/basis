@@ -1,5 +1,8 @@
 #Changelog
 
+## October 17, 2016 v2.0.1
+* Replace normalize.css to normalize-styl
+
 ## October 2, 2016 v2.0.0
 * Update `._c-checkbox`
 * Update `._c-radio`
