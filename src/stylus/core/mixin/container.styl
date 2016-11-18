@@ -1,0 +1,47 @@
+//
+// Fluid container component
+//
+// .c-container-fluid {
+//   _container-fluid();
+// }
+//
+// <div class="c-container-fluid">
+//   ...
+// </div>
+//
+
+bs-container-margin ?= bs-base-line-height;
+
+_container-fluid() {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: (bs-container-margin / 2);
+  padding-left: (bs-container-margin / 2);
+
+  +bs-bp-md-min() {
+    padding-right: bs-container-margin;
+    padding-left: bs-container-margin;
+  }
+}
+
+//
+// Container component
+//
+// .c-container {
+//   _container();
+// }
+//
+// <div class="c-container">
+//   ...
+// </div>
+//
+
+bs-container-max-width ?= 1200px;
+
+_container() {
+  _container-fluid();
+
+  +bs-bp-lg-only() {
+    max-width: bs-px2rem(bs-container-max-width);
+  }
+}
