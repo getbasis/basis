@@ -1,0 +1,46 @@
+//
+// Adding margin for the row
+//
+// @param  int  coefficient
+//
+bs-row-margin(coefficient) {
+  _row--margin(coefficient);
+}
+
+//
+// Adding margin for the column
+//
+// @param  int  coefficient
+//
+bs-col-margin(coefficient) {
+  _row__col--margin(coefficient);
+}
+
+//
+// Setting column width
+//
+// @param  length  width
+//
+bs-col-width(width) {
+  _row__col--width(width);
+}
+
+//
+// Setting column width
+//
+// @param  int  columns  molecule column size
+// @param  int  max-columns  denominator column size
+//
+bs-col(columns = null, max-columns = null) {
+  _row__col(columns, max-columns);
+}
+
+//
+// Setting column offset
+//
+// @param  int  columns  molecule offset size
+// @param  int  max-columns  denominator offset size
+//
+bs-col-offset(columns = null, max-columns = null) {
+  _row__col--offset(columns, max-columns);
+}

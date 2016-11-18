@@ -1,5 +1,5 @@
 .{bs-prefix}c-row {
-  @extend $bs-row;
+  @extend $_row;
 
   &--reverse {
     flex-direction: row-reverse;
@@ -50,33 +50,33 @@
       }
 
       &{prefix}-collapse {
-        bs-row-margin(0);
+        _row--margin(0);
 
         > .{bs-prefix}c-row__col {
-          bs-col-margin(0);
+          _row__col--margin(0);
         }
       }
 
       &{prefix}-margin {
-        bs-row-margin(1);
+        _row--margin(1);
 
         > .{bs-prefix}c-row__col {
-          bs-col-margin(1);
+          _row__col--margin(1);
         }
 
         &-s {
-          bs-row-margin(.5);
+          _row--margin(.5);
 
           > .{bs-prefix}c-row__col {
-            bs-col-margin(.5);
+            _row__col--margin(.5);
           }
         }
 
         &-l {
-          bs-row-margin(2);
+          _row--margin(2);
 
           > .{bs-prefix}c-row__col {
-            bs-col-margin(2);
+            _row__col--margin(2);
           }
         }
       }
@@ -86,7 +86,7 @@
           display: flex;
 
           > * {
-            bs-col-width(100%);
+            _row__col--width(100%);
           }
         }
       }
@@ -104,31 +104,31 @@ for size, screen-min in bs-sizes {
 
         if (gcd == 1) {
           $_bs-item{prefix}-gcd-{i / gcd}-{max_columns / gcd} {
-            bs-col(i, max_columns);
+            _row__col(i, max_columns);
           }
 
           $_bs-item{prefix}-offset-gcd-{i / gcd}-{max_columns / gcd} {
-            bs-col-offset(i, max_columns);
+            _row__col--offset(i, max_columns);
           }
         }
       }
     }
 
     $_bs-item{prefix}-full {
-      bs-col-width(100%);
+      _row__col--width(100%);
     }
 
     .{bs-prefix}c-row__col {
       &{prefix}-auto {
-        bs-col-width(auto);
+        _row__col--width(auto);
       }
 
       &{prefix}-justify {
-        bs-col-width(1);
+        _row__col--width(1);
       }
 
       &{prefix}-offset-0 {
-        bs-col-offset(0);
+        _row__col--offset(0);
       }
 
       &{prefix}-shrink {

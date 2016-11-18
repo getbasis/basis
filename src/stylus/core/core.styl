@@ -12,7 +12,9 @@ bs-use-mixin-only ?= false;
 @import 'function/*';
 @import 'variable/*';
 @import 'mixin/*';
+@import '_deprecated/mixin';
 
 if (bs-is-use-mixin-only()) {
   @import 'placeholder/*';
+  @import '_deprecated/placeholder';
 }
