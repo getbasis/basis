@@ -2,34 +2,28 @@
 // Hero component
 //
 // .c-hero {
-//     @extend $bs-hero;
+//   @extend $_hero;
 // }
 //
+// <div class="c-hero">
+//   <div class="c-hero__header"></div>
+//   <div class="c-hero__content"></div>
+//   <div class="c-hero__footer"></div>
+// </div>
+//
 
-$bs-hero-col {
-  flex: 0 1 100%;
-  max-width: 100%;
-  position: relative;
-}
-
-$bs-hero {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  position: relative;
+$_hero {
+  _hero();
 
   &__header {
-    @extend $bs-hero-col;
-    align-self: flex-start;
+    _hero__header();
   }
 
   &__content {
-    @extend $bs-hero-col;
-    align-self: center;
+    _hero__content();
   }
 
   &__footer {
-    @extend $bs-hero-col;
-    align-self: flex-end;
+    _hero__footer();
   }
 }

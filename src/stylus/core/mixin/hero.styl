@@ -1,0 +1,50 @@
+//
+// Hero component
+//
+// .c-hero {
+//   _hero();
+//   &__header {
+//     _hero__header();
+//   }
+//   &__content {
+//     _hero__content();
+//   }
+//   &__footer {
+//     _hero__footer();
+//   }
+// }
+//
+// <div class="c-hero">
+//   <div class="c-hero__header"></div>
+//   <div class="c-hero__content"></div>
+//   <div class="c-hero__footer"></div>
+// </div>
+//
+
+_hero() {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+_hero__header() {
+  _hero__col();
+  align-self: flex-start;
+}
+
+_hero__content() {
+  _hero__col();
+  align-self: center;
+}
+
+_hero__footer() {
+  _hero__col();
+  align-self: flex-end;
+}
+
+_hero__col() {
+  flex: 0 1 100%;
+  max-width: 100%;
+  position: relative;
+}
