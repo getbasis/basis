@@ -1,0 +1,60 @@
+//
+// Radio component
+//
+// .c-radio {
+//   _radio();
+// }
+//
+// <span class="c-radio" data-c="radio">
+//   <input type="radio">
+//   <label data-c="radio__label">Label</label>
+// </span>
+//
+
+bs-radio-margin  ?= (bs-base-font-size / 2);
+bs-radio-z-index ?= 1;
+
+radio() {
+  position: relative;
+  display: inline-block;
+  margin-right: bs-radio-margin;
+  padding-left: (bs-base-font-size + bs-radio-margin);
+
+  > [type="radio"] {
+    _checked-control-position();
+    cursor: pointer;
+    opacity: 0 !important;
+    outline: 0;
+    z-index: bs-radio-z-index;
+
+    &:checked ~ [data-c="radio__label"]::after {
+      opacity: 1;
+    }
+  }
+
+  > [data-c="radio__label"] {
+    &::before {
+      _checked-control-position();
+      content: '';
+      display: inline-block;
+      background-color: #fff;
+      border: 1px solid bs-light(bs-color-gray);
+      border-radius: 100%;
+      z-index: (bs-radio-z-index - 1);
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      display: inline-block;
+      background-color: bs-dark(bs-color-gray);
+      border-radius: 100%;
+      height: (bs-base-font-size / 2);
+      width: @height;
+      left: ((bs-base-font-size - @height) / 2);
+      top: (bs-between-lines + @left);
+      opacity: 0;
+      z-index: (bs-radio-z-index - 1);
+    }
+  }
+}
