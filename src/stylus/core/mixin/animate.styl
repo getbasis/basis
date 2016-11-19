@@ -4,8 +4,8 @@
 // @param   length             px        bounce size
 // @param   second|milisecond  delay: 0  animate time
 //
-bs-bounce-vertical(px, delay = 0) {
-  keyframe-name = bs-bounce-vertical- + px;
+_bounce-vertical(px, delay = 0) {
+  keyframe-name = _bounce-vertical- + px;
   position: relative;
   animation: keyframe-name delay;
 
@@ -22,14 +22,14 @@ bs-bounce-vertical(px, delay = 0) {
 // Shake vertical
 //
 bs-shake-vertical() {
-  bs-bounce-vertical(4px, .5s);
+  _bounce-vertical(4px, .5s);
 }
 
 //
 // Vibrate vertical
 //
 bs-vibrate-vertical() {
-  bs-bounce-vertical(2px, .2s);
+  _bounce-vertical(2px, .2s);
 }
 
 //
