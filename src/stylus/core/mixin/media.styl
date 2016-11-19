@@ -1,0 +1,41 @@
+//
+// Media component
+//
+// .c-media {
+//   _media();
+//   &__figure {
+//     _media__figure();
+//   }
+//   &__body {
+//     _media__body();
+//   }
+// }
+//
+// <div class="c-media">
+//   <div class="c-media__figure">
+//     <img ...>
+//   </div>
+//   <div class="c-media__body">
+//     ...
+//   </div>
+// </div>
+//
+
+_media() {
+  display: flex;
+}
+
+_media__figure() {
+  bs-margin(0, 1, 0, 0);
+  flex: none;
+  bs-background-image-cover();
+
+  > * {
+    vertical-align: top;
+    margin-top: bs-between-lines;
+  }
+}
+
+_media__body() {
+  flex: 1;
+}
