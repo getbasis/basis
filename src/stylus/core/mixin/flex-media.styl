@@ -28,11 +28,11 @@ _flex-media() {
 }
 
 _flex-media__figure() {
-  bs-margin(0, 0, .5);
+  _margin(0, 0, .5);
   _background-image-cover();
 
   +bs-bp-md-min() {
-    bs-margin(0, 1, 0, 0);
+    _margin(0, 1, 0, 0);
     flex: none;
 
     > * {
