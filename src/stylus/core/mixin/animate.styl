@@ -72,9 +72,9 @@ _vibrate-horizontal() {
 // @param   float              px        bounce size
 // @param   second|milisecond  delay: 0  animate time
 //
-bs-bounce-scale(float, delay = 0) {
+_bounce-scale(float, delay = 0) {
   suffix = bs-strip-unit(percentage(float));
-  keyframe-name = bs-bounce-scale- + suffix;
+  keyframe-name = _bounce-scale- + suffix;
   animation: keyframe-name delay ease-out;
   scale = (float - 1);
 
@@ -91,14 +91,14 @@ bs-bounce-scale(float, delay = 0) {
 // Shake scale
 //
 bs-shake-scale() {
-  bs-bounce-scale(1.2, .5s);
+  _bounce-scale(1.2, .5s);
 }
 
 //
 // Vibrate scale
 //
 bs-vibrate-scale() {
-  bs-bounce-scale(1.1, .2s);
+  _bounce-scale(1.1, .2s);
 }
 
 //
