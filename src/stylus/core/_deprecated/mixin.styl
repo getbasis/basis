@@ -165,7 +165,9 @@ bs-clearfix() {
 // }
 //
 bs-hover() {
-  _hover();
+  _hover() {
+    {block};
+  }
 }
 
 //
@@ -277,4 +279,15 @@ bs-padding-bottom(coefficient) {
 //
 bs-padding-left(coefficient) {
   _padding-left(coefficient);
+}
+
+//
+// Return min-width media query
+//
+// @param  length  min  width
+//
+bs-bp-min(min) {
+  +_media-min(min) {
+    {block};
+  }
 }

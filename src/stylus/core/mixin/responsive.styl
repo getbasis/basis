@@ -3,7 +3,7 @@
 //
 // @param  length  min  width
 //
-bs-bp-min(min) {
+_media-min(min) {
   if (min == bs-screen-sm-min) {
     {block};
   } else {
@@ -28,7 +28,7 @@ bs-bp-max(max) {
 // Return bs-screen-md-min media query
 //
 bs-bp-md-min() {
-  +bs-bp-min(bs-screen-md-min) {
+  +_media-min(bs-screen-md-min) {
     {block};
   }
 }
@@ -66,7 +66,7 @@ bs-bp-md-only() {
 // @return  string  media query
 //
 bs-bp-lg-only() {
-  +bs-bp-min(bs-screen-lg-min) {
+  +_media-min(bs-screen-lg-min) {
     {block};
   }
 }
