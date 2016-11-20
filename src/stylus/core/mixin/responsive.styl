@@ -18,7 +18,7 @@ _media-min(min) {
 //
 // @param  length  max  width
 //
-bs-bp-max(max) {
+_media-max(max) {
   @media (max-width: max) {
     {block};
   }
@@ -37,7 +37,7 @@ bs-bp-md-min() {
 // Return bs-screen-md-max media query
 //
 bs-bp-md-max() {
-  +bs-bp-max(bs-screen-md-max) {
+  +_media-max(bs-screen-md-max) {
     {block};
   }
 }
@@ -46,7 +46,7 @@ bs-bp-md-max() {
 // Return media query for smartphone size
 //
 bs-bp-sm-only() {
-  +bs-bp-max(bs-screen-sm-max) {
+  +_media-max(bs-screen-sm-max) {
     {block};
   }
 }

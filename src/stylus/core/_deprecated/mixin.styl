@@ -291,3 +291,14 @@ bs-bp-min(min) {
     {block};
   }
 }
+
+//
+// Return max-width media query
+//
+// @param  length  max  width
+//
+bs-bp-max(max) {
+  +_media-max(max) {
+    {block};
+  }
+}
