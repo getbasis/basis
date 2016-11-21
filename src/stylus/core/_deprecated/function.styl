@@ -87,3 +87,14 @@ bs-gcd(a, b) {
 bs-is-use-mixin-only() {
   return _is-use-mixin-only();
 }
+
+//
+// Return rem from px
+//
+// @param   px  px
+// @param   px  base-font-size-px
+// @return  rem
+//
+bs-px2rem(px, base-font-size-px = bs-base-font-size-px) {
+  return _px2rem(px, base-font-size-px);
+}
