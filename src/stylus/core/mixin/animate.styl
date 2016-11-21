@@ -106,9 +106,7 @@ _vibrate-scale() {
 // This mixin use the pseudo-elements.
 //
 _extend-underline() {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
+  _position(absolute, null, null, 0, 50%);
   display: block;
   content: '';
   width: 0;

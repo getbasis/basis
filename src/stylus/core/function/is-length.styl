@@ -1,0 +1,12 @@
+//
+// Checks for a valid CSS length.
+//
+// @return  bool
+//
+_is-length(value) {
+  if ('unit' == typeof(value) && ('' != unit(value) || 0 == value)) {
+    return true;
+  }
+
+  return false;
+}

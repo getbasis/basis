@@ -44,15 +44,15 @@ _radio() {
     }
 
     &::after {
+      height: (_base-font-size / 2);
       position: absolute;
+      left: ((_base-font-size - @height) / 2);
+      top: (_between-lines + @left);
       content: '';
       display: inline-block;
       background-color: _dark(_color-gray);
       border-radius: 100%;
-      height: (_base-font-size / 2);
       width: @height;
-      left: ((_base-font-size - @height) / 2);
-      top: (_between-lines + @left);
       opacity: 0;
       z-index: (radio-z-index - 1);
     }
