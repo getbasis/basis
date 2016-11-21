@@ -34,3 +34,7 @@
 	bs-assert-equals(1, _strip-unit(1rem));
 	bs-assert-equals(10, _strip-unit(10px));
 }
+
++bs-test('[variable] _transition-duration') {
+	bs-assert-equals(_transition-duration, bs-transition-duration);
+}
