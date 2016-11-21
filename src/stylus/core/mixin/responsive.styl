@@ -26,17 +26,15 @@ _media-min(min) {
 // @param  length  max  width
 //
 _media-max(max) {
-  @media (max-width: max) {
-    {block};
-  }
-}
-
-//
-// Return bs-screen-md-max media query
-//
-bs-bp-md-max() {
-  +_media-max(bs-screen-md-max) {
-    {block};
+  size = _hash-search(max, bs-sizes);
+  if (size != null) {
+    @media (max-width: bs-sizes-max[max]) {
+      {block};
+    }
+  } else {
+    @media (max-width: max) {
+      {block};
+    }
   }
 }
 

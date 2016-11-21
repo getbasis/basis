@@ -6,5 +6,5 @@
 // @return  rem
 //
 bs-px2rem(px, base-font-size-px = bs-base-font-size-px) {
-  return bs-strip-unit(px / base-font-size-px) * 1rem;
+  return unit(px / base-font-size-px, 'rem');
 }
