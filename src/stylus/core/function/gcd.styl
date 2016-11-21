@@ -5,9 +5,9 @@
 // @param   int  b  The number to divide
 // @return  int  The number of the remainder
 //
-bs-gcd(a, b) {
+_gcd(a, b) {
   if (b == 0) {
     return a;
   }
-  return bs-gcd(b, a % b);
+  return _gcd(b, a % b);
 }

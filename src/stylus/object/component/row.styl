@@ -100,7 +100,7 @@ for size, screen-min in bs-sizes {
 
     for max_columns in range(1, bs-max-columns) {
       for i in range(1, max_columns) {
-        gcd = bs-gcd(i, max_columns);
+        gcd = _gcd(i, max_columns);
 
         if (gcd == 1) {
           $_bs-item{prefix}-gcd-{i / gcd}-{max_columns / gcd} {
@@ -149,7 +149,7 @@ for size, screen-min in bs-sizes {
 
       for max_columns in range(bs-min-columns, bs-max-columns) {
         for i in range(1, max_columns) {
-          gcd = bs-gcd(i, max_columns);
+          gcd = _gcd(i, max_columns);
 
           &{prefix}-{i}-{max_columns} {
             if (i != max_columns) {
