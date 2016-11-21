@@ -26,7 +26,7 @@
 // </div>
 //
 
-_input-group-border-color ?= bs-input-group-border-color ?= _light(_color-gray);
+_input-group-border ?= 1px solid _light(_color-gray);
 
 _input-group() {
   display: flex;
@@ -39,13 +39,13 @@ _input-group() {
 
 _input-group__addon() {
   flex: 0 1 0;
-  border: 1px solid _input-group-border-color;
+  border: _input-group-border;
 }
 
 _input-group__field() {
   display: flex;
   flex: 1;
-  border: 1px solid _input-group-border-color;
+  border: _input-group-border;
 }
 
 _input-group__control() {
@@ -59,5 +59,5 @@ _input-group__btn() {
   _btn();
   flex: 0 1 0;
   overflow: visible;
-  border: 1px solid _input-group-border-color;
+  border: _input-group-border;
 }
