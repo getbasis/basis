@@ -10,7 +10,7 @@ html, body {
 }
 
 html {
-  font-size: (_strip-unit(bs-base-font-size-px) / 16 * 100%);
+  font-size: (_strip-unit(_base-font-size-px) / 16 * 100%);
 }
 
 body {
@@ -22,7 +22,7 @@ body {
 }
 
 code, kbd, pre, samp {
-  _font-size-line-height(bs-base-font-size-px - 2);
+  _font-size-line-height(_base-font-size-px - 2);
   font-family: '_', monospace;
 }
 
