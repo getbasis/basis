@@ -41,7 +41,7 @@ bs-container-max-width ?= 1200px;
 _container() {
   _container-fluid();
 
-  +bs-bp-lg-only() {
+  +_media-lg-only() {
     max-width: bs-px2rem(bs-container-max-width);
   }
 }
