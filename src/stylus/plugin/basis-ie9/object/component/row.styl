@@ -179,7 +179,7 @@ for size, screen-min in bs-sizes {
     +_media-min(screen-min) {
       prefix = bs-bp-prefix(size);
 
-      for max_columns in range(bs-min-columns, bs-max-columns) {
+      for max_columns in range(_min-columns, bs-max-columns) {
         for i in range(1, max_columns) {
           gcd = _gcd(i, max_columns);
 
