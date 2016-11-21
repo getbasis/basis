@@ -22,11 +22,11 @@
 	bs-assert-equals(1.6rem, rem);
 }
 
-+bs-test('[function] bs-rem2px()') {
-	rem = bs-rem2px(1rem, 16px);
++bs-test('[function] _rem2px()') {
+	rem = _rem2px(1rem, 16px);
 	bs-assert-equals(16px, rem);
 
-	rem = bs-rem2px(1rem, 10px);
+	rem = _rem2px(1rem, 10px);
 	bs-assert-equals(10px, rem);
 }
 

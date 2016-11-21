@@ -9,7 +9,7 @@ _font-size(font-size) {
     font-size: font-size;
     font-size: _px2rem(font-size);
   } else if (unit == 'rem') {
-    font-size: bs-rem2px(font-size);
+    font-size: _rem2px(font-size);
     font-size: font-size;
   } else {
     font-size: font-size;
@@ -25,7 +25,7 @@ _line-height(font-size) {
   unit = unit(font-size);
   px   = font-size;
   if (unit == 'rem') {
-    px = bs-rem2px(font-size);
+    px = _rem2px(font-size);
   }
   line-height: (bs-vertical-rhythm(px) / bs-strip-unit(px));
 }
