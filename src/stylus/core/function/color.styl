@@ -24,7 +24,7 @@ _lighter(hex) {
 // @param   hex  hex
 // @return  hex
 //
-bs-lightest(hex) {
+_lightest(hex) {
   return lightness(hex, (lightness(hex) + 37%));
 }
 
