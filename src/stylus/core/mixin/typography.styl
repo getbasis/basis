@@ -3,7 +3,7 @@
 //
 // @param  rem|px  font-size
 //
-bs-font-size(font-size) {
+_font-size(font-size) {
   unit = unit(font-size);
   if (unit == 'px') {
     font-size: font-size;
@@ -61,7 +61,7 @@ bs-line-height(font-size) {
 // @param  rem|px  font-size
 //
 // h1 {
-//     bs-font-size-line-height(1.5rem);
+//   bs-font-size-line-height(1.5rem);
 // }
 //
 bs-font-size-line-height(font-size) {
@@ -70,6 +70,6 @@ bs-font-size-line-height(font-size) {
   if (unit == 'px') {
     rem = bs-px2rem(font-size);
   }
-  bs-font-size(rem);
+  _font-size(rem);
   bs-line-height(rem);
 }
