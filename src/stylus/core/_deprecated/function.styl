@@ -133,3 +133,14 @@ bs-space(base-margin, base-coefficient, add-coefficient) {
 bs-strip-unit(value) {
   return _strip-unit(value);
 }
+
+//
+// Return line height ( px ) for vertical rhythum
+//
+// @param   px   font-size
+// @param   int  coefficient
+// @return  int
+//
+bs-vertical-rhythm(font-size, coefficient = 1) {
+  return _vertical-rhythm(font-size, coefficient);
+}
