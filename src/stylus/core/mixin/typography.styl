@@ -17,36 +17,11 @@ _font-size(font-size) {
 }
 
 //
-// Return line height ( px ) for vertical rhythum
-//
-// @param   px   font-size
-// @param   int  coefficient
-// @return  int
-//
-bs-vertical-rhythm(font-size, coefficient = 1) {
-  between-lines    = bs-strip-unit(bs-rem2px(bs-between-lines));
-  base-line-height = bs-strip-unit(bs-rem2px(bs-base-line-height));
-  base-font-size   = bs-strip-unit(bs-rem2px(bs-base-font-size));
-  font-size        = bs-strip-unit(font-size);
-
-  line-height = font-size + (between-lines * coefficient);
-
-  if (line-height < font-size + (between-lines * 2)) {
-    return bs-vertical-rhythm(font-size, (coefficient + 1));
-  } else {
-    if (font-size % base-font-size == 0 && font-size > base-font-size) {
-      return line-height - (between-lines / 2);
-    }
-    return line-height;
-  }
-}
-
-//
 // Return line-height for vertical rhythum
 //
 // @param  rem|px  font-size  font size
 //
-bs-line-height(font-size) {
+_line-height(font-size) {
   unit = unit(font-size);
   px   = font-size;
   if (unit == 'rem') {
@@ -71,5 +46,5 @@ bs-font-size-line-height(font-size) {
     rem = bs-px2rem(font-size);
   }
   _font-size(rem);
-  bs-line-height(rem);
+  _line-height(rem);
 }
