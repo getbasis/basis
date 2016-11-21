@@ -45,7 +45,7 @@ _max-columns ?= bs-max-columns ?= 12;
 // Array of breakpoints
 // @type  array
 //
-bs-sizes ?= {
+_sizes ?= bs-sizes ?= {
   sm: 0,
   md: (_px2rem(640px) / _px2rem(_base-font-size-px)),
   lg: (_px2rem(1024px) / _px2rem(_base-font-size-px))
@@ -55,7 +55,7 @@ bs-sizes ?= {
 // Array of breakpoints
 // @type  array
 //
-bs-sizes-max ?= {
-  sm: (bs-sizes.md - (1em / _strip-unit(_base-font-size-px))),
-  md: (bs-sizes.lg - (1em / _strip-unit(_base-font-size-px)))
+_sizes-max ?= bs-sizes-max ?= {
+  sm: (_sizes.md - (1em / _strip-unit(_base-font-size-px))),
+  md: (_sizes.lg - (1em / _strip-unit(_base-font-size-px)))
 };

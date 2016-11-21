@@ -5,7 +5,7 @@
     flex-direction: row-reverse;
   }
 
-  for size, screen-min in bs-sizes {
+  for size, screen-min in _sizes {
     +_media-min(screen-min) {
       prefix = bs-bp-prefix(size);
 
@@ -94,7 +94,7 @@
   }
 }
 
-for size, screen-min in bs-sizes {
+for size, screen-min in _sizes {
   +_media-min(screen-min) {
     prefix = bs-bp-prefix(size);
 
@@ -143,7 +143,7 @@ for size, screen-min in bs-sizes {
 }
 
 .{bs-prefix}c-row__col {
-  for size, screen-min in bs-sizes {
+  for size, screen-min in _sizes {
     +_media-min(screen-min) {
       prefix = bs-bp-prefix(size);
 
