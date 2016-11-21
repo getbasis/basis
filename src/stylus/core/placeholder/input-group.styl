@@ -38,9 +38,11 @@ $_input-group {
 
   &__control {
     _input-group__control();
+    padding: (_base-line-height / 4) (_base-line-height / 2);
   }
 
   &__btn {
+    @extend $_btn;
     _input-group__btn();
   }
 }
