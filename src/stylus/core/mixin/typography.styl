@@ -27,7 +27,7 @@ _line-height(font-size) {
   if (unit == 'rem') {
     px = _rem2px(font-size);
   }
-  line-height: (bs-vertical-rhythm(px) / bs-strip-unit(px));
+  line-height: (bs-vertical-rhythm(px) / _strip-unit(px));
 }
 
 //

@@ -6,10 +6,10 @@
 // @return  int
 //
 bs-vertical-rhythm(font-size, coefficient = 1) {
-  between-lines    = bs-strip-unit(_rem2px(bs-between-lines));
-  base-line-height = bs-strip-unit(_rem2px(bs-base-line-height));
-  base-font-size   = bs-strip-unit(_rem2px(bs-base-font-size));
-  font-size        = bs-strip-unit(font-size);
+  between-lines    = _strip-unit(_rem2px(bs-between-lines));
+  base-line-height = _strip-unit(_rem2px(bs-base-line-height));
+  base-font-size   = _strip-unit(_rem2px(bs-base-font-size));
+  font-size        = _strip-unit(font-size);
 
   line-height = font-size + (between-lines * coefficient);
 

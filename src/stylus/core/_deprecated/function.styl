@@ -123,3 +123,13 @@ bs-space(base-margin, base-coefficient, add-coefficient) {
   add-margin = (base-margin * (add-coefficient - 1));
   return (margin + add-margin);
 }
+
+//
+// Return numeric value that doesn't have the unit.
+//
+// @param   length  value  numeric value
+// @return  int
+//
+bs-strip-unit(value) {
+  return _strip-unit(value);
+}

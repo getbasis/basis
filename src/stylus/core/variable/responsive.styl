@@ -53,7 +53,7 @@ bs-screen-sm-min = 0;
 // @type  length
 //
 bs-screen-md-min ?= (_px2rem(640px) / _px2rem(bs-base-font-size-px));
-bs-screen-sm-max = (bs-screen-md-min - (1em / bs-strip-unit(bs-base-font-size-px)));
+bs-screen-sm-max = (bs-screen-md-min - (1em / _strip-unit(bs-base-font-size-px)));
 
 //
 // Break point for tablet and pc
@@ -61,7 +61,7 @@ bs-screen-sm-max = (bs-screen-md-min - (1em / bs-strip-unit(bs-base-font-size-px
 // @type  length
 //
 bs-screen-lg-min ?= (_px2rem(1024px) / _px2rem(bs-base-font-size-px));
-bs-screen-md-max = (bs-screen-lg-min - (1em / bs-strip-unit(bs-base-font-size-px)));
+bs-screen-md-max = (bs-screen-lg-min - (1em / _strip-unit(bs-base-font-size-px)));
 
 //
 // Array of breakpoints

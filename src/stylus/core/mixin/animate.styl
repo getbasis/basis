@@ -73,7 +73,7 @@ _vibrate-horizontal() {
 // @param   second|milisecond  delay: 0  animate time
 //
 _bounce-scale(float, delay = 0) {
-  suffix = bs-strip-unit(percentage(float));
+  suffix = _strip-unit(percentage(float));
   keyframe-name = _bounce-scale- + suffix;
   animation: keyframe-name delay ease-out;
   scale = (float - 1);
