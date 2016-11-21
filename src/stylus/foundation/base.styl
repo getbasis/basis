@@ -16,7 +16,7 @@ html {
 body {
   color: _color-text;
   font-family: bs-font-family;
-  _font-size-line-height(bs-base-font-size);
+  _font-size-line-height(_base-font-size);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -46,37 +46,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  _font-size-line-height(bs-base-font-size * bs-h1-font-size-scale);
+  _font-size-line-height(_base-font-size * bs-h1-font-size-scale);
   _margin-top(bs-h1-margin-top);
   _margin-bottom(bs-h1-margin-bottom);
 }
 
 h2 {
-  _font-size-line-height(bs-base-font-size * bs-h2-font-size-scale);
+  _font-size-line-height(_base-font-size * bs-h2-font-size-scale);
   _margin-top(bs-h2-margin-top);
   _margin-bottom(bs-h2-margin-bottom);
 }
 
 h3 {
-  _font-size-line-height(bs-base-font-size * bs-h3-font-size-scale);
+  _font-size-line-height(_base-font-size * bs-h3-font-size-scale);
   _margin-top(bs-h3-margin-top);
   _margin-bottom(bs-h3-margin-bottom);
 }
 
 h4 {
-  _font-size-line-height(bs-base-font-size * bs-h4-font-size-scale);
+  _font-size-line-height(_base-font-size * bs-h4-font-size-scale);
   _margin-top(bs-h4-margin-top);
   _margin-bottom(bs-h4-margin-bottom);
 }
 
 h5 {
-  _font-size-line-height(bs-base-font-size * bs-h5-font-size-scale);
+  _font-size-line-height(_base-font-size * bs-h5-font-size-scale);
   _margin-top(bs-h5-margin-top);
   _margin-bottom(bs-h5-margin-bottom);
 }
 
 h6 {
-  _font-size-line-height(bs-base-font-size * bs-h6-font-size-scale);
+  _font-size-line-height(_base-font-size * bs-h6-font-size-scale);
   _margin-top(bs-h6-margin-top);
   _margin-bottom(bs-h6-margin-bottom);
 }
@@ -93,9 +93,9 @@ dd {
 }
 
 blockquote {
-  border-left: (bs-base-font-size / 2) solid _lighter(_color-gray);
+  border-left: (_base-font-size / 2) solid _lighter(_color-gray);
   margin-left: 0;
-  padding: bs-base-font-size 0 bs-base-font-size bs-base-font-size;
+  padding: _base-font-size 0 _base-font-size _base-font-size;
 
   :last-child {
     margin-bottom: 0;
@@ -118,7 +118,7 @@ pre {
   background-color: _lightest(_color-gray);
   border: 1px solid _lighter(_color-gray);
   border-radius: _border-radius;
-  padding: bs-base-font-size;
+  padding: _base-font-size;
   overflow: auto;
 
   code {

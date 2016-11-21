@@ -9,19 +9,19 @@ _base-font-size-px ?= bs-base-font-size-px ?= 16px;
 // Default font size
 // @type  rem
 //
-bs-base-font-size = 1rem;
+_base-font-size = bs-base-font-size = 1rem;
 
 //
 // Between the character and line of line-height
 // @type  rem
 //
-bs-between-lines ?= (bs-base-font-size / 4);
+bs-between-lines ?= (_base-font-size / 4);
 
 //
 // Default line height
 // @type  rem
 //
-bs-base-line-height ?= (bs-base-font-size + bs-between-lines * 2);
+bs-base-line-height ?= (_base-font-size + bs-between-lines * 2);
 
 //
 // Margin coefficient

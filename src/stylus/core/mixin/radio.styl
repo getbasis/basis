@@ -11,14 +11,14 @@
 // </span>
 //
 
-bs-radio-margin  ?= (bs-base-font-size / 2);
+bs-radio-margin  ?= (_base-font-size / 2);
 bs-radio-z-index ?= 1;
 
 _radio() {
   position: relative;
   display: inline-block;
   margin-right: bs-radio-margin;
-  padding-left: (bs-base-font-size + bs-radio-margin);
+  padding-left: (_base-font-size + bs-radio-margin);
 
   > [type="radio"] {
     _checked-control-position();
@@ -49,9 +49,9 @@ _radio() {
       display: inline-block;
       background-color: _dark(_color-gray);
       border-radius: 100%;
-      height: (bs-base-font-size / 2);
+      height: (_base-font-size / 2);
       width: @height;
-      left: ((bs-base-font-size - @height) / 2);
+      left: ((_base-font-size - @height) / 2);
       top: (bs-between-lines + @left);
       opacity: 0;
       z-index: (bs-radio-z-index - 1);

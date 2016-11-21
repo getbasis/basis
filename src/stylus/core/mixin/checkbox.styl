@@ -11,7 +11,7 @@
 // </span>
 //
 
-bs-checkbox-margin        ?= (bs-base-font-size / 2);
+bs-checkbox-margin        ?= (_base-font-size / 2);
 bs-checkbox-z-index       ?= 1;
 bs-checkbox-border-radius ?= 3px;
 
@@ -19,7 +19,7 @@ _checkbox() {
   position: relative;
   display: inline-block;
   margin-right: bs-checkbox-margin;
-  padding-left: (bs-base-font-size + bs-checkbox-margin);
+  padding-left: (_base-font-size + bs-checkbox-margin);
 
   > [type="checkbox"] {
     _checked-control-position();
@@ -50,9 +50,9 @@ _checkbox() {
       display: inline-block;
       background-color: _dark(_color-gray);
       border-radius: (bs-checkbox-border-radius - 1);
-      height: (bs-base-font-size / 2);
+      height: (_base-font-size / 2);
       width: @height;
-      left: ((bs-base-font-size - @height) / 2);
+      left: ((_base-font-size - @height) / 2);
       top: (bs-between-lines + @left);
       opacity: 0;
       z-index: (bs-checkbox-z-index - 1);

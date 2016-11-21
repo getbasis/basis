@@ -8,7 +8,7 @@
 _vertical-rhythm(font-size, coefficient = 1) {
   between-lines    = _strip-unit(_rem2px(bs-between-lines));
   base-line-height = _strip-unit(_rem2px(bs-base-line-height));
-  base-font-size   = _strip-unit(_rem2px(bs-base-font-size));
+  base-font-size   = _strip-unit(_rem2px(_base-font-size));
   font-size        = _strip-unit(font-size);
 
   line-height = font-size + (between-lines * coefficient);
