@@ -1,8 +1,8 @@
-.{bs-prefix}c-media {
+.{_prefix}c-media {
   @extend $_media;
 
   &__body {
-    > .{bs-prefix}c-media {
+    > .{_prefix}c-media {
       _margin-top(1);
     }
   }
@@ -12,7 +12,7 @@
   }
 
   &--reverse {
-    .{bs-prefix}c-media__figure {
+    .{_prefix}c-media__figure {
       _margin(0, 0, 0, 1);
       order: 1;
     }

@@ -1,4 +1,4 @@
-.{bs-prefix}c-row {
+.{_prefix}c-row {
   @extend $_row;
 
   &--reverse {
@@ -52,7 +52,7 @@
       &{prefix}-collapse {
         _row--margin(0);
 
-        > .{bs-prefix}c-row__col {
+        > .{_prefix}c-row__col {
           _row__col--margin(0);
         }
       }
@@ -60,14 +60,14 @@
       &{prefix}-margin {
         _row--margin(1);
 
-        > .{bs-prefix}c-row__col {
+        > .{_prefix}c-row__col {
           _row__col--margin(1);
         }
 
         &-s {
           _row--margin(.5);
 
-          > .{bs-prefix}c-row__col {
+          > .{_prefix}c-row__col {
             _row__col--margin(.5);
           }
         }
@@ -75,14 +75,14 @@
         &-l {
           _row--margin(2);
 
-          > .{bs-prefix}c-row__col {
+          > .{_prefix}c-row__col {
             _row__col--margin(2);
           }
         }
       }
 
       &{prefix}-fill {
-        > .{bs-prefix}c-row__col {
+        > .{_prefix}c-row__col {
           display: flex;
 
           > * {
@@ -118,7 +118,7 @@ for size, screen-min in _sizes {
       _row__col--width(100%);
     }
 
-    .{bs-prefix}c-row__col {
+    .{_prefix}c-row__col {
       &{prefix}-auto {
         _row__col--width(auto);
       }
@@ -142,7 +142,7 @@ for size, screen-min in _sizes {
   }
 }
 
-.{bs-prefix}c-row__col {
+.{_prefix}c-row__col {
   for size, screen-min in _sizes {
     +_media-min(screen-min) {
       prefix = bs-bp-prefix(size);
