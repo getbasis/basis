@@ -11,8 +11,6 @@
 //
 
 _container-fluid() {
-  margin-right: auto;
-  margin-left: auto;
 }
 
 //
@@ -30,7 +28,8 @@ _container-fluid() {
 _container-max-width ?= bs-container-max-width ?= 1200px;
 
 _container() {
-  _container-fluid();
+  margin-right: auto;
+  margin-left: auto;
 
   +_media-lg-only() {
     max-width: _px2rem(_container-max-width);
