@@ -31,22 +31,16 @@ _flex-media__figure() {
   _margin(0, 0, .5);
   _background-image-cover();
 
-  +_media-min('md') {
-    _margin(0, 1, 0, 0);
-    flex: none;
+  > img {
+    width: 100%;
+  }
 
-    > * {
-      vertical-align: top;
-      margin-top: _between-lines;
-    }
+  +_media-min('md') {
+    flex: none;
 
     > img {
       width: auto;
     }
-  }
-
-  > img {
-    width: 100%;
   }
 }
 

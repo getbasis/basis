@@ -10,37 +10,28 @@
 // </span>
 //
 
-bs-select-padding ?= (_base-line-height / 4) _base-line-height (_base-line-height / 4) (_base-line-height / 2);
-
 _select() {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  background-color: #fff;
-  border: bs-form-control-border;
-  border-radius: bs-form-control-border-radius;
 
-  &::after {
+  &::before {
     position: absolute;
     right: 6px;
     top: 50%;
-    margin-top: -4px;
+    transform: translateY(-50%);
     content: '';
     display: block;
-    border: 6px solid transparent;
-    border-top: 8px solid _dark(_color-gray);
-    width: 0;
-    height: 0;
   }
 
   > select {
+    position: relative;
     margin: 0;
     appearance: none;
-    background-color: transparent;
+    background-color: transparent !important;
     border: none;
     line-height: 1;
     outline: 0;
-    padding: bs-select-padding;
-    width: 130%;
+    width: 100%;
   }
 }

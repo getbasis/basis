@@ -1,40 +1,40 @@
 @import '../src/stylus/core/core';
 @import 'api/api';
 
-+bs-test('[function] bs-bp-prefix()') {
-	bs-assert-equals('-', bs-bp-prefix('sm'));
-	bs-assert-equals('--md', bs-bp-prefix('md'));
-	bs-assert-equals('--lg', bs-bp-prefix('lg'));
++_test('[function] _size-prefix()') {
+	_assert-equals('-', _size-prefix('sm'));
+	_assert-equals('--md', _size-prefix('md'));
+	_assert-equals('--lg', _size-prefix('lg'));
 }
 
-+bs-test('[function] _gcd()') {
-	bs-assert-equals(2, _gcd(2, 12));
-	bs-assert-equals(4, _gcd(4, 12));
-	bs-assert-equals(1, _gcd(1, 12));
-	bs-assert-equals(1, _gcd(5, 12));
++_test('[function] _gcd()') {
+	_assert-equals(2, _gcd(2, 12));
+	_assert-equals(4, _gcd(4, 12));
+	_assert-equals(1, _gcd(1, 12));
+	_assert-equals(1, _gcd(5, 12));
 }
 
-+bs-test('[function] _px2rem()') {
++_test('[function] _px2rem()') {
 	rem = _px2rem(16px, 16px);
-	bs-assert-equals(1rem, rem);
+	_assert-equals(1rem, rem);
 
 	rem = _px2rem(16px, 10px);
-	bs-assert-equals(1.6rem, rem);
+	_assert-equals(1.6rem, rem);
 }
 
-+bs-test('[function] _rem2px()') {
++_test('[function] _rem2px()') {
 	rem = _rem2px(1rem, 16px);
-	bs-assert-equals(16px, rem);
+	_assert-equals(16px, rem);
 
 	rem = _rem2px(1rem, 10px);
-	bs-assert-equals(10px, rem);
+	_assert-equals(10px, rem);
 }
 
-+bs-test('[function] _strip-unit()') {
-	bs-assert-equals(1, _strip-unit(1rem));
-	bs-assert-equals(10, _strip-unit(10px));
++_test('[function] _strip-unit()') {
+	_assert-equals(1, _strip-unit(1rem));
+	_assert-equals(10, _strip-unit(10px));
 }
 
-+bs-test('[variable] _transition-duration') {
-	bs-assert-equals(_transition-duration, bs-transition-duration);
++_test('[variable] _transition-duration') {
+	_assert-equals(_transition-duration, _transition-duration);
 }

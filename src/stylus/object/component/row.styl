@@ -7,7 +7,7 @@
 
   for size, screen-min in _sizes {
     +_media-min(screen-min) {
-      prefix = bs-bp-prefix(size);
+      prefix = _size-prefix(size);
 
       &{prefix}-nowrap {
         flex-wrap: nowrap;
@@ -96,7 +96,7 @@
 
 for size, screen-min in _sizes {
   +_media-min(screen-min) {
-    prefix = bs-bp-prefix(size);
+    prefix = _size-prefix(size);
 
     for max_columns in range(1, _max-columns) {
       for i in range(1, max_columns) {
@@ -145,7 +145,7 @@ for size, screen-min in _sizes {
 .{_prefix}c-row__col {
   for size, screen-min in _sizes {
     +_media-min(screen-min) {
-      prefix = bs-bp-prefix(size);
+      prefix = _size-prefix(size);
 
       for max_columns in range(_min-columns, _max-columns) {
         for i in range(1, max_columns) {

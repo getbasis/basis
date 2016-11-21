@@ -1,11 +1,11 @@
-bs-test(message) {
+_test(message) {
 	[Test] {
 		message: message;
 		{block}
 	}
 }
 
-bs-assert-equals(expected, actual) {
+_assert-equals(expected, actual) {
 	if (expected == actual) {
 		content: 'OK!';
 	} else {

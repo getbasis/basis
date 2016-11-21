@@ -12,4 +12,19 @@
 
 $_select {
   _select();
+  background-color: #fff;
+  border: 1px solid _light(_color-gray);
+  border-radius: _border-radius;
+
+  &::before {
+    border: 6px solid transparent;
+    border-top: 8px solid _dark(_color-gray);
+    border-bottom: 0;
+    width: 0;
+    height: 0;
+  }
+
+  > select {
+    padding: (_base-line-height / 4) _base-line-height (_base-line-height / 4) (_base-line-height / 2);
+  }
 }

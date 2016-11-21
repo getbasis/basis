@@ -20,6 +20,12 @@ $_media {
 
   &__figure {
     _media__figure();
+    _margin(0, 1, 0, 0);
+
+    > * {
+      vertical-align: top;
+      margin-top: _between-lines;
+    }
   }
 
   &__body {

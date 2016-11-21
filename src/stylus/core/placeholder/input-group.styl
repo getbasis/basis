@@ -16,9 +16,20 @@
 
 $_input-group {
   _input-group();
+  border-radius: _border-radius;
+
+  > :first-child {
+    border-radius: _border-radius 0 0 _border-radius;
+  }
+
+  > :last-child {
+    border-radius: 0 _border-radius _border-radius 0;
+  }
 
   &__addon {
     _input-group__addon();
+    background-color: _lighter(_color-gray);
+    padding: (_base-font-size / 2);
   }
 
   &__field {

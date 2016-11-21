@@ -11,21 +11,21 @@
 // </span>
 //
 
-bs-radio-margin  ?= (_base-font-size / 2);
-bs-radio-z-index ?= 1;
-
 _radio() {
+  radio-margin  = (_base-font-size / 2);
+  radio-z-index = 1;
+
   position: relative;
   display: inline-block;
-  margin-right: bs-radio-margin;
-  padding-left: (_base-font-size + bs-radio-margin);
+  margin-right: radio-margin;
+  padding-left: (_base-font-size + radio-margin);
 
   > [type="radio"] {
     _checked-control-position();
     cursor: pointer;
     opacity: 0 !important;
     outline: 0;
-    z-index: bs-radio-z-index;
+    z-index: radio-z-index;
 
     &:checked ~ [data-c="radio__label"]::after {
       opacity: 1;
@@ -40,7 +40,7 @@ _radio() {
       background-color: #fff;
       border: 1px solid _light(_color-gray);
       border-radius: 100%;
-      z-index: (bs-radio-z-index - 1);
+      z-index: (radio-z-index - 1);
     }
 
     &::after {
@@ -54,7 +54,7 @@ _radio() {
       left: ((_base-font-size - @height) / 2);
       top: (_between-lines + @left);
       opacity: 0;
-      z-index: (bs-radio-z-index - 1);
+      z-index: (radio-z-index - 1);
     }
   }
 }

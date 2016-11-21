@@ -20,6 +20,15 @@ $_flex-media {
 
   &__figure {
     _flex-media__figure();
+
+    +_media-min('md') {
+      _margin(0, 1, 0, 0);
+
+      > * {
+        vertical-align: top;
+        margin-top: _between-lines;
+      }
+    }
   }
 
   &__body {
