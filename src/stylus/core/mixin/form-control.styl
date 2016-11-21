@@ -8,10 +8,10 @@
 // <input type="text" class="c-form-control" />
 //
 
-bs-form-control-border        ?= 1px solid _light(bs-color-gray);
-bs-form-control-border-radius ?= bs-border-radius;
+bs-form-control-border        ?= 1px solid _light(_color-gray);
+bs-form-control-border-radius ?= _border-radius;
 bs-form-control-padding       ?= (bs-base-line-height / 4) (bs-base-line-height / 2);
-bs-form-control-disabled-background-color ?= _lighter(bs-color-gray);
+bs-form-control-disabled-background-color ?= _lighter(_color-gray);
 
 _form-control() {
   background-color: #fff;
