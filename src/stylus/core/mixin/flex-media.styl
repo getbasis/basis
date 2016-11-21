@@ -22,7 +22,7 @@
 //
 
 _flex-media() {
-  +bs-bp-md-min() {
+  +_media-min('md') {
     display: flex;
   }
 }
@@ -31,7 +31,7 @@ _flex-media__figure() {
   _margin(0, 0, .5);
   _background-image-cover();
 
-  +bs-bp-md-min() {
+  +_media-min('md') {
     _margin(0, 1, 0, 0);
     flex: none;
 

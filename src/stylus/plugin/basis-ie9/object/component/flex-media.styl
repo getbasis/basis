@@ -1,24 +1,24 @@
 .{bs-prefix}c-flex-media {
-  +bs-bp-md-min() {
+  +_media-min('md') {
 	  _clearfix();
   }
 
   &__figure {
-    +bs-bp-md-min() {
+    +_media-min('md') {
       display: block;
       float: left;
     }
   }
 
   &__body {
-    +bs-bp-md-min() {
+    +_media-min('md') {
 	    display: block;
       overflow: hidden;
     }
   }
 
   &--reverse {
-    +bs-bp-md-min() {
+    +_media-min('md') {
 	    > .{bs-prefix}c-flex-media__figure {
         float: right;
       }

@@ -4,7 +4,14 @@
 // @param  length  min  width
 //
 _media-min(min) {
-  if (min == bs-screen-sm-min) {
+  size = _hash-search(min, bs-sizes);
+  if (min == 'sm') {
+    {block};
+  } else if (size != null) {
+    @media (min-width: bs-sizes[min]) {
+      {block};
+    }
+  } else if (min == bs-screen-sm-min) {
     {block};
   } else {
     @media (min-width: min) {
@@ -20,15 +27,6 @@ _media-min(min) {
 //
 _media-max(max) {
   @media (max-width: max) {
-    {block};
-  }
-}
-
-//
-// Return bs-screen-md-min media query
-//
-bs-bp-md-min() {
-  +_media-min(bs-screen-md-min) {
     {block};
   }
 }
