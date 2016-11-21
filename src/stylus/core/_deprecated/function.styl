@@ -5,10 +5,5 @@
 // @return  string
 //
 bs-bp-prefix(size) {
-  prefix = '-';
-
-  if (size != 'sm') {
-    prefix = '--' + size;
-  }
-  return prefix;
+  return _size-prefix(size);
 }
