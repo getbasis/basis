@@ -42,35 +42,13 @@ _min-columns ?= bs-min-columns ?= 1;
 _max-columns ?= bs-max-columns ?= 12;
 
 //
-// Break point for smartphone
-// @type  length
-//
-bs-screen-sm-min = 0;
-
-//
-// Break point for smartphone and tablet
-// 640px / 16px
-// @type  length
-//
-bs-screen-md-min ?= (_px2rem(640px) / _px2rem(_base-font-size-px));
-bs-screen-sm-max = (bs-screen-md-min - (1em / _strip-unit(_base-font-size-px)));
-
-//
-// Break point for tablet and pc
-// 1024px / 16px
-// @type  length
-//
-bs-screen-lg-min ?= (_px2rem(1024px) / _px2rem(_base-font-size-px));
-bs-screen-md-max = (bs-screen-lg-min - (1em / _strip-unit(_base-font-size-px)));
-
-//
 // Array of breakpoints
 // @type  array
 //
 bs-sizes ?= {
-  sm: bs-screen-sm-min,
-  md: bs-screen-md-min,
-  lg: bs-screen-lg-min
+  sm: 0,
+  md: (_px2rem(640px) / _px2rem(_base-font-size-px)),
+  lg: (_px2rem(1024px) / _px2rem(_base-font-size-px))
 };
 
 //
@@ -78,6 +56,6 @@ bs-sizes ?= {
 // @type  array
 //
 bs-sizes-max ?= {
-  sm: bs-screen-sm-max,
-  md: bs-screen-md-max
+  sm: (bs-sizes.md - (1em / _strip-unit(_base-font-size-px))),
+  md: (bs-sizes.lg - (1em / _strip-unit(_base-font-size-px)))
 };

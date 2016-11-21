@@ -11,7 +11,7 @@ _media-min(min) {
     @media (min-width: bs-sizes[min]) {
       {block};
     }
-  } else if (min == bs-screen-sm-min) {
+  } else if (min == bs-sizes.sm) {
     {block};
   } else {
     @media (min-width: min) {
@@ -42,7 +42,7 @@ _media-max(max) {
 // Return media query for smartphone size
 //
 _media-sm-only() {
-  +_media-max(bs-screen-sm-max) {
+  +_media-max(bs-sizes-max.sm) {
     {block};
   }
 }
@@ -51,7 +51,7 @@ _media-sm-only() {
 // Return media query for tablet size
 //
 _media-md-only() {
-  @media (min-width: bs-screen-md-min) and (max-width: bs-screen-md-max) {
+  @media (min-width: bs-sizes.md) and (max-width: bs-sizes-max.md) {
     {block};
   }
 }
@@ -62,7 +62,7 @@ _media-md-only() {
 // @return  string  media query
 //
 _media-lg-only() {
-  +_media-min(bs-screen-lg-min) {
+  +_media-min(bs-sizes.lg) {
     {block};
   }
 }
