@@ -7,5 +7,9 @@
 _space(coefficient) {
   margin     = (_base-line-height * coefficient);
   add-margin = (_base-line-height * (_margin-coefficient - 1));
-  return (margin + _margin-coefficient);
+  space      = (margin + add-margin);
+  if (0 == space) {
+    return 0;
+  }
+  return space;
 }

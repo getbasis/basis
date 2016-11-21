@@ -47,3 +47,11 @@
   _assert-equals(false, _is-length('test'));
   _assert-equals(false, _is-length('1px'));
 }
+
++_test('[function] _space()') {
+  _assert-equals(.75rem, _space(.5));
+  _assert-equals(1.5rem, _space(1));
+  _assert-equals(4.5rem, _space(3));
+  _assert-equals(0, _space(0));
+  _assert-equals(-1.5rem, _space(-1));
+}
