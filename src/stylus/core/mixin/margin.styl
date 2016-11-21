@@ -8,22 +8,22 @@
 //
 _margin(coefficient-1, coefficient-2 = null, coefficient-3 = null, coefficient-4 = null) {
   if (coefficient-2 == null && coefficient-3 == null && coefficient-4 == null) {
-    margin = bs-space(bs-base-line-height, coefficient-1, bs-margin-coefficient);
+    margin = _space(coefficient-1);
     margin: margin;
   } else if (coefficient-3 == null && coefficient-4 == null) {
-    margin-vertical   = bs-space(bs-base-line-height, coefficient-1, bs-margin-coefficient);
-    margin-horizontal = bs-space(bs-base-line-height, coefficient-2, bs-margin-coefficient);
+    margin-vertical   = _space(coefficient-1);
+    margin-horizontal = _space(coefficient-2);
     margin: margin-vertical margin-horizontal;
   } else if (coefficient-4 == null) {
-    margin-top        = bs-space(bs-base-line-height, coefficient-1, bs-margin-coefficient);
-    margin-horizontal = bs-space(bs-base-line-height, coefficient-2, bs-margin-coefficient);
-    margin-bottom     = bs-space(bs-base-line-height, coefficient-3, bs-margin-coefficient);
+    margin-top        = _space(coefficient-1);
+    margin-horizontal = _space(coefficient-2);
+    margin-bottom     = _space(coefficient-3);
     margin: margin-top margin-horizontal margin-bottom;
   } else {
-    margin-top    = bs-space(bs-base-line-height, coefficient-1, bs-margin-coefficient);
-    margin-right  = bs-space(bs-base-line-height, coefficient-2, bs-margin-coefficient);
-    margin-bottom = bs-space(bs-base-line-height, coefficient-3, bs-margin-coefficient);
-    margin-left   = bs-space(bs-base-line-height, coefficient-4, bs-margin-coefficient);
+    margin-top    = _space(coefficient-1);
+    margin-right  = _space(coefficient-2);
+    margin-bottom = _space(coefficient-3);
+    margin-left   = _space(coefficient-4);
     margin: margin-top margin-right margin-bottom margin-left;
   }
 }
@@ -34,7 +34,7 @@ _margin(coefficient-1, coefficient-2 = null, coefficient-3 = null, coefficient-4
 // @param  int  coefficient
 //
 _margin-top(coefficient) {
-  margin-top: bs-space(bs-base-line-height, coefficient, bs-margin-coefficient);
+  margin-top: _space(coefficient);
 }
 
 //
@@ -43,7 +43,7 @@ _margin-top(coefficient) {
 // @param  int  coefficient
 //
 _margin-right(coefficient) {
-  margin-right: bs-space(bs-base-line-height, coefficient, bs-margin-coefficient);
+  margin-right: _space(coefficient);
 }
 
 //
@@ -52,7 +52,7 @@ _margin-right(coefficient) {
 // @param  int  coefficient
 //
 _margin-bottom(coefficient) {
-  margin-bottom: bs-space(bs-base-line-height, coefficient, bs-margin-coefficient);
+  margin-bottom: _space(coefficient);
 }
 
 //
@@ -61,5 +61,5 @@ _margin-bottom(coefficient) {
 // @param  int  coefficient
 //
 bs-margin-left(coefficient) {
-  margin-left: bs-space(bs-base-line-height, coefficient, bs-margin-coefficient);
+  margin-left: _space(coefficient);
 }

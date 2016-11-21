@@ -109,3 +109,17 @@ bs-px2rem(px, base-font-size-px = bs-base-font-size-px) {
 bs-rem2px(rem, base-font-size-px = bs-base-font-size-px) {
   return _rem2px(rem, base-font-size-px);
 }
+
+//
+// Return the margin conforming to the rhythm
+//
+// @param   length  base-margin
+// @param   int     base-coefficient
+// @param   int     add-coefficient
+// @return  length
+//
+bs-space(base-margin, base-coefficient, add-coefficient) {
+  margin     = (base-margin * base-coefficient);
+  add-margin = (base-margin * (add-coefficient - 1));
+  return (margin + add-margin);
+}

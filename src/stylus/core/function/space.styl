@@ -1,13 +1,11 @@
 //
 // Return the margin conforming to the rhythm
 //
-// @param   length  base-margin
-// @param   int     base-coefficient
-// @param   int     add-coefficient
+// @param   int     coefficient
 // @return  length
 //
-bs-space(base-margin, base-coefficient, add-coefficient) {
-  margin     = (base-margin * base-coefficient);
-  add-margin = (base-margin * (add-coefficient - 1));
-  return (margin + add-margin);
+_space(coefficient) {
+  margin     = (bs-base-line-height * coefficient);
+  add-margin = (bs-base-line-height * (bs-margin-coefficient - 1));
+  return (margin + bs-margin-coefficient);
 }
