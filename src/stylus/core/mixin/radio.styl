@@ -21,9 +21,8 @@ _radio() {
   padding-left: (_base-font-size + radio-margin);
 
   > [type="radio"] {
-    _position(absolute, _between-lines, null, null, 0);
+    _position(absolute, _between-lines, null, null, 0, radio-z-index);
     _square(_base-font-size);
-    z-index: radio-z-index;
     cursor: pointer;
     opacity: 0 !important;
     outline: 0;
@@ -35,9 +34,8 @@ _radio() {
 
   > [data-c="radio__label"] {
     &::before {
-      _position(absolute, _between-lines, null, null, 0);
+      _position(absolute, _between-lines, null, null, 0, (radio-z-index - 1));
       _circle(_base-font-size);
-      z-index: (radio-z-index - 1);
       content: '';
       display: inline-block;
       background-color: #fff;
@@ -49,9 +47,8 @@ _radio() {
       left = ((_base-font-size - size) / 2);
       top  = (_between-lines + left);
 
-      _position(absolute, top, null, null, left);
+      _position(absolute, top, null, null, left, (radio-z-index - 1));
       _circle(size);
-      z-index: (radio-z-index - 1);
       content: '';
       display: inline-block;
       background-color: _dark(_color-gray);

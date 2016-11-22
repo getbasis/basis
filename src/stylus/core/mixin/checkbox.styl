@@ -22,9 +22,8 @@ _checkbox() {
   padding-left: (_base-font-size + checkbox-margin);
 
   > [type="checkbox"] {
-    _position(absolute, _between-lines, null, null, 0);
+    _position(absolute, _between-lines, null, null, 0, checkbox-z-index);
     _square(_base-font-size);
-    z-index: checkbox-z-index;
     cursor: pointer;
     opacity: 0 !important;
     outline: 0;
@@ -36,9 +35,8 @@ _checkbox() {
 
   > [data-c="checkbox__label"] {
     &::before {
-      _position(absolute, _between-lines, null, null, 0);
+      _position(absolute, _between-lines, null, null, 0, (checkbox-z-index - 1));
       _square(_base-font-size, checkbox-border-radius);
-      z-index: (checkbox-z-index - 1);
       content: '';
       display: inline-block;
       background-color: #fff;
@@ -50,9 +48,8 @@ _checkbox() {
       left = ((_base-font-size - size) / 2);
       top  = (_between-lines + left);
 
-      _position(absolute, top, null, null, left);
+      _position(absolute, top, null, null, left, (checkbox-z-index - 1));
       _square(size, (checkbox-border-radius - 1));
-      z-index: (checkbox-z-index - 1);
       content: '';
       display: inline-block;
       background-color: _dark(_color-gray);

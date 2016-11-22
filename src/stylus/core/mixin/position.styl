@@ -6,8 +6,9 @@
 // @param  length  right
 // @param  length  bottom
 // @param  length  left
+// @param  int     z-index
 //
-_position(position, top = null, right = null, bottom = null, left = null) {
+_position(position, top = null, right = null, bottom = null, left = null, z-index = null) {
   position: position;
 
   if (_is-length(top)) {
@@ -24,5 +25,9 @@ _position(position, top = null, right = null, bottom = null, left = null) {
 
   if (_is-length(left)) {
     left: left;
+  }
+
+  if (_is-int(z-index)) {
+    z-index: _strip-unit(z-index);
   }
 }
