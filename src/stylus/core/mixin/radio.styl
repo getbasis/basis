@@ -21,11 +21,12 @@ _radio() {
   padding-left: (_base-font-size + radio-margin);
 
   > [type="radio"] {
-    _checked-control-position();
+    _position(absolute, _between-lines, null, null, 0);
+    _square(_base-font-size);
+    z-index: radio-z-index;
     cursor: pointer;
     opacity: 0 !important;
     outline: 0;
-    z-index: radio-z-index;
 
     &:checked ~ [data-c="radio__label"]::after {
       opacity: 1;
@@ -34,27 +35,27 @@ _radio() {
 
   > [data-c="radio__label"] {
     &::before {
-      _checked-control-position();
+      _position(absolute, _between-lines, null, null, 0);
+      _circle(_base-font-size);
+      z-index: (radio-z-index - 1);
       content: '';
       display: inline-block;
       background-color: #fff;
       border: 1px solid _light(_color-gray);
-      border-radius: 100%;
-      z-index: (radio-z-index - 1);
     }
 
     &::after {
-      height: (_base-font-size / 2);
-      position: absolute;
-      left: ((_base-font-size - @height) / 2);
-      top: (_between-lines + @left);
+      size = (_base-font-size / 2);
+      left = ((_base-font-size - size) / 2);
+      top  = (_between-lines + left);
+
+      _position(absolute, top, null, null, left);
+      _circle(size);
+      z-index: (radio-z-index - 1);
       content: '';
       display: inline-block;
       background-color: _dark(_color-gray);
-      border-radius: 100%;
-      width: @height;
       opacity: 0;
-      z-index: (radio-z-index - 1);
     }
   }
 }
