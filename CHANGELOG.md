@@ -1,5 +1,12 @@
 #Changelog
 
+## November 22, 2016 v3.0.0
+* Refactoring
+* Changed prefix of variable, mixin and placeholder. `bs-` to `_`.
+* Added some mixins.
+* Added some functions.
+* Removed global variables for the components.
+
 ## October 17, 2016 v2.0.1
 * Replace normalize.css to normalize-styl
 
