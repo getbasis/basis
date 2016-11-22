@@ -1,24 +1,24 @@
 .{_prefix}c-flex-media {
-  +_media-min('md') {
+  +_media-min(md) {
 	  _clearfix();
   }
 
   &__figure {
-    +_media-min('md') {
+    +_media-min(md) {
       display: block;
       float: left;
     }
   }
 
   &__body {
-    +_media-min('md') {
+    +_media-min(md) {
 	    display: block;
       overflow: hidden;
     }
   }
 
   &--reverse {
-    +_media-min('md') {
+    +_media-min(md) {
 	    > .{_prefix}c-flex-media__figure {
         float: right;
       }

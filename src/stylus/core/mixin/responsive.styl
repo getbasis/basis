@@ -1,7 +1,7 @@
 //
-// Return min-width media query
+// min-width media query
 //
-// @param  length  min  width
+// @param  size|length  min  width
 //
 _media-min(min) {
   size = _hash-search(min, _sizes);
@@ -21,9 +21,9 @@ _media-min(min) {
 }
 
 //
-// Return max-width media query
+// max-width media query
 //
-// @param  length  max  width
+// @param  size|length  max  width
 //
 _media-max(max) {
   size = _hash-search(max, _sizes);
@@ -39,7 +39,7 @@ _media-max(max) {
 }
 
 //
-// Return media query for smartphone size
+// Media query for smartphone size
 //
 _media-sm-only() {
   +_media-max(_sizes-max.sm) {
@@ -48,7 +48,7 @@ _media-sm-only() {
 }
 
 //
-// Return media query for tablet size
+// Media query for tablet size
 //
 _media-md-only() {
   @media (min-width: _sizes.md) and (max-width: _sizes-max.md) {
@@ -57,9 +57,7 @@ _media-md-only() {
 }
 
 //
-// Return media query for pc size
-//
-// @return  string  media query
+// Media query for pc size
 //
 _media-lg-only() {
   +_media-min(_sizes.lg) {
