@@ -60,27 +60,6 @@ gulp.task('watch', function() {
 gulp.task('build', ['css']);
 
 /**
- * Release
- */
-gulp.task('release', ['build'], function() {
-  return gulp.src(
-      [
-        '**/*',
-        '!node_modules',
-        '!node_modules/**',
-        '!bin',
-        '!bin/**',
-        '!.git',
-        '!.gitignore',
-        '!.travis.yml',
-        '!**/.DS_Store'
-      ],
-      {base: './'}
-    )
-    .pipe( gulp.dest('release'));
-} );
-
-/**
  * Creates the zip file
  */
 gulp.task('zip', function(){
