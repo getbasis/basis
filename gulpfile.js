@@ -66,7 +66,13 @@ gulp.task('release', ['build'], function() {
       [
         './**',
         '!node_modules',
-        '!node_modules/**'
+        '!node_modules/**',
+        '!bin',
+        '!bin/**',
+        '!.git',
+        '!.gitignore',
+        '!.travis.yml',
+        '!**/.DS_Store'
       ])
       .pipe( gulp.dest('release'));
 } );
