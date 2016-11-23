@@ -65,7 +65,7 @@ gulp.task('build', ['css']);
 gulp.task('release', ['build'], function() {
   return gulp.src(
       [
-        './**',
+        '**/*',
         '!node_modules',
         '!node_modules/**',
         '!bin',
