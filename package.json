@@ -30,6 +30,7 @@
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.5.0",
+    "gulp-zip": "^3.2.0",
     "stylus": "^0.54.5"
   },
   "scripts": {

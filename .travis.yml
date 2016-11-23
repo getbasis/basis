@@ -18,10 +18,13 @@ script:
 - npm run gulp build
 after_success:
 - bash ./bin/deploy.sh
+before_deploy:
+- bash ./bin/zip.sh
 deploy:
   provider: releases
   api_key:
     secure: A8qPo5Z1dJjkIFFUtTzOnzTwOXHKWy0TgZ8PTpty8tKAPtacjppFKmprCuOJdZzkfV9nd4Fp1/e0Fw9354Zz6g1rVxVj6Wvz40U89/PR7tahAi/V+qpRudoNltS1X1VJ435my60KBpDaMQGpftKWTjQ4V+JJCm4Nc4Nq6ZXzIQQ2T7gTsKp42XKo+mrx3LxkL22kNWY+IbG+saLPnck7CzD+Rn+CjIm6ZCly95tjMxsFHN5H3HFJtrm8WEsB3PzVnKS8v7mYds/n0iWaLVnn4pYedozbF5IyjW39QizFlbpKUrWDMj5Szl4b+21B+QPL+73xOeFg3PWdiuSKHgoDUPtcKwmBUqhK5jU1DbttvyUf+MAy7oRqrPUu/G15wnwgatPKdYvZqNGhZGbX1GutQ9GOOgNMuH4AiRtOSCKKp1QKn025rCA4ppQPk4/tWqgVfsRqjC1jtYWt303Qd3u1R9XPu8/mwa3qlCEAqknir0jXAO4bBFZkLf3pH6GxVacHcN10xFRjqg+ny1TUBRlhXgcqSWIT7MIsx+JFRv1+o/PV+91PP09+HQsoB+8W8zxcR4xIaTuQgg9qEGjT1PsaLcX/SxKvtnZBEB4w1DQd4hAr+CN6LYAPPsbVsx/dEr1VYc4nVsmPyeQ96EFMugy23w4SiWYvA3WCPaXYenXoEl0=
+  file: basis.zip
   on:
     tags: true
     repo: getbasis/basis

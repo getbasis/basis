@@ -10,6 +10,7 @@ var rename       = require('gulp-rename');
 var postcss      = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var cssnano      = require('cssnano');
+var zip          = require('gulp-zip');
 
 var path = {
   src: {
@@ -76,5 +77,20 @@ gulp.task('release', ['build'], function() {
       ])
       .pipe( gulp.dest('release'));
 } );
+
+/**
+ * Creates the zip file
+ */
+gulp.task('zip', ['release'], function(){
+  return gulp.src(
+      [
+        'release/**',
+        '!release/.git'
+      ]
+      , {base: './release'}
+    )
+    .pipe(zip('basis.zip'))
+    .pipe(gulp.dest('./'));
+});
 
 gulp.task('default', ['build', 'watch']);
