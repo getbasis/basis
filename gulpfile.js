@@ -83,13 +83,21 @@ gulp.task('release', ['build'], function() {
 /**
  * Creates the zip file
  */
-gulp.task('zip', ['release'], function(){
+gulp.task('zip', function(){
   return gulp.src(
       [
-        'release/**',
-        '!release/.git'
+        '**/*',
+        '!node_modules',
+        '!node_modules/**',
+        '!bin',
+        '!bin/**',
+        '!.git',
+        '!.gitignore',
+        '!.travis.yml',
+        '!basis.zip',
+        '!**/.DS_Store'
       ]
-      , {base: './release'}
+      , {base: './'}
     )
     .pipe(zip('basis.zip'))
     .pipe(gulp.dest('./'));

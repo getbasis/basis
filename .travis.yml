@@ -19,7 +19,7 @@ script:
 after_success:
 - bash ./bin/deploy.sh
 before_deploy:
-- bash ./bin/zip.sh
+- npm run gulp zip
 deploy:
   provider: releases
   api_key:
