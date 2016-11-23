@@ -68,8 +68,6 @@ gulp.task('zip', function(){
         '**/*',
         '!node_modules',
         '!node_modules/**',
-        '!bin',
-        '!bin/**',
         '!.git',
         '!.gitignore',
         '!.travis.yml',
