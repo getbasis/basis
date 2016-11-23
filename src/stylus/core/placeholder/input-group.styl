@@ -34,11 +34,16 @@ $_input-group {
 
   &__field {
     _input-group__field();
-  }
 
-  &__control {
-    _input-group__control();
-    padding: (_base-line-height / 4) (_base-line-height / 2);
+    > input[type='email'],
+    > input[type='number'],
+    > input[type='password'],
+    > input[type='search'],
+    > input[type='tel'],
+    > input[type='text'],
+    > input[type='url'] {
+      padding: (_base-line-height / 4) (_base-line-height / 2);
+    }
   }
 
   &__btn {
