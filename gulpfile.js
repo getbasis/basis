@@ -74,8 +74,10 @@ gulp.task('release', ['build'], function() {
         '!.gitignore',
         '!.travis.yml',
         '!**/.DS_Store'
-      ])
-      .pipe( gulp.dest('release'));
+      ],
+      {base: './'}
+    )
+    .pipe( gulp.dest('release'));
 } );
 
 /**
