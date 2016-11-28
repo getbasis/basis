@@ -1,16 +1,31 @@
 //
 // Ghost style
 //
+// @param  hash  properties for decoration
+//
 // .c-btn-ghost {
 //   _btn();
-//   _ghost();
+//   _ghost({
+//     border-size : 1px,
+//     border-color: #fff,
+//     color       : #fff,
+//   });
 // }
 //
 // <a class="c-btn-ghost" role="button">btn</a>
 //
 
-_ghost() {
-  background-color: transparent;
-  border-color: #fff;
-  color: #fff;
+_ghost(params = {}) {
+  params = merge(
+    {
+      border-size : 1px,
+      border-color: #fff,
+      color       : #fff,
+    },
+    params
+  );
+
+  background-color: transparent !important;
+  border: params['border-size'] solid params['border-color'];
+  color: params['color'];
 }
