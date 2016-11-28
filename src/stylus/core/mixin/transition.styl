@@ -1,6 +1,23 @@
 //
 // Transition helper
 //
+// @param  string  property
+//
+// a {
+//   _transition(all);
+//   color: #f00;
+//   &:hover {
+//     color: #f9c;
+//   }
+// }
+//
+_transition(property = all) {
+  transition: property _transition-duration _transition-function-timing;
+}
+
+//
+// Transition helper
+//
 // a {
 //   _transition-all();
 //   color: #f00;

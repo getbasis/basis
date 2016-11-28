@@ -1,0 +1,41 @@
+//
+// Hamberger button component
+//
+// .c-hamburger-btn {
+//   @extend $_hamburger-btn();
+// }
+//
+// <div class="c-hamburger-btn" aria-expanded="false">
+//   <div class="c-hamburger-btn__bar"></div>
+//   <div class="c-hamburger-btn__bar"></div>
+//   <div class="c-hamburger-btn__bar"></div>
+// </div>
+//
+
+$_hamburger-btn {
+  _hamburger-btn();
+  width: 22px;
+
+  &__bar {
+    _hamburger-btn__bar();
+    background-color: #333;
+
+    [aria-expanded="true"] > & {
+      &:nth-child(1), &:nth-child(3) {
+        top: (hamburger-btn-height / 2 - hamburger-btn-bar-height / 2);
+      }
+
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        background-color: transparent;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
