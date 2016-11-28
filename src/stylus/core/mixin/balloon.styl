@@ -1,0 +1,97 @@
+//
+// Top balloon component
+//
+// .c-balloon-top {
+//   _balloon-top();
+// }
+//
+// <div class="c-balloon-top">
+//   ...
+// </div>
+//
+
+_balloon-triangle-size ?= 10px;
+
+_balloon-top() {
+  position: relative;
+
+  &::before, &::after {
+    content: '';
+    display: block;
+    _position(absolute, (_balloon-triangle-size * -1), null, null, 50%);
+    margin-left: ((_balloon-triangle-size / 2) * -1);
+    _triangle-top(_balloon-triangle-size, _balloon-triangle-size, transparent);
+  }
+}
+
+//
+// Right balloon component
+//
+// .c-balloon-right {
+//   _balloon-right();
+// }
+//
+// <div class="c-balloon-right">
+//   ...
+// </div>
+//
+
+_balloon-right() {
+  position: relative;
+
+  &::before, &::after {
+    content: '';
+    display: block;
+    _position(absolute, 50%, (_balloon-triangle-size * -1), null, null);
+    margin-top: ((_balloon-triangle-size / 2) * -1);
+    _triangle-right(_balloon-triangle-size, _balloon-triangle-size, transparent);
+  }
+}
+
+//
+// Bottom balloon component
+//
+// .c-balloon-bottom {
+//   _balloon-bottom();
+// }
+//
+// <div class="c-balloon-bottom">
+//   ...
+// </div>
+//
+
+_balloon-bottom() {
+  position: relative;
+
+  &::before, &::after {
+    content: '';
+    display: block;
+    _position(absolute, null, null, (_balloon-triangle-size * -1), 50%);
+    margin-left: ((_balloon-triangle-size / 2) * -1);
+    _triangle-bottom(_balloon-triangle-size, _balloon-triangle-size, transparent);
+  }
+}
+
+//
+// Left balloon component
+//
+// .c-balloon-left {
+//   _balloon-left();
+// }
+//
+// <div class="c-balloon-left">
+//   ...
+// </div>
+//
+
+_balloon-left() {
+  position: relative;
+
+  &::before, &::after {
+    content: '';
+    display: block;
+    _position(absolute, 50%, null, null, (_balloon-triangle-size * -1));
+    margin-top: ((_balloon-triangle-size / 2) * -1);
+    _triangle-left(_balloon-triangle-size, _balloon-triangle-size, transparent);
+  }
+}
