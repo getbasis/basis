@@ -1,8 +1,15 @@
 //
 // Top balloon component
 //
+// @param  hash  properties for decoration
+//
 // .c-balloon-top {
-//   _balloon-top();
+//   _balloon-top({
+//     background-color: #fff,
+//     border-color    : #ccc,
+//     border-size     : 1px,
+//     triangle-size   : 10px,
+//   });
 // }
 //
 // <div class="c-balloon-top">
@@ -10,25 +17,59 @@
 // </div>
 //
 
-_balloon-triangle-size ?= 10px;
+_balloon-top(params = {}) {
+  params = merge(
+    {
+      background-color: transparent,
+      border-color    : transparent,
+      border-size     : 0,
+      triangle-size   : 10px,
+    },
+    params
+  );
 
-_balloon-top() {
   position: relative;
+  background-color: params['background-color'];
+
+  if (params['border-size'] && params['border-color']) {
+    border: params['border-size'] solid params['border-color'];
+  }
 
   &::before, &::after {
     content: '';
     display: block;
-    _position(absolute, (_balloon-triangle-size * -1), null, null, 50%);
-    margin-left: ((_balloon-triangle-size / 2) * -1);
-    _triangle-top(_balloon-triangle-size, _balloon-triangle-size, transparent);
+    margin-left: ((params['triangle-size'] / 2) * -1);
+  }
+
+  top = params['triangle-size'] * -1;
+
+  &::before {
+    _position(absolute, top, null, null, 50%);
+    _triangle-top(params['triangle-size'], params['triangle-size'], params['border-color']);
+  }
+
+  &::after {
+    if (0 < params['border-size']) {
+      top = top + params['border-size'] + 1;
+    }
+
+    _position(absolute, top, null, null, 50%);
+    _triangle-top(params['triangle-size'], params['triangle-size'], params['background-color']);
   }
 }
 
 //
 // Right balloon component
 //
+// @param  hash  properties for decoration
+//
 // .c-balloon-right {
-//   _balloon-right();
+//   _balloon-right({
+//     background-color: #fff,
+//     border-color    : #ccc,
+//     border-size     : 1px,
+//     triangle-size   : 10px,
+//   });
 // }
 //
 // <div class="c-balloon-right">
@@ -36,23 +77,64 @@ _balloon-top() {
 // </div>
 //
 
-_balloon-right() {
+_balloon-right(params = {}) {
+  params = merge(
+    {
+      background-color: transparent,
+      border-color    : transparent,
+      border-size     : 0,
+      triangle-size   : 10px,
+    },
+    params
+  );
+
   position: relative;
+  background-color: params['background-color'];
+
+  if (params['border-size'] && params['border-color']) {
+    border: params['border-size'] solid params['border-color'];
+  }
 
   &::before, &::after {
     content: '';
     display: block;
-    _position(absolute, 50%, (_balloon-triangle-size * -1), null, null);
-    margin-top: ((_balloon-triangle-size / 2) * -1);
-    _triangle-right(_balloon-triangle-size, _balloon-triangle-size, transparent);
+    margin-top: ((params['triangle-size'] / 2) * -1);
+  }
+
+  &::before, &::after {
+    content: '';
+    display: block;
+  }
+
+  right = params['triangle-size'] * -1;
+
+  &::before {
+    _position(absolute, 50%, right, null, null);
+    _triangle-right(params['triangle-size'], params['triangle-size'], params['border-color']);
+  }
+
+  &::after {
+    if (0 < params['border-size']) {
+      right = right + params['border-size'] + 1;
+    }
+
+    _position(absolute, 50%, right, null, null);
+    _triangle-right(params['triangle-size'], params['triangle-size'], params['background-color']);
   }
 }
 
 //
 // Bottom balloon component
 //
+// @param  hash  properties for decoration
+//
 // .c-balloon-bottom {
-//   _balloon-bottom();
+//   _balloon-bottom({
+//     background-color: #fff,
+//     border-color    : #ccc,
+//     border-size     : 1px,
+//     triangle-size   : 10px,
+//   });
 // }
 //
 // <div class="c-balloon-bottom">
@@ -60,23 +142,59 @@ _balloon-right() {
 // </div>
 //
 
-_balloon-bottom() {
+_balloon-bottom(params = {}) {
+  params = merge(
+    {
+      background-color: transparent,
+      border-color    : transparent,
+      border-size     : 0,
+      triangle-size   : 10px,
+    },
+    params
+  );
+
   position: relative;
+  background-color: params['background-color'];
+
+  if (params['border-size'] && params['border-color']) {
+    border: params['border-size'] solid params['border-color'];
+  }
 
   &::before, &::after {
     content: '';
     display: block;
-    _position(absolute, null, null, (_balloon-triangle-size * -1), 50%);
-    margin-left: ((_balloon-triangle-size / 2) * -1);
-    _triangle-bottom(_balloon-triangle-size, _balloon-triangle-size, transparent);
+    margin-left: ((params['triangle-size'] / 2) * -1);
+  }
+
+  bottom = params['triangle-size'] * -1;
+
+  &::before {
+    _position(absolute, null, null, bottom, 50%);
+    _triangle-bottom(params['triangle-size'], params['triangle-size'], params['border-color']);
+  }
+
+  &::after {
+    if (0 < params['border-size']) {
+      bottom = bottom + params['border-size'] + 1;
+    }
+
+    _position(absolute, null, null, bottom, 50%);
+    _triangle-bottom(params['triangle-size'], params['triangle-size'], params['background-color']);
   }
 }
 
 //
 // Left balloon component
 //
+// @param  hash  properties for decoration
+//
 // .c-balloon-left {
-//   _balloon-left();
+//   _balloon-left({
+//     background-color: #fff,
+//     border-color    : #ccc,
+//     border-size     : 1px,
+//     triangle-size   : 10px,
+//   });
 // }
 //
 // <div class="c-balloon-left">
@@ -84,14 +202,48 @@ _balloon-bottom() {
 // </div>
 //
 
-_balloon-left() {
+_balloon-left(params = {}) {
+  params = merge(
+    {
+      background-color: transparent,
+      border-color    : transparent,
+      border-size     : 0,
+      triangle-size   : 10px,
+    },
+    params
+  );
+
   position: relative;
+  background-color: params['background-color'];
+
+  if (params['border-size'] && params['border-color']) {
+    border: params['border-size'] solid params['border-color'];
+  }
 
   &::before, &::after {
     content: '';
     display: block;
-    _position(absolute, 50%, null, null, (_balloon-triangle-size * -1));
-    margin-top: ((_balloon-triangle-size / 2) * -1);
-    _triangle-left(_balloon-triangle-size, _balloon-triangle-size, transparent);
+    margin-top: ((params['triangle-size'] / 2) * -1);
+  }
+
+  &::before, &::after {
+    content: '';
+    display: block;
+  }
+
+  left = params['triangle-size'] * -1;
+
+  &::before {
+    _position(absolute, 50%, null, null, left);
+    _triangle-left(params['triangle-size'], params['triangle-size'], params['border-color']);
+  }
+
+  &::after {
+    if (0 < params['border-size']) {
+      left = left + params['border-size'] + 1;
+    }
+
+    _position(absolute, 50%, null, null, left);
+    _triangle-left(params['triangle-size'], params['triangle-size'], params['background-color']);
   }
 }

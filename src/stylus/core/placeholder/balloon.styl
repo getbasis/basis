@@ -11,24 +11,15 @@
 //
 
 $_balloon-top {
-  background-color = #fff;
-  border-color     = _light(_color-gray);
-  border-size      = 1px;
+  _balloon-top({
+    background-color: #fff,
+    border-color    : _light(_color-gray),
+    border-size     : 1px,
+    triangle-size   : 10px,
+  });
 
-  _balloon-top();
-  background-color: background-color;
-  border: border-size solid border-color;
-  border-radius: 4px;
+  border-radius: _border-radius;
   _padding(.75);
-
-  &::before {
-    border-bottom-color: border-color;
-  }
-
-  &::after {
-    transform: translateY(border-size + 1);
-    border-bottom-color: background-color;
-  }
 }
 
 //
@@ -44,24 +35,15 @@ $_balloon-top {
 //
 
 $_balloon-right {
-  background-color = #fff;
-  border-color     = _light(_color-gray);
-  border-size      = 1px;
+  _balloon-right({
+    background-color: #fff,
+    border-color    : _light(_color-gray),
+    border-size     : 1px,
+    triangle-size   : 10px,
+  });
 
-  _balloon-right();
-  background-color: background-color;
-  border: border-size solid border-color;
   border-radius: 4px;
   _padding(.75);
-
-  &::before {
-    border-left-color: border-color;
-  }
-
-  &::after {
-    transform: translateX((border-size + 1) * -1);
-    border-left-color: background-color;
-  }
 }
 
 //
@@ -77,24 +59,15 @@ $_balloon-right {
 //
 
 $_balloon-bottom {
-  background-color = #fff;
-  border-color     = _light(_color-gray);
-  border-size      = 1px;
+  _balloon-bottom({
+    background-color: #fff,
+    border-color    : _light(_color-gray),
+    border-size     : 1px,
+    triangle-size   : 10px,
+  });
 
-  _balloon-bottom();
-  background-color: background-color;
-  border: border-size solid border-color;
   border-radius: 4px;
   _padding(.75);
-
-  &::before {
-    border-top-color: border-color;
-  }
-
-  &::after {
-    transform: translateY((border-size + 1) * -1);
-    border-top-color: background-color;
-  }
 }
 
 //
@@ -110,22 +83,12 @@ $_balloon-bottom {
 //
 
 $_balloon-left {
-  background-color = #fff;
-  border-color     = _light(_color-gray);
-  border-size      = 1px;
+  _balloon-left({
+    background-color: #fff,
+    border-color    : _light(_color-gray),
+    border-size     : 1px,
+    triangle-size   : 10px,
+  });
 
-  _balloon-left();
-  background-color: background-color;
-  border: border-size solid border-color;
-  border-radius: 4px;
   _padding(.75);
-
-  &::before {
-    border-right-color: border-color;
-  }
-
-  &::after {
-    transform: translateX(border-size + 1);
-    border-right-color: background-color;
-  }
 }
