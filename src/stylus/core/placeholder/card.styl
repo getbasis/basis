@@ -1,0 +1,40 @@
+//
+// Card componet
+//
+// .c-card {
+//   @extend $_card;
+// }
+//
+// <div class="c-card">
+//  <div class="c-card__figure">
+//    <img ...>
+//  </div>
+//  <div class="c-card__body">
+//    ...
+//  </div>
+//  <div class="c-card__action">
+//    ...
+//  </div>
+// </div>
+//
+
+$_card {
+  _card();
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .1),
+              0 1px 1px 0 rgba(0, 0, 0, .05);
+  background-color: #fff;
+
+  &__figure {
+    _card__figure();
+  }
+
+  &__body {
+    _card__body();
+    _padding(.5, .75);
+  }
+
+  &__action {
+    border-top: 1px solid _lighter(_color-gray);
+    _padding(.5, .75);
+  }
+}

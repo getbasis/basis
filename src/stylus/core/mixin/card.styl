@@ -1,0 +1,38 @@
+//
+// Card componet
+//
+// .c-card {
+//   _card();
+//   &__figure {
+//     _card__figure();
+//   }
+//   &__body {
+//     _card__body();
+//   }
+// }
+//
+// <div class="c-card">
+//  <div class="c-card__figure">
+//    <img ...>
+//  </div>
+//  <div class="c-card__body">
+//    ...
+//  </div>
+// </div>
+//
+
+_card() {
+  display: flex;
+  flex-direction: column;
+}
+
+_card__figure() {
+  > img {
+    vertical-align: top;
+    width: 100%;
+  }
+}
+
+_card__body() {
+  flex: 1 0 auto;
+}
