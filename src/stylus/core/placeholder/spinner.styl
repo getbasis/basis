@@ -1,0 +1,63 @@
+//
+// The dots spinner component
+//
+// .c-spinner-dots {
+//   @extend $_spinner-dots;
+// }
+//
+// <div class="c-spinner-dots">
+//   <div class="c-spinner-dots__dot"></div>
+//   <div class="c-spinner-dots__dot"></div>
+//   <div class="c-spinner-dots__dot"></div>
+// </div>
+//
+
+$_spinner-dots {
+  _spinner-dots();
+
+  &__dot {
+    _spinner-dots__dot();
+    margin: 0 4px;
+    background-color: _color-gray;
+  }
+}
+
+//
+// The pulse spinner component
+//
+// .c-spinner-pulse {
+//   @extend $_spinner-pulse;
+// }
+//
+// <div class="c-spinner-pulse">
+//   <div class="c-spinner-pulse__bar"></div>
+//   <div class="c-spinner-pulse__bar"></div>
+//   <div class="c-spinner-pulse__bar"></div>
+// </div>
+//
+
+$_spinner-pulse {
+  _spinner-pulse();
+
+  &__bar {
+    _spinner-pulse__bar();
+    margin: 0 3px;
+    background-color: _color-gray;
+  }
+}
+
+//
+// The circle spinner component
+//
+// .c-spinner-circle {
+//   @extend $_spinner-circle;
+// }
+//
+// <div class="c-spinner-circle"></div>
+//
+
+$_spinner-circle {
+  _spinner-circle();
+  border-color: _light(_color-gray);
+  border-top-color: _color-gray;
+}
