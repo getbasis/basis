@@ -17,9 +17,7 @@ $_select {
   border-radius: _border-radius;
 
   &::before {
-    border: 6px solid transparent;
-    border-top: 8px solid _dark(_color-gray);
-    border-bottom: 0;
+    _triangle-bottom(8px, 6px, _dark(_color-gray))
     width: 0;
     height: 0;
   }
