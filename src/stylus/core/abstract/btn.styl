@@ -1,0 +1,42 @@
+//
+// The button component
+//
+// @param  hash  properties for decoration
+//
+// .c-btn {
+//   _btn({
+//     background-color: null,
+//     border-color    : null,
+//     border-size     : null,
+//   });
+// }
+//
+// <a class="c-btn" role="button">btn</a>
+//
+
+_btn(params = {}) {
+  params = merge(
+    {
+      background-color: null,
+      border-color    : null,
+      border-size     : null,
+    },
+    params
+  );
+
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  if (! _is-null(params['border-color']) && ! _is-null(params['border-size'])) {
+    border: params['border-size'] solid params['border-color'];
+  }
+
+  if (! _is-null(params['background-color'])) {
+    background-color: params['background-color'];
+  }
+}

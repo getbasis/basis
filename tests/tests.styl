@@ -64,3 +64,11 @@
   _assert-equals(0, _space(0));
   _assert-equals(-1.5rem, _space(-1));
 }
+
++_test('[function] _is-null()') {
+  _assert-equals(false, _is-null(''));
+  _assert-equals(false, _is-null(false));
+  _assert-equals(false, _is-null(0));
+  _assert-equals(false, _is-null('null'));
+  _assert-equals(true, _is-null(null));
+}

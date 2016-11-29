@@ -11,9 +11,12 @@
 //
 
 $_alert {
-  _alert();
-  background-color: #fff;
+  _alert({
+    background-color: #fff,
+    border-color    : _light(_color-gray),
+    border-size     : 1px,
+  });
+
   border-radius: _border-radius;
-  border: 1px solid _light(_color-gray);
   padding: _base-font-size;
 }

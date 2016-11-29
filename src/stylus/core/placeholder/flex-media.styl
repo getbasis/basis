@@ -1,5 +1,5 @@
 //
-// Media component. When smartphone size, vertically aligned.
+// The meedia component. When smartphone size, vertically aligned.
 //
 // .c-flex-media {
 //   @extend $_flex-media;
@@ -19,20 +19,13 @@ $_flex-media {
   _flex-media();
 
   &__figure {
-    _flex-media__figure();
     _margin(0, 0, .5);
 
     +_media-min(md) {
       _margin(0, 1, 0, 0);
-
-      > * {
-        vertical-align: top;
-        margin-top: _between-lines;
-      }
     }
   }
 
   &__body {
-    _flex-media__body();
   }
 }

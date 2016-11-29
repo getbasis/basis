@@ -1,0 +1,65 @@
+//
+// The input group component
+//
+// @param  hash  properties for decoration
+//
+// .c-input-group {
+//   _input-group();
+// }
+//
+// <div class="c-input-group">
+//   <div class="c-input-group__addon">@</div>
+//   <div class="c-input-group__field">
+//     <input type="text">
+//   </div>
+//   <button class="c-input-group__btn">Go</button>
+// </div>
+//
+
+_input-group(params = {}) {
+  params = merge(
+    {
+      border-size : 1px,
+      border-color: _light(_color-gray),
+    },
+    params
+  );
+
+  display: flex;
+  flex-wrap: nowrap;
+
+  > :nth-child(n + 2) {
+    border-left: none;
+  }
+
+  &__addon {
+    flex: 0 1 0;
+    border: params['border-size'] solid params['border-color'];
+  }
+
+  &__field {
+    display: flex;
+    flex: 1;
+    border: params['border-size'] solid params['border-color'];
+
+    > input[type='email'],
+    > input[type='number'],
+    > input[type='password'],
+    > input[type='search'],
+    > input[type='tel'],
+    > input[type='text'],
+    > input[type='url'] {
+      _form-control();
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+  }
+
+  &__btn {
+    _btn();
+    flex: 0 1 0;
+    overflow: visible;
+    border: params['border-size'] solid params['border-color'];
+  }
+}

@@ -1,0 +1,38 @@
+//
+// The alert component
+//
+// @param  hash  properties for decoration
+//
+// .c-alert {
+//   _alert({
+//     background-color: null,
+//     border-color    : null,
+//     border-size     : null,
+//   });
+// }
+//
+// <alert class="c-alert" role="alert">
+//   ...
+// </alert>
+//
+
+_alert(params = {}) {
+  params = merge(
+    {
+      background-color: null,
+      border-color    : null,
+      border-size     : null,
+    },
+    params
+  );
+
+  display: block;
+
+  if (! _is-null(params['border-color']) && ! _is-null(params['border-size'])) {
+    border: params['border-size'] solid params['border-color'];
+  }
+
+  if (! _is-null(params['background-color'])) {
+    background-color: params['background-color'];
+  }
+}

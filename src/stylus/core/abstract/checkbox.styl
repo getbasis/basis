@@ -1,13 +1,13 @@
 //
-// Checkbox component
+// The checkbox component
 //
 // .c-checkbox {
 //   _checkbox();
 // }
 //
-// <span class="c-checkbox" data-c="checkbox">
+// <span class="c-checkbox">
 //   <input type="checkbox">
-//   <label data-c="checkbox__label">Label</label>
+//   <label class="c-checkbox__label">Label</label>
 // </span>
 //
 
@@ -28,12 +28,12 @@ _checkbox() {
     opacity: 0 !important;
     outline: 0;
 
-    &:checked ~ [data-c="checkbox__label"]::after {
+    &:checked ~ ^[0]__label::after {
       opacity: 1;
     }
   }
 
-  > [data-c="checkbox__label"] {
+  &__label {
     &::before {
       _position(absolute, _between-lines, null, null, 0, (checkbox-z-index - 1));
       _square(_base-font-size, checkbox-border-radius);

@@ -1,0 +1,46 @@
+//
+// The circle spinner component
+//
+// @param  hash  properties for decoration
+//
+// .c-spinner-circle {
+//   _spinner-circle({
+//     size       : 20px,
+//     color      : _light(_color-gray),
+//     border-size: 3px,
+//     delay      : 0s,
+//     duration   : 2s,
+//   });
+// }
+//
+// <div class="c-spinner-pulse"></div>
+//
+
+_spinner-circle(params = {}) {
+  params = merge(
+    {
+      size       : 20px,
+      color      : _light(_color-gray),
+      border-size: 3px,
+      delay      : 0s,
+      duration   : 2s,
+    },
+    params
+  );
+
+  animation-name = _sanitize-animation-name(_spinner-circle- + join('-', values(params)));
+
+  _circle(params['size']);
+  border: params['border-size'] solid params['color'];
+  border-top-color: _dark(params['color']);
+  animation: animation-name params['duration'] linear params['delay'] infinite;
+
+  @keyframes animation-name {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

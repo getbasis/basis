@@ -1,5 +1,5 @@
 //
-// Input group component
+// The input group component
 //
 // .c-input-group {
 //   @extend $_input-group;
@@ -27,14 +27,11 @@ $_input-group {
   }
 
   &__addon {
-    _input-group__addon();
     background-color: _lighter(_color-gray);
     padding: (_base-font-size / 2);
   }
 
   &__field {
-    _input-group__field();
-
     > input[type='email'],
     > input[type='number'],
     > input[type='password'],
@@ -48,6 +45,5 @@ $_input-group {
 
   &__btn {
     @extend $_btn;
-    _input-group__btn();
   }
 }

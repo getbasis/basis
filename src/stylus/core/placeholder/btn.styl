@@ -1,5 +1,5 @@
 //
-// Button component
+// The button component
 //
 // .c-btn {
 //   @extend $_btn;
@@ -9,9 +9,12 @@
 //
 
 $_btn {
-  _btn();
-  background-color: #fff;
-  border: 1px solid _light(_color-gray);
+  _btn({
+    background-color: #fff,
+    border-size     : 1px,
+    border-color    : _light(_color-gray),
+  });
+
   color: _color-text;
   padding: (_base-font-size / 2) (_base-font-size * 2);
 }

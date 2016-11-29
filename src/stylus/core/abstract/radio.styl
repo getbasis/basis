@@ -1,13 +1,15 @@
 //
-// Radio component
+// The radio component
+//
+// @param  hash  properties for decoration
 //
 // .c-radio {
 //   _radio();
 // }
 //
-// <span class="c-radio" data-c="radio">
+// <span class="c-radio">
 //   <input type="radio">
-//   <label data-c="radio__label">Label</label>
+//   <label class="c-radio__label">Label</label>
 // </span>
 //
 
@@ -27,12 +29,12 @@ _radio() {
     opacity: 0 !important;
     outline: 0;
 
-    &:checked ~ [data-c="radio__label"]::after {
+    &:checked ~ ^[0]__label::after {
       opacity: 1;
     }
   }
 
-  > [data-c="radio__label"] {
+  &__label {
     &::before {
       _position(absolute, _between-lines, null, null, 0, (radio-z-index - 1));
       _circle(_base-font-size);

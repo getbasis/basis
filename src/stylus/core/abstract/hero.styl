@@ -1,17 +1,8 @@
 //
-// Hero component
+// The hero component
 //
 // .c-hero {
 //   _hero();
-//   &__header {
-//     _hero__header();
-//   }
-//   &__content {
-//     _hero__content();
-//   }
-//   &__footer {
-//     _hero__footer();
-//   }
 // }
 //
 // <div class="c-hero">
@@ -26,21 +17,21 @@ _hero() {
   flex-direction: row;
   flex-wrap: wrap;
   position: relative;
-}
 
-_hero__header() {
-  _hero__col();
-  align-self: flex-start;
-}
+  &__header {
+    _hero__col();
+    align-self: flex-start;
+  }
 
-_hero__content() {
-  _hero__col();
-  align-self: center;
-}
+  &__content {
+    _hero__col();
+    align-self: center;
+  }
 
-_hero__footer() {
-  _hero__col();
-  align-self: flex-end;
+  &__footer {
+    _hero__col();
+    align-self: flex-end;
+  }
 }
 
 _hero__col() {

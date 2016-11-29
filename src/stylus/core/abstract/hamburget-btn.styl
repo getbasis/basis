@@ -1,0 +1,59 @@
+//
+// The hamberger button component
+//
+// @param  hash  properties for decoration
+//
+// .c-hamburger-btn {
+//   _hamburger-btn({
+//     height    : 16px,
+//     width     : 22px,
+//     bar-height: 2px,
+//     color     : _color-text,
+//   });
+// }
+//
+// <div class="c-hamburger-btn" role="button" aria-expanded="false">
+//   <div class="c-hamburger-btn__bar"></div>
+//   <div class="c-hamburger-btn__bar"></div>
+//   <div class="c-hamburger-btn__bar"></div>
+// </div>
+//
+
+_hamburger-btn(params = {}) {
+  params = merge(
+    {
+      height    : 16px,
+      width     : 22px,
+      bar-height: 2px,
+      color     : _color-text,
+    },
+    params
+  );
+
+  position: relative;
+  display: inline-block;
+  box-sizing: content-box;
+  cursor: pointer;
+  height: params['height'];
+  width: params['width'];
+
+  &__bar {
+    _position(absolute, null, 0, null, 0);
+    display: block;
+    background-color: params['color'];
+    height: params['bar-height'];
+    _transition(transform);
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: (params['height'] / 2 - params['bar-height'] / 2);
+    }
+
+    &:nth-child(3) {
+      top: (params['height'] - params['bar-height']);
+    }
+  }
+}

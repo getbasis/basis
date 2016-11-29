@@ -1,5 +1,5 @@
 //
-// Select component
+// The select component
 //
 // .c-select {
 //   @extend $_select;
@@ -11,9 +11,12 @@
 //
 
 $_select {
-  _select();
-  background-color: #fff;
-  border: 1px solid _light(_color-gray);
+  _select({
+    background-color: #fff,
+    border-size     : 1px,
+    border-color    : _light(_color-gray),
+  });
+
   border-radius: _border-radius;
 
   &::before {

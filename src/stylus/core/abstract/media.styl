@@ -1,14 +1,8 @@
 //
-// Media component
+// The media component
 //
 // .c-media {
 //   _media();
-//   &__figure {
-//     _media__figure();
-//   }
-//   &__body {
-//     _media__body();
-//   }
 // }
 //
 // <div class="c-media">
@@ -23,13 +17,18 @@
 
 _media() {
   display: flex;
-}
 
-_media__figure() {
-  flex: none;
-  _background-image-cover();
-}
+  &__figure {
+    flex: none;
+    _background-image-cover();
 
-_media__body() {
-  flex: 1;
+    > * {
+      vertical-align: top;
+      margin-top: _between-lines;
+    }
+  }
+
+  &__body {
+    flex: 1;
+  }
 }

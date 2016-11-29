@@ -19,13 +19,12 @@ _ghost(params = {}) {
   params = merge(
     {
       border-size : 1px,
-      border-color: #fff,
       color       : #fff,
     },
     params
   );
 
   background-color: transparent !important;
-  border: params['border-size'] solid params['border-color'];
+  border: params['border-size'] solid params['color'];
   color: params['color'];
 }
