@@ -7,6 +7,7 @@
 * Added card components. Card add-on is deprecated.
 * Added hamburger button components. Hamburger button add-on is deprecated.
 * Added spinner components. Spinner add-on is deprecated.
+* Added drawer components. Drawer add-on is deprecated.
 
 ## November 22, 2016 v3.0.0
 * Refactoring
