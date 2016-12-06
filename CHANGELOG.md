@@ -1,5 +1,8 @@
 #Changelog
 
+## December 6, 2016 v4.1.0
+* Added navbar components. Menu add-on is deprecated.
+
 ## December 1, 2016 v4.0.0
 * Refactoring
 * Removed the elements mixin and merged to the block elements.
@@ -9,7 +12,6 @@
 * Added spinner components. Spinner add-on is deprecated.
 * Added drawer components. Drawer add-on is deprecated.
 * Added page-effect components. Page Effect add-on is deprecated.
-* Added navbar components. Menu add-on is deprecated.
 
 ## November 22, 2016 v3.0.0
 * Refactoring
