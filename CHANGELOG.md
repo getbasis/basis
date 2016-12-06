@@ -9,6 +9,7 @@
 * Added spinner components. Spinner add-on is deprecated.
 * Added drawer components. Drawer add-on is deprecated.
 * Added page-effect components. Page Effect add-on is deprecated.
+* Added navbar components. Menu add-on is deprecated.
 
 ## November 22, 2016 v3.0.0
 * Refactoring
