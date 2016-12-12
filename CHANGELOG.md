@@ -1,5 +1,8 @@
 #Changelog
 
+## December 6, 2016 v4.1.1
+* Fixed `_space()` bug.
+
 ## December 6, 2016 v4.1.0
 * Added navbar components. Menu add-on is deprecated.
 
