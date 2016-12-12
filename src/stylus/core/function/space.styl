@@ -1,10 +1,17 @@
 //
 // Return the margin conforming to the rhythm
+// When coefficient is lenght return it as is
 //
-// @param   int     coefficient
+// @param   int|length  coefficient
 // @return  length
 //
 _space(coefficient) {
+  if (0 == coefficient) {
+    return 0;
+  }
+  if ('' != unit(coefficient)) {
+    return coefficient;
+  }
   margin     = (_base-line-height * coefficient);
   add-margin = (_base-line-height * (_margin-coefficient - 1));
   space      = (margin + add-margin);
