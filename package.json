@@ -22,23 +22,26 @@
     "url": "https://github.com/getbasis/basis"
   },
   "devDependencies": {
-    "autoprefixer": "^6.3.7",
-    "cssnano": "^3.7.3",
+    "autoprefixer": "^6.5.4",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "cssnano": "^3.9.1",
     "gulp": "^3.9.1",
     "gulp-cli": "^1.2.2",
     "gulp-plumber": "^1.1.0",
-    "gulp-postcss": "^6.1.1",
+    "gulp-postcss": "^6.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-stylus": "^2.5.0",
+    "gulp-rollup": "^2.5.1",
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^2.0.0",
     "gulp-zip": "^3.2.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-node-resolve": "^2.0.0",
     "stylus": "^0.54.5"
   },
   "scripts": {
     "gulp": "gulp",
-    "build": "gulp build",
-    "release": "gulp release",
-    "stylus-test": "stylus tests/tests.styl && cat tests/tests.css",
-    "stylus": "stylus"
+    "stylus-test": "stylus tests/tests.styl && cat tests/tests.css"
   },
   "dependencies": {
     "normalize-styl": "^4.1.1"

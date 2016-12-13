@@ -24,30 +24,43 @@ A lightweight responsive Stylus/CSS framework based on flexible box.
 
 ### Using npm
 
-1. ```$ npm install getbasis```
-2. Import basis.styl your Stylus.
-```styl
+Installs Basis
+```
+$ npm install getbasis
+$ npm run gulp build
+```
+
+Imports basis.styl your Stylus.
+```
 @import /PATH/TO/node_modules/getbasis/src/stylus/basis;
 ```
 
-IF you want to use build files, just do this.
-
-```shell
-$ cd /PATH/TO/getbasis
-$ npm install
-$ npm run gulp build
+Imports JavaScripts ( Require jQuery )
+```
+import Basis from '/PATH/TO/node_modules/getbasis/src/js/basis.js';
 ```
 
 ### Download from GitHub
 
-1. Download the basis from https://github.com/getbasis/basis/releases
-2. Import basis.styl your Stylus.
-```styl
+Downloads the basis from https://github.com/getbasis/basis/releases
+
+Imports basis.styl your Stylus.
+```
 @import /PATH/TO/basis/src/stylus/basis;
 ```
+
 or Just this link.
-```html
+```
 <link rel="stylesheet" href="/PATH/TO/basis/dist/css/basis.min.css" />
+```
+
+Loads JavaScripts
+```
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="/PATH/TO/node_modules/getbasis/dist/js/basis.min.js"></script>
 ```
 
 ### Option
