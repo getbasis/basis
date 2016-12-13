@@ -1,5 +1,9 @@
 #Changelog
 
+## December 13, 2016 v4.2.0
+* Added basis.js
+* `._c-navbar` for IE9
+
 ## December 6, 2016 v4.1.1
 * Fixed `_space()` bug.
 
