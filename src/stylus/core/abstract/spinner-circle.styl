@@ -30,6 +30,7 @@ _spinner-circle(params = {}) {
 
   animation-name = _sanitize-animation-name(_spinner-circle- + join('-', values(params)));
 
+  display: inline-block;
   _circle(params['size']);
   border: params['border-size'] solid params['color'];
   border-top-color: _dark(params['color']);
