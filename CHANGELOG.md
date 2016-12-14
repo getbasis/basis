@@ -1,4 +1,7 @@
 #Changelog
+## December 14, 2016 v4.2.1
+* Fix #9
+* Fix #10
 
 ## December 13, 2016 v4.2.0
 * Added basis.js
