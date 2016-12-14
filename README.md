@@ -37,7 +37,7 @@ Imports basis.styl your Stylus.
 
 Imports JavaScripts ( Require jQuery )
 ```
-import Basis from '/PATH/TO/node_modules/getbasis/src/js/basis.js';
+import '/PATH/TO/node_modules/getbasis/src/js/basis.js';
 ```
 
 ### Download from GitHub
@@ -51,7 +51,7 @@ Imports basis.styl your Stylus.
 
 or Just this link.
 ```
-<link rel="stylesheet" href="/PATH/TO/basis/dist/css/basis.min.css" />
+<link rel="stylesheet" href="/PATH/TO/basis/dist/css/basis.min.css">
 ```
 
 Loads JavaScripts
