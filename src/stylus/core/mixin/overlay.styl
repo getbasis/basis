@@ -2,13 +2,19 @@
 // Overlay
 //
 // @param  hex  hex
+// @param  int  opacity
 //
-_overlay(hex) {
+_overlay(hex, opacity = 1) {
   position: relative;
 
   &::before {
     _position(absolute, 0, 0, 0, 0);
     content: '';
-    background-color: hex;
+
+    if (1 == opacity) {
+      background-color: hex;
+    } else {
+      background-color: rgba(hex, opacity);
+    }
   }
 }
