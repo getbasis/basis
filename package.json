@@ -1,6 +1,6 @@
 {
   "name": "getbasis",
-  "version": "4.2.1",
+  "version": "4.3.0",
   "main": "src/stylus/basis.styl",
   "author": "inc2734",
   "contributors": [
@@ -26,8 +26,6 @@
     "babel-preset-es2015-rollup": "^3.0.0",
     "cssnano": "^3.9.1",
     "gulp": "^3.9.1",
-    "gulp-cli": "^1.2.2",
-    "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-rollup": "^2.5.1",
@@ -36,8 +34,7 @@
     "gulp-zip": "^3.2.0",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^5.0.5",
-    "rollup-plugin-node-resolve": "^2.0.0",
-    "stylus": "^0.54.5"
+    "rollup-plugin-node-resolve": "^2.0.0"
   },
   "scripts": {
     "gulp": "gulp",

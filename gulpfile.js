@@ -4,7 +4,6 @@
  * Import node modules
  */
 var gulp         = require('gulp');
-var plumber      = require('gulp-plumber');
 var stylus       = require('gulp-stylus');
 var rename       = require('gulp-rename');
 var postcss      = require('gulp-postcss');

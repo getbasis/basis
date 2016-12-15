@@ -1,4 +1,11 @@
 #Changelog
+
+## December 15, 2016 v4.3.0
+* Added `._c-entry` component.
+* Added `._c-section` component.
+* Added `._c-page-header` component.
+* Added `._c-page-entries` component.
+
 ## December 14, 2016 v4.2.1
 * Fix #9
 * Fix #10
