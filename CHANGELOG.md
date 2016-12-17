@@ -1,5 +1,9 @@
 #Changelog
 
+## December 18, 2016 v4.3.1
+* Updated default heading size and margin.
+* Updated default html elements margin.
+
 ## December 15, 2016 v4.3.0
 * Added `._c-entry` component.
 * Added `._c-section` component.
