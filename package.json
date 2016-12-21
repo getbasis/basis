@@ -38,7 +38,7 @@
   },
   "scripts": {
     "gulp": "gulp",
-    "stylus-test": "stylus tests/tests.styl && echo tests/tests.css"
+    "stylus-test": "stylus tests/tests.styl && cat tests/tests.css"
   },
   "dependencies": {
     "normalize-styl": "^4.1.1"
