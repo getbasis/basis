@@ -27,12 +27,12 @@ export default class BasisPageEffect {
         event.preventDefault();
         this.show();
         const url = link.attr('href');
-        this.location(url);
+        this.moveLocation(url);
       });
     });
   }
 
-  location(url) {
+  moveLocation(url) {
     setTimeout(() => {
       location.href = url
     }, this.params['duration']);
