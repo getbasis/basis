@@ -1,5 +1,9 @@
 #Changelog
 
+## December 21, 2016 v4.3.2
+* Fix page-effect.js bug #12
+* Added plumber
+
 ## December 18, 2016 v4.3.1
 * Updated default heading size and margin.
 * Updated default html elements margin.
