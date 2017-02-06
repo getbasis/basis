@@ -15,9 +15,9 @@ env:
   - GIT_AUTHOR_EMAIL=inc@2inc.org
   - secure: kJS266orZqY/ClRbkj+WVrkaG3v/2k59ih+5D4V6vykb7kkBXoGm/INlVxoRk/1GpvysPlYAoS5/86lZh+0F3kFueVALRo0bgBbHXbBiupoGb0cy0LnJAfOyrDmX7B0TibwmHycmAaDWzfzJN/x3C+p1azEyZNpAQ4ctMSFXYdsimO4OVxzLWrT55N91YmgDGZhMMdn5n4cgRLFFMkDSdWqv5x2SybIsBuZQ3depLtLOzNNhSpjrmgsgida12ODZk0Lz7utwTflwLUuSpSCbbP0U+mj27BTKOJkJwhyUOYkRDj3fhxO5JTzrJGjSG19sOP1M9bJVFvqBxEJi3vqeGSHYdEwzwbFqkdJBdJzbdI51hSqz78QmGfPA3aBgnhd83BjENMFpvzrho3E2kBa4OOe3BiEPalx0ioR1Mj/ssUgxNKnB8ShPiJ7n9f3CG3+wxlVU6LdZ7pRoTfV0dlWc2RzS6tKqxCRk8zL31vkjGdOiINJHZ3PnU1A8HimHQ5q9FT/i5fdR6eCxQDFGB9NF5LCpFvzkQNjSm9WTsopctpH7Q2NXaHPMZFfgvzIgN/CIKGC6PvwWJcBxRdmNLYFAlUZ2dOBdV011JPQkcEpzRZwISNfhefrp1+CBnPq345kcc/8VLgvqFPrJxP7ko++IrwUdaP+vT2vxk3Q+QKWOTYU=
 script:
-- npm run gulp build
+- yarn run gulp build
 before_deploy:
-- npm run gulp zip
+- yarn run gulp zip
 deploy:
   provider: releases
   api_key:
