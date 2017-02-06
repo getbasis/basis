@@ -13,7 +13,6 @@ A lightweight responsive Stylus/CSS framework based on flexible box.
 * CSS architecture of Basis is [FLOCSS](https://github.com/hiloki/flocss). So it is possible a modular approach.
 * Basis has incorporated the concept of vertical rhythm. So you can be a good-balanced design.
 * Flexible grid system. Clean because using a flexible box.
-* highly extensible. The core is only the basic components, it can be extended with [add-on](https://github.com/getbasis).
 
 ## Demo ( HTML5 Templates )
 * integrity: http://getbasis.github.io/integrity/
@@ -26,13 +25,13 @@ A lightweight responsive Stylus/CSS framework based on flexible box.
 
 Installs Basis
 ```
-$ npm install getbasis
-$ npm run gulp build
+$ yarn install getbasis
+$ yarn run gulp build
 ```
 
 Imports basis.styl your Stylus.
 ```
-@import /PATH/TO/node_modules/getbasis/src/stylus/basis;
+@import /PATH/TO/node_modules/getbasis/src/css/basis;
 ```
 
 Imports JavaScripts ( Require jQuery )
@@ -46,7 +45,7 @@ Downloads the basis from https://github.com/getbasis/basis/releases
 
 Imports basis.styl your Stylus.
 ```
-@import /PATH/TO/basis/src/stylus/basis;
+@import /PATH/TO/basis/src/css/basis;
 ```
 
 or Just this link.

@@ -121,4 +121,16 @@ gulp.task('zip', function(){
     .pipe(gulp.dest('./'));
 });
 
+/**
+ * Stylus tests
+ */
+gulp.task('stylus-test', function() {
+  return gulp.src('./tests/tests.scss')
+    .pipe(plumber())
+    .pipe(stylus({
+      'resolve url nocheck': true
+    }))
+    .pipe(gulp.dest('./tests'));
+});
+
 gulp.task('default', ['build', 'watch']);
