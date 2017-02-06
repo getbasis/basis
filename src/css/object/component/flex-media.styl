@@ -1,0 +1,36 @@
+//
+// The meedia component. When smartphone size, vertically aligned.
+//
+// <div class="_c-flex-media">
+//  <div class="_c-flex-media__figure">
+//    <img ...>
+//  </div>
+//  <div class="_c-flex-media__body">
+//    ...
+//  </div>
+// </div>
+//
+
+.{_prefix}c-flex-media {
+  _flex-media();
+
+  &__figure {
+    _margin(0, 0, .5);
+
+    +_media-min(md) {
+      _margin(0, 1, 0, 0);
+    }
+  }
+
+  &__body {
+  }
+
+  &--reverse {
+    .{_prefix}c-flex-media__figure {
+      +_media-min(md) {
+        _margin(0, 0, 0, 1);
+        order: 1;
+      }
+    }
+  }
+}

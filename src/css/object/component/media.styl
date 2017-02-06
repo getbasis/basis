@@ -1,0 +1,37 @@
+//
+// The media component
+//
+// <div class="_c-media">
+//   <div class="_c-media__figure">
+//     <img ...>
+//   </div>
+//   <div class="_c-media__body">
+//     ...
+//   </div>
+// </div>
+//
+
+.{_prefix}c-media {
+  _media();
+
+  &__figure {
+    _margin(0, 1, 0, 0);
+  }
+
+  &__body {
+    > .{_prefix}c-media {
+      _margin-top(1);
+    }
+  }
+
+  &--middle {
+    align-items: center;
+  }
+
+  &--reverse {
+    .{_prefix}c-media__figure {
+      _margin(0, 0, 0, 1);
+      order: 1;
+    }
+  }
+}

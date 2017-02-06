@@ -1,0 +1,31 @@
+//
+// The hero component
+//
+// <div class="_c-hero">
+//   <div class="_c-hero__header"></div>
+//   <div class="_c-hero__content"></div>
+//   <div class="_c-hero__footer"></div>
+// </div>
+//
+
+.{_prefix}c-hero {
+  _hero();
+
+  &--full {
+    height: 100vh;
+  }
+
+  &--cover {
+    _background-image-cover();
+  }
+
+  &--overlay {
+    _overlay(#000, .7);
+  }
+
+  &--fixed {
+    +_media-lg-only() {
+      _background-image-fixed();
+    }
+  }
+}
