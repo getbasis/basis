@@ -1,5 +1,11 @@
 #Changelog
 
+## February 7, 2017 v6.0.0
+* Refactoring
+* Removed placeholder layer.
+* Removed variables for backward compatibility.
+* Using yarn
+
 ## December 21, 2016 v4.3.2
 * Fix page-effect.js bug #12
 * Added plumber
