@@ -21,7 +21,7 @@ A lightweight responsive Stylus/CSS framework based on flexible box.
 
 ## Get started
 
-### Using npm
+### Using yarn
 
 Installs Basis
 ```
