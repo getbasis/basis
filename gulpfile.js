@@ -125,7 +125,7 @@ gulp.task('zip', function(){
  * Stylus tests
  */
 gulp.task('stylus-test', function() {
-  return gulp.src('./tests/tests.scss')
+  return gulp.src('./tests/tests.styl')
     .pipe(plumber())
     .pipe(stylus({
       'resolve url nocheck': true

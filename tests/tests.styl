@@ -1,4 +1,4 @@
-@import '../src/stylus/core/core';
+@import '../src/css/basis-core';
 @import 'api/api';
 
 +_test('[function] _size-prefix()') {
@@ -71,4 +71,8 @@
   _assert-equals(false, _is-null(0));
   _assert-equals(false, _is-null('null'));
   _assert-equals(true, _is-null(null));
+}
+
++_test('[function] _vertical-rhythm()') {
+  _assert-equals(24, _vertical-rhythm(16px));
 }

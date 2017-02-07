@@ -8,7 +8,6 @@
 // @param  hex  border-color
 //
 _balloon-triangle(position, size, background-color, border-size = 0, border-color = transparent) {
-  triangle-function-name = _triangle- + position;
   before = size * -1;
   after  = before;
   if (0 < border-size) {
@@ -29,26 +28,32 @@ _balloon-triangle(position, size, background-color, border-size = 0, border-colo
   &::before {
     if ('top' == position) {
       _position(absolute, before, null, null, 50%);
+      _triangle-top(size, size, border-color);
     } else if ('right' == position) {
       _position(absolute, 50%, before, null, null);
+      _triangle-right(size, size, border-color);
     } else if ('bottom' == position) {
       _position(absolute, null, null, before, 50%);
+      _triangle-bottom(size, size, border-color);
     } else if ('left' == position) {
       _position(absolute, 50%, null, null, before);
+      _triangle-left(size, size, border-color);
     }
-    triangle-function-name(size, size, border-color);
   }
 
   &::after {
     if ('top' == position) {
       _position(absolute, after, null, null, 50%);
+      _triangle-top(size, size, background-color);
     } else if ('right' == position) {
       _position(absolute, 50%, after, null, null);
+      _triangle-right(size, size, background-color);
     } else if ('bottom' == position) {
       _position(absolute, null, null, after, 50%);
+      _triangle-bottom(size, size, background-color);
     } else if ('left' == position) {
       _position(absolute, 50%, null, null, after);
+      _triangle-left(size, size, background-color);
     }
-    triangle-function-name(size, size, background-color);
   }
 }
