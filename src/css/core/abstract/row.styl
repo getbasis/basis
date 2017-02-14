@@ -80,9 +80,9 @@ _row__col--offset(columns = null, max-columns = null) {
 // @param  int  coefficient
 //
 _row__col--margin(coefficient) {
-  padding-right: (_base-line-height * coefficient / 2);
-  padding-left: (_base-line-height * coefficient / 2);
-  margin-bottom: (_base-line-height * coefficient);
+  _padding-right(coefficient / 2);
+  _padding-left(coefficient / 2);
+  _margin-bottom(coefficient);
 }
 
 //
@@ -91,7 +91,7 @@ _row__col--margin(coefficient) {
 // @param  int  coefficient
 //
 _row--margin(coefficient) {
-  margin-right: (_base-line-height * coefficient / 2 * -1);
-  margin-left: (_base-line-height * coefficient / 2 * -1);
-  margin-bottom: (_base-line-height * coefficient * -1);
+  _margin-right(coefficient / 2 * -1);
+  _margin-left(coefficient / 2 * -1);
+  _margin-bottom(coefficient * -1);
 }

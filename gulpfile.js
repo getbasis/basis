@@ -41,7 +41,8 @@ gulp.task('css', function() {
     )
     .pipe(plumber())
     .pipe(stylus({
-      'resolve url nocheck': true
+      'resolve url': true,
+      include: 'node_modules/normalize-styl'
     }))
     .pipe(postcss([
       autoprefixer({
@@ -106,14 +107,12 @@ gulp.task('build', ['css', 'js']);
 gulp.task('zip', function(){
   return gulp.src(
       [
-        '**/*',
+        '**',
+        '.editorconfig',
+        '.gitignore',
         '!node_modules',
         '!node_modules/**',
-        '!.git',
-        '!.gitignore',
-        '!.travis.yml',
-        '!basis.zip',
-        '!**/.DS_Store'
+        '!basis.zip'
       ]
       , {base: './'}
     )

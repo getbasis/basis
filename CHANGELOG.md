@@ -1,5 +1,11 @@
 #Changelog
 
+## February 14, 2017 v6.0.2
+* Fix line-height of Form elements for normalize.css.
+* Refactoring grid margin calculation.
+* Fix zip task bug.
+* Fix normalize.css importing bug.
+
 ## February 7, 2017 v6.0.0
 * Refactoring
 * Removed placeholder layer.
