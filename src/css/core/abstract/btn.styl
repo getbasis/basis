@@ -6,8 +6,7 @@
 // .c-btn {
 //   _btn({
 //     background-color: null,
-//     border-color    : null,
-//     border-size     : null,
+//     border: null,
 //   });
 // }
 //
@@ -18,11 +17,13 @@ _btn(params = {}) {
   params = merge(
     {
       background-color: null,
-      border-color    : null,
-      border-size     : null,
+      border: null,
     },
     params
   );
+
+  background-color = params['background-color'];
+  border = params['border'];
 
   display: inline-block;
   cursor: pointer;
@@ -32,11 +33,11 @@ _btn(params = {}) {
   vertical-align: middle;
   white-space: nowrap;
 
-  if (! _is-null(params['border-color']) && ! _is-null(params['border-size'])) {
-    border: params['border-size'] solid params['border-color'];
+  if (! _is-null(background-color)) {
+    background-color: background-color;
   }
 
-  if (! _is-null(params['background-color'])) {
-    background-color: params['background-color'];
+  if (! _is-null(border)) {
+    background-color: border;
   }
 }
