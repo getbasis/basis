@@ -5,10 +5,10 @@
 //
 // .c-balloon-left {
 //   _balloon-left({
-//     background-color: #fff,
-//     border-color    : #ccc,
-//     border-size     : 1px,
-//     triangle-size   : 10px,
+//     background-color: null,
+//     border-color: null,
+//     border-size: null,
+//     triangle-size: 10px,
 //   });
 // }
 //
@@ -20,26 +20,34 @@
 _balloon-left(params = {}) {
   params = merge(
     {
-      background-color: transparent,
-      border-color    : transparent,
-      border-size     : 0,
-      triangle-size   : 10px,
+      background-color: null,
+      border-color: null,
+      border-size: null,
+      triangle-size: 10px,
     },
     params
   );
 
-  position: relative;
-  background-color: params['background-color'];
+  background-color = params['background-color'];
+  border-color = params['border-color'];
+  border-size = params['border-size'];
+  triangle-size = params['triangle-size'];
 
-  if (! _is-null(params['border-size']) && ! _is-null(params['border-color'])) {
-    border: params['border-size'] solid params['border-color'];
+  position: relative;
+
+  if (! _is-null(border-size)) {
+    background-color: background-color;
+  }
+
+  if (! _is-null(border-size) && ! _is-null(border-color)) {
+    border: border-size solid border-color;
   }
 
   _balloon-triangle(
     left,
-    params['triangle-size'],
-    params['background-color'],
-    params['border-size'],
-    params['border-color']
+    triangle-size,
+    background-color,
+    border-size,
+    border-color
   );
 }
