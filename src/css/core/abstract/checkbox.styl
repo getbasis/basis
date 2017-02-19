@@ -2,7 +2,10 @@
 // The checkbox component
 //
 // .c-checkbox {
-//   _checkbox();
+//   _checkbox({
+//     size: _base-font-size-px,
+//     border-radius: _border-radius,
+//   });
 // }
 //
 // <span class="c-checkbox">
@@ -12,18 +15,32 @@
 //
 
 _checkbox() {
-  checkbox-margin  = (_base-font-size / 2);
-  checkbox-z-index = 1;
-  checkbox-border-radius = 3px;
+  params = merge(
+    {
+      size: _base-font-size-px,
+      border-radius: _border-radius,
+    },
+    params
+  );
+
+  z-index = 1;
+  border-radius = params['border-radius'];
+  size = params['size'];
 
   position: relative;
   display: inline-block;
-  margin-right: checkbox-margin;
-  padding-left: (_base-font-size + checkbox-margin);
+  padding-left: size;
+
+  > [type="checkbox"],
+  &__label::before,
+  &__label::after {
+    _position(absolute, 50%, null, null, 0);
+    transform: translateY(-50%);
+  }
 
   > [type="checkbox"] {
-    _position(absolute, _between-lines, null, null, 0, checkbox-z-index);
-    _square(_base-font-size);
+    z-index: z-index;
+    _square(size);
     cursor: pointer;
     opacity: 0 !important;
     outline: 0;
@@ -34,26 +51,26 @@ _checkbox() {
   }
 
   &__label {
-    &::before {
-      _position(absolute, _between-lines, null, null, 0, (checkbox-z-index - 1));
-      _square(_base-font-size, checkbox-border-radius);
-      content: '';
+    &::before,
+    &::after {
+      z-index: (z-index - 1);
       display: inline-block;
+    }
+
+    &::before {
+      _square(size);
+      content: '';
       background-color: #fff;
       border: 1px solid _light(_color-gray);
+      border-radius: border-radius;
     }
 
     &::after {
-      size = (_base-font-size / 2);
-      left = ((_base-font-size - size) / 2);
-      top  = (_between-lines + left);
-
-      _position(absolute, top, null, null, left, (checkbox-z-index - 1));
-      _square(size, (checkbox-border-radius - 1));
-      content: '';
-      display: inline-block;
-      background-color: _dark(_color-gray);
+      _ic();
+      content: "\e901";
       opacity: 0;
+      font-size: calc((size) - 4px);
+      left: (4px / 2);
     }
   }
 }
