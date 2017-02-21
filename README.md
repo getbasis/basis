@@ -26,7 +26,6 @@ A lightweight responsive Stylus/CSS framework based on flexible box.
 Installs Basis
 ```
 $ yarn install getbasis
-$ yarn run gulp build
 ```
 
 Imports basis.styl your Stylus.

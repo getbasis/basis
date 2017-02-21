@@ -1,43 +1,16 @@
 //
-// The form control component
-//
-// @param  hash  properties for decoration
+// Form Control
 //
 // .c-form-control {
-//   _form-control({
-//     background-color         : #fff,
-//     border-size              : 1px,
-//     border-color             : #ccc,
-//     disabled-background-color: #eee,
-//     readonly-background-color: #eee,
-//   });
+//   _form-control();
 // }
 //
 // <input type="text" class="c-form-control">
 //
 
-_form-control(params = {}) {
-  params = merge(
-    {
-      background-color         : #fff,
-      border-size              : 0,
-      border-color             : transparent,
-      disabled-background-color: _lighter(_color-gray),
-      readonly-background-color: _lighter(_color-gray),
-    },
-    params
-  );
-
-  border: params['border-size'] solid params['border-color'];
-
-  &[disabled] {
-    background-color: params['disabled-background-color'];
-    cursor: not-allowed;
-  }
-
-  &[readonly] {
-    background-color: params['readonly-background-color'];
-  }
+_form-control() {
+  _form-control-base-border();
+  _form-control-base-padding();
 
   textarea& {
     height: auto;

@@ -1,11 +1,21 @@
-//
-// The checkbox component
-//
-// <span class="_c-checkbox">
-//   <input type="checkbox">
-//   <label class="_c-checkbox__label">Label</label>
-// </span>
-//
+/*
+---
+name: Checkbox
+category:
+  - object/component
+  - object/component/checkbox
+---
+
+```html
+<label>
+  <span class="_c-checkbox">
+    <input type="checkbox">
+    <span class="_c-checkbox__control"></span>
+  </span>
+  ...
+</label>
+```
+*/
 
 .{_prefix}c-checkbox {
   _checkbox({
@@ -14,9 +24,4 @@
   });
 
   margin-right: (_base-font-size-px / 2);
-  padding-left: (_base-font-size-px + (_base-font-size-px / 2));
-
-  &--block {
-    display: block;
-  }
 }

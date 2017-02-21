@@ -1,14 +1,14 @@
 //
-// The hamberger button component
+// Hamburger Button
 //
-// @param  hash  properties for decoration
+// @param  hash  params  properties for decoration
 //
 // .c-hamburger-btn {
 //   _hamburger-btn({
-//     height    : 16px,
-//     width     : 22px,
+//     height: 16px,
+//     width: 22px,
 //     bar-height: 2px,
-//     color     : _color-text,
+//     color: _color-text,
 //   });
 // }
 //
@@ -22,26 +22,31 @@
 _hamburger-btn(params = {}) {
   params = merge(
     {
-      height    : 16px,
-      width     : 22px,
+      height: 16px,
+      width: 22px,
       bar-height: 2px,
-      color     : _color-text,
+      color: _color-text,
     },
     params
   );
+
+  height = params['height'];
+  width = params['width'];
+  bar-height = params['bar-height'];
+  color = params['color'];
 
   position: relative;
   display: inline-block;
   box-sizing: content-box;
   cursor: pointer;
-  height: params['height'];
-  width: params['width'];
+  height: height;
+  width: width;
 
   &__bar {
     _position(absolute, null, 0, null, 0);
     display: block;
-    background-color: params['color'];
-    height: params['bar-height'];
+    background-color: color;
+    height: bar-height;
     _transition(transform);
 
     &:nth-child(1) {
@@ -49,11 +54,11 @@ _hamburger-btn(params = {}) {
     }
 
     &:nth-child(2) {
-      top: (params['height'] / 2 - params['bar-height'] / 2);
+      top: (height / 2 - bar-height / 2);
     }
 
     &:nth-child(3) {
-      top: (params['height'] - params['bar-height']);
+      top: (height - bar-height);
     }
   }
 }

@@ -1,7 +1,7 @@
 //
-// The alert component
+// Alert
 //
-// @param  hash  properties for decoration
+// @param  hash  params  properties for decoration
 //
 // .c-alert {
 //   _alert({
@@ -29,11 +29,11 @@ _alert(params = {}) {
 
   display: block;
 
-  if (! _is-null(border)) {
-    border: border;
-  }
-
   if (! _is-null(background-color)) {
     background-color: background-color;
+  }
+
+  if (! _is-null(border)) {
+    border: border;
   }
 }

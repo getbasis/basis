@@ -1,13 +1,13 @@
 //
-// The drawer component
+// Drawer
 //
-// @param  hash  properties for decoration
+// @param  hash  $params  properties for decoration
 //
 // .c-drawer {
 //   _drawer({
 //     background-color: _light(_color-black),
-//     width           : (_base-line-height * 10),
-//     max-width       : 80%,
+//     width: (_base-line-height * 10),
+//     max-width: 80%,
 //   });
 // }
 //
@@ -31,27 +31,35 @@
 //   </nav>
 // </div>
 //
-// <div class="_c-hamburger-btn" data-c="drawer-btn" aria-expanded="false" aria-controls="drawer"></div>
+// <div class="_c-hamburger-btn" data-c="drawer-btn" aria-expanded="false" aria-controls="drawer">
+//   <div class="_c-hamburger-btn__bar"></div>
+//   <div class="_c-hamburger-btn__bar"></div>
+//   <div class="_c-hamburger-btn__bar"></div>
+// </div>
 //
 
 _drawer(params = {}) {
   params = merge(
     {
       background-color: _light(_color-black),
-      width           : (_base-line-height * 10),
-      max-width       : 80%,
+      width: (_base-line-height * 10),
+      max-width: 80%,
     },
     params
   );
+
+  background-color = params['background-color'];
+  width = params['width'];
+  max-width = params['max-width'];
 
   position: relative;
 
   &__body {
     _position(absolute, 0, null, 0, -100%, 10);
     _transition(left);
-    width: params['width'];
-    max-width: params['max-width'];
-    background-color: params['background-color'];
+    width: width;
+    max-width: max-width;
+    background-color: background-color;
     overflow-y: auto;
 
     &[aria-hidden="false"] {

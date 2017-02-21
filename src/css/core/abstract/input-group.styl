@@ -1,13 +1,8 @@
 //
-// The input group component
-//
-// @param  hash  properties for decoration
+// Input Group
 //
 // .c-input-group {
-//   _input-group({
-//     border-size : 1px,
-//     border-color: _light(_color-gray),
-//   });
+//   _input-group();
 // }
 //
 // <div class="c-input-group">
@@ -19,31 +14,42 @@
 // </div>
 //
 
-_input-group(params = {}) {
-  params = merge(
-    {
-      border-size : 1px,
-      border-color: _light(_color-gray),
-    },
-    params
-  );
-
+_input-group() {
   display: flex;
   flex-wrap: nowrap;
+  border-radius: _border-radius;
 
-  > :nth-child(n + 2) {
-    border-left: none;
+  > :first-child {
+    position: relative;
+    border-radius: _border-radius 0 0 _border-radius;
+    border-right: none;
+  }
+
+  > :nth-last-child(2) {
+    position: relative;
+    z-index: 1;
+  }
+
+  > :last-child {
+    position: relative;
+    z-index: 0;
+    left: -1px;
+    border-radius: 0 _border-radius _border-radius 0;
+
+    &:hover, &:active, &:focus {
+      z-index: 1;
+    }
   }
 
   &__addon {
+    border: 1px solid _form-control-border-color;
+    _form-control-base-padding();
     flex: none;
-    border: params['border-size'] solid params['border-color'];
   }
 
   &__field {
     display: flex;
     flex: 1;
-    border: params['border-size'] solid params['border-color'];
 
     > input[type='email'],
     > input[type='number'],
@@ -53,16 +59,20 @@ _input-group(params = {}) {
     > input[type='text'],
     > input[type='url'] {
       _form-control();
+      border-radius: 0;
       flex: 1;
       width: 100%;
-      border: none;
     }
   }
 
   &__btn {
-    _btn();
+    _btn({
+      background-color: #fff,
+    });
+    _form-control-base-border();
+    _form-control-base-padding();
+    color: _color-text;
     flex: none;
     overflow: visible;
-    border: params['border-size'] solid params['border-color'];
   }
 }

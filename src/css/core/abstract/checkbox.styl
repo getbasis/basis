@@ -1,5 +1,5 @@
 //
-// The checkbox component
+// Checkbox
 //
 // .c-checkbox {
 //   _checkbox({
@@ -8,10 +8,13 @@
 //   });
 // }
 //
-// <span class="c-checkbox">
-//   <input type="checkbox">
-//   <label class="c-checkbox__label">Label</label>
-// </span>
+// <label>
+//   <span class="c-checkbox">
+//     <input type="checkbox">
+//     <span class="c-checkbox__control"></span>
+//   </span>
+//   ...
+// </label>
 //
 
 _checkbox() {
@@ -29,36 +32,32 @@ _checkbox() {
 
   position: relative;
   display: inline-block;
-  padding-left: size;
+  _square(size);
 
   > [type="checkbox"],
-  &__label::before,
-  &__label::after {
-    _position(absolute, 50%, null, null, 0);
-    transform: translateY(-50%);
+  &__control,
+  &__control::before,
+  &__control::after {
+    _position(absolute, 0, null, null, 0);
+    display: block;
+    _square(size);
   }
 
   > [type="checkbox"] {
     z-index: z-index;
-    _square(size);
     cursor: pointer;
     opacity: 0 !important;
     outline: 0;
 
-    &:checked ~ ^[0]__label::after {
+    &:checked ~ ^[0]__control::after {
       opacity: 1;
     }
   }
 
-  &__label {
-    &::before,
-    &::after {
-      z-index: (z-index - 1);
-      display: inline-block;
-    }
+  &__control {
+    z-index: (z-index - 1);
 
     &::before {
-      _square(size);
       content: '';
       background-color: #fff;
       border: 1px solid _light(_color-gray);
@@ -69,8 +68,9 @@ _checkbox() {
       _ic();
       content: "\e901";
       opacity: 0;
-      font-size: calc((size) - 4px);
-      left: (4px / 2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

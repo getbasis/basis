@@ -1,61 +1,207 @@
+/*
+---
+name: ._u-animate
+category:
+  - object/utility
+  - object/utility/animate
+---
+
+```html
+<style>
+._u-animate:hover {
+  width: 100% !important;
+  opacity: .5 !important;
+}
+</style>
+<div class="_u-animate" style="background-color: #333; width: 100px; height: 20px;"></div>
+```
+*/
+
 .{_prefix}u-animate {
   _transition-all();
+}
 
-  &-size {
-    _transition-size();
+/*
+---
+name: ._u-animate-size
+category:
+  - object/utility
+  - object/utility/animate
+---
+
+```html
+<style>
+._u-animate-size:hover {
+  width: 100% !important;
+}
+</style>
+<div class="_u-animate-size" style="background-color: #333; width: 100px; height: 20px;"></div>
+```
+*/
+
+.{_prefix}u-animate-size {
+  _transition-size();
+}
+
+/*
+---
+name: ._u-animate-opacity
+category:
+  - object/utility
+  - object/utility/animate
+---
+
+```html
+<style>
+._u-animate-opacity:hover {
+  opacity: .5 !important;
+}
+</style>
+<div class="_u-animate-opacity" style="background-color: #333; width: 100px; height: 20px;"></div>
+```
+*/
+
+.{_prefix}u-animate-opacity {
+  _transition-opacity();
+}
+
+/*
+---
+name: ._u-animate-shake-vertical
+category:
+  - object/utility
+  - object/utility/animate
+---
+
+```html
+<div class="_u-animate-shake-vertical" style="background-color: #333; width: 40px; height: 40px;"></div>
+```
+*/
+
+.{_prefix}u-animate-shake-vertical {
+  +_hover() {
+    _shake-vertical();
+  }
+}
+
+/*
+---
+name: ._u-animate-vibrate-vertical
+category:
+  - object/utility
+  - object/utility/animate
+---
+
+```html
+<div class="_u-animate-vibrate-vertical" style="background-color: #333; width: 40px; height: 40px;"></div>
+```
+*/
+
+.{_prefix}u-animate-vibrate-vertical {
+  +_hover() {
+    _vibrate-vertical();
+  }
+}
+
+/*
+---
+name: ._u-animate-shake-horizontal
+category:
+  - object/utility
+  - object/utility/animate
+---
+
+```html
+<div class="_u-animate-shake-horizontal" style="background-color: #333; width: 40px; height: 40px;"></div>
+```
+*/
+
+.{_prefix}u-animate-shake-horizontal {
+  +_hover() {
+    _shake-horizontal();
+  }
+}
+
+/*
+---
+name: ._u-animate-vibrate-horizontal
+category:
+  - object/utility
+  - object/utility/animate
+---
+
+```html
+<div class="_u-animate-vibrate-horizontal" style="background-color: #333; width: 40px; height: 40px;"></div>
+```
+*/
+
+.{_prefix}u-animate-vibrate-horizontal {
+  +_hover() {
+    _vibrate-horizontal();
+  }
+}
+
+/*
+---
+name: ._u-animate-shake-scale
+category:
+  - object/utility
+  - object/utility/animate
+---
+
+```html
+<div class="_u-animate-shake-scale" style="background-color: #333; width: 40px; height: 40px;"></div>
+```
+*/
+
+.{_prefix}u-animate-shake-scale {
+  +_hover() {
+    _shake-scale();
+  }
+}
+
+/*
+---
+name: ._u-animate-vibrate-scale
+category:
+  - object/utility
+  - object/utility/animate
+---
+
+```html
+<div class="_u-animate-vibrate-scale" style="background-color: #333; width: 40px; height: 40px;"></div>
+```
+*/
+
+.{_prefix}u-animate-vibrate-scale {
+  +_hover() {
+    _vibrate-scale();
+  }
+}
+
+/*
+---
+name: ._u-animate-extend-underline
+category:
+  - object/utility
+  - object/utility/animate
+---
+
+```html
+<span class="_u-animate-extend-underline">menu</span>
+```
+*/
+
+.{_prefix}u-animate-extend-underline {
+  position: relative;
+
+  &::after {
+    _extend-underline();
   }
 
-  &-opacity {
-    _transition-opacity();
-  }
-
-  &-shake-vertical {
-    +_hover() {
-      _shake-vertical();
-    }
-  }
-
-  &-vibrate-vertical {
-    +_hover() {
-      _vibrate-vertical();
-    }
-  }
-
-  &-shake-horizontal {
-    +_hover() {
-      _shake-horizontal();
-    }
-  }
-
-  &-vibrate-horizontal {
-    +_hover() {
-      _vibrate-horizontal();
-    }
-  }
-
-  &-shake-scale {
-    +_hover() {
-      _shake-scale();
-    }
-  }
-
-  &-vibrate-scale {
-    +_hover() {
-      _vibrate-scale();
-    }
-  }
-
-  &-extend-underline {
-    position: relative;
-
+  +_hover() {
     &::after {
-      _extend-underline();
-    }
-
-    +_hover() {
-      &::after {
-        width: 100%;
-      }
+      width: 100%;
     }
   }
 }

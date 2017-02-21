@@ -1,12 +1,12 @@
 //
-// The page effect component
+// Page Effect
 //
-// @param  hash  properties for decoration
+// @param  hash  params  properties for decoration
 //
 // .c-page-effect {
 //   _page-effect({
 //     duration: .2s,
-//     color   : #fff,
+//     background-color: #fff,
 //   });
 // }
 //
@@ -26,27 +26,30 @@ _page-effect(params = {}) {
   params = merge(
     {
       duration: .2s, // Must be the same as js location duration time.
-      color   : #fff,
+      background-color: #fff,
     },
     params
   );
+
+  duration = params['duration'];
+  background-color = params['color'];
 
   fadein-animation-name  = _sanitize-animation-name(_page-effect-fadein- + join('-', values(params)));
   fadeout-animation-name = _sanitize-animation-name(_page-effect-fadeout- + join('-', values(params)));
 
   _position(fixed, 0, 0, 0, 0, _page-effect-z-index);
-  background-color: params['color'];
+  background-color: background-color;
 
   &[data-page-effect="fadein"][aria-hidden="true"] {
     opacity: 0;
     z-index: -1;
-    animation: fadein-animation-name (params['duration'] + 0.2) ease-in 0s;
+    animation: fadein-animation-name (duration + 0.2) ease-in 0s;
   }
 
   &[data-page-effect="fadeout"][aria-hidden="false"] {
     opacity: 1;
     z-index: _page-effect-z-index;
-    animation: fadeout-animation-name params['duration'] ease-in 0s;
+    animation: fadeout-animation-name duration ease-in 0s;
   }
 
   @keyframes fadein-animation-name {

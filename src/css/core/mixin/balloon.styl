@@ -1,23 +1,10 @@
 //
-// The bottom balloon component
+// Generate balloon
 //
-// @param  hash  properties for decoration
+// @param  string  angle   position of arrow
+// @param  hash    params  properties for decoration
 //
-// .c-balloon-bottom {
-//   _balloon-bottom({
-//     background-color: null,
-//     border-color: null,
-//     border-size: null,
-//     triangle-size: 10px,
-//   });
-// }
-//
-// <div class="c-balloon-bottom">
-//   ...
-// </div>
-//
-
-_balloon-bottom(params = {}) {
+_balloon(angle, params = {}) {
   params = merge(
     {
       background-color: null,
@@ -44,7 +31,7 @@ _balloon-bottom(params = {}) {
   }
 
   _balloon-triangle(
-    bottom,
+    angle,
     triangle-size,
     background-color,
     border-size,
