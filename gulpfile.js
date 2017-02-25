@@ -124,8 +124,8 @@ gulp.task('watch', function() {
   gulp.watch([dir.src.js + '/**/*.js'], ['js']);
   gulp.watch(
     [
-      dir.dist.css + '/basis.css',
-      dir.dist.js + '/app.js'
+      dir.src.css + '/**/*.styl',
+      dir.src.js + '/**/*.js'
     ],
     ['aigis:update']
   );
@@ -153,7 +153,7 @@ gulp.task('server', ['aigis:build'], function() {
 /**
  * Creates the zip file
  */
-gulp.task('zip', function(){
+gulp.task('zip', function() {
   return gulp.src(
       [
         '**',
@@ -172,7 +172,7 @@ gulp.task('zip', function(){
 /**
  * Stylus tests
  */
-gulp.task('stylus-test', function() {
+gulp.task('test', function() {
   return gulp.src('./tests/tests.styl')
     .pipe(plumber())
     .pipe(stylus({
