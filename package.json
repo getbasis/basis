@@ -1,6 +1,6 @@
 {
   "name": "getbasis",
-  "version": "6.2.0",
+  "version": "6.2.1",
   "main": "src/css/basis.styl",
   "author": "inc2734",
   "contributors": [
@@ -26,6 +26,7 @@
     "src",
     "dist",
     "tests",
+    "package.json",
     "gulpfile.js",
     "LICENSE",
     "README.md",
