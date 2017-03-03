@@ -11,6 +11,7 @@ _balloon(angle, params = {}) {
       border-color: null,
       border-size: null,
       triangle-size: 10px,
+      padding: _space(.75),
     },
     params
   );
@@ -19,6 +20,7 @@ _balloon(angle, params = {}) {
   border-color = params['border-color'];
   border-size = params['border-size'];
   triangle-size = params['triangle-size'];
+  padding = params['padding'];
 
   position: relative;
 
@@ -28,6 +30,10 @@ _balloon(angle, params = {}) {
 
   if (! _is-null(border-size) && ! _is-null(border-color)) {
     border: border-size solid border-color;
+  }
+
+  if (! _is-null(padding)) {
+    padding: padding;
   }
 
   _balloon-triangle(

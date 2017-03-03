@@ -7,6 +7,7 @@
 //   _alert({
 //     background-color: null,
 //     border: null,
+//     padding: _space(.75),
 //   });
 // }
 //
@@ -20,12 +21,14 @@ _alert(params = {}) {
     {
       background-color: null,
       border: null,
+      padding: _space(.75),
     },
     params
   );
 
   background-color = params['background-color'];
   border = params['border'];
+  padding = params['padding'];
 
   display: block;
 
@@ -35,5 +38,9 @@ _alert(params = {}) {
 
   if (! _is-null(border)) {
     border: border;
+  }
+
+  if (! _is-null(padding)) {
+    padding: padding;
   }
 }

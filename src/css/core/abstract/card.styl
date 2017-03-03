@@ -1,8 +1,13 @@
 //
 // Card
 //
+// @param  hash  $params  properties for decoration
+//
 // .c-card {
-//   _card();
+//   @include _card({
+//     background-color: null,
+//     padding: _space(.75),
+//   });
 // }
 //
 // <div class="c-card">
@@ -15,9 +20,24 @@
 // </div>
 //
 
-_card() {
+_card(params = {}) {
+  params = merge(
+    {
+      background-color: null,
+      padding: _space(.75),
+    },
+    params
+  );
+
+  background-color = params['background-color'];
+  padding = params['padding'];
+
   display: flex;
   flex-direction: column;
+
+  if (! _is-null(background-color)) {
+    background-color: background-color;
+  }
 
   &__figure {
     > img {
@@ -28,5 +48,9 @@ _card() {
 
   &__body {
     flex: 1 0 auto;
+
+    if (! _is-null(padding)) {
+      padding: padding;
+    }
   }
 }

@@ -7,6 +7,7 @@
 //   _btn({
 //     background-color: null,
 //     border: null,
+//     padding: _space(.5) _space(1),
 //   });
 // }
 //
@@ -18,12 +19,14 @@ _btn(params = {}) {
     {
       background-color: null,
       border: null,
+      padding: _space(.5) _space(1),
     },
     params
   );
 
   background-color = params['background-color'];
   border = params['border'];
+  padding = params['padding'];
 
   display: inline-block;
   cursor: pointer;
@@ -40,5 +43,9 @@ _btn(params = {}) {
 
   if (! _is-null(border)) {
     border: border;
+  }
+
+  if (! _is-null(padding)) {
+    padding: padding;
   }
 }
