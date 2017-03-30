@@ -1,5 +1,9 @@
 #Changelog
 
+## March 30, 2017 v6.4.0
+* Added `_pagination()`
+* Added `._c-pagination`
+
 ## March 3, 2017 v6.3.0
 * Update btn, alert, balloon and card padding.
 * Added `_ib-row()`. This is inline-block base abstract.
